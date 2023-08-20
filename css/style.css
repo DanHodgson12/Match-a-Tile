@@ -4,11 +4,6 @@
     border: 1px solid black;
 }
 
-/* .border {
-  box-sizing: border-box;
-  border: 1px solid black;
-} */
-
 #side-bar {
   background-color: blue;
 }
@@ -20,10 +15,6 @@
 #guess-tiles {
   background-color: rgb(61, 61, 61);
   min-height: 100px;
-}
-
-#controls {
-  background-color: rgb(61, 61, 61);
 }
 
 /* --------------- */

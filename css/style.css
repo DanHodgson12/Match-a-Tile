@@ -1,12 +1,36 @@
+/* Header */
+
 #logo {
     height: 60px;
     width: 60px;
     border: 1px solid black;
 }
 
+#game-info button {
+  min-width: 90px;
+}
+
+/* Controls */
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+#startButton {
+  font-size: 2rem;
+}
+
+#resetButton {
+  font-size: 1.5rem;
+}
+
+/* Side-Bar */
+
 #side-bar {
   background-color: blue;
 }
+
+/* Game Area */
 
 #game-area {
   background-color: grey;
@@ -15,14 +39,6 @@
 #guess-tiles {
   background-color: rgb(61, 61, 61);
   min-height: 100px;
-}
-
-#game-info button {
-  min-width: 90px;
-}
-
-.dropdown-item {
-  cursor: pointer;
 }
 
 /* --------------- */

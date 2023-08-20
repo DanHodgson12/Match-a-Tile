@@ -1,38 +1,29 @@
-.row {
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.logo {
+#logo {
     height: 60px;
     width: 60px;
     border: 1px solid black;
 }
 
-main {
-  height: 500px;
+/* .border {
   box-sizing: border-box;
-  border: 1px solid;
-}
+  border: 1px solid black;
+} */
 
-.side-bar {
+#side-bar {
   background-color: blue;
 }
 
-.game-area {
+#game-area {
   background-color: grey;
-  min-height: 200px;
 }
 
-.guess-tiles {
+#guess-tiles {
   background-color: rgb(61, 61, 61);
   min-height: 100px;
 }
 
-.controls {
+#controls {
   background-color: rgb(61, 61, 61);
-    min-height: 100px;
 }
 
 /* --------------- */

@@ -35,7 +35,7 @@
     <nav class="navbar navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center mx-auto" href="#">
-          <div class="logo mx-2"></div>
+          <div id="logo" class="mx-2"></div>
           <h1 class="my-0 mx-2">Match-A-Tile</h1>
         </a>
         <div class="mx-auto text-center">
@@ -53,13 +53,13 @@
       <div class="row m-0 p-0 h-100">
 
         <!-- Side Bar -->
-        <div class="col-lg-3 m-0 p-0 d-none d-lg-block side-bar"></div>
+        <div id="side-bar" class="col-lg-3 m-0 p-0 d-none d-lg-block"></div>
 
         <!-- Main Area -->
-        <div class="col-lg-9 m-0 p-0">
+        <div id="main-area" class="col-lg-9 m-0 p-0">
 
-          <!-- Start/Reset/Info -->
-          <div class="row controls m-0 p-2">
+          <!-- Controls -->
+          <div id="controls" class="row m-0 p-2">
 
             <div class="col-4 p-0 align-items-center justify-content-center" id="about-instructions">
 
@@ -136,8 +136,8 @@
           </div>
 
           <!-- Game Area -->
-          <div class="row m-0 p-0">
-            <div class="col p-0 game-area">
+          <div id="game-area" class="row m-0 p-0">
+            <div class="col p-0">
 
               <div class="grid-container my-4">
                 <div class="grid-item tile" id="tile-1"></div>
@@ -155,8 +155,8 @@
           </div>
 
           <!-- Guess Tiles -->
-          <div class="row m-0 p-0">
-            <div class="col m-0 p-0 guess-tiles"></div>
+          <div id="guess-tiles" class="row m-0 p-0">
+            <div class="col m-0 p-0"></div>
           </div>
 
         </div>

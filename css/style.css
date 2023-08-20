@@ -1,12 +1,23 @@
+.row {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .logo {
     height: 60px;
     width: 60px;
     border: 1px solid black;
 }
 
+main {
+  height: 500px;
+  box-sizing: border-box;
+  border: 1px solid;
+}
+
 .side-bar {
   background-color: blue;
-  height: 300px;
 }
 
 .game-area {
@@ -16,7 +27,12 @@
 
 .guess-tiles {
   background-color: rgb(61, 61, 61);
-    height: 100px;
+  min-height: 100px;
+}
+
+.controls {
+  background-color: rgb(61, 61, 61);
+    min-height: 100px;
 }
 
 /* --------------- */

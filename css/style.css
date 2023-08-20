@@ -3,3 +3,34 @@
     width: 60px;
     border: 1px solid black;
 }
+
+.side-bar {
+  background-color: blue;
+  height: 300px;
+}
+
+.game-area {
+  background-color: grey;
+  min-height: 200px;
+}
+
+.guess-tiles {
+  background-color: rgb(61, 61, 61);
+    height: 100px;
+}
+
+/* --------------- */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 15px;
+  justify-content: center;
+  background-color: bisque;
+}
+
+.tile {
+  height: 60px;
+  width: 60px;
+  background-color: aqua;
+}

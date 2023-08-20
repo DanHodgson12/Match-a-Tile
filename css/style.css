@@ -3,7 +3,6 @@
 #logo {
     height: 60px;
     width: 60px;
-    border: 1px solid black;
 }
 
 #game-info button {
@@ -36,23 +35,29 @@
   background-color: grey;
 }
 
-#guess-tiles {
-  background-color: rgb(61, 61, 61);
-  min-height: 100px;
-}
-
-/* --------------- */
-
 .grid-container {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(3, auto);
-  gap: 15px;
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
   justify-content: center;
-  background-color: bisque;
+}
+
+.grid-item {
+  height: 100px;
+  width: 100px;
 }
 
 .tile {
-  height: 60px;
-  width: 60px;
-  background-color: aqua;
+  background-color: #eac086;
+  border-radius: 10px;
+  box-shadow: 0 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+#guess-tiles {
+  background-color: rgb(61, 61, 61);
+  min-height: 100px;
 }

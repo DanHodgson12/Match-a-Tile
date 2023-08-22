@@ -26,7 +26,11 @@
 /* Side-Bar */
 
 #side-bar {
-  background-color: blue;
+  background-color: #eac086;
+}
+
+#about-text, #instructions-text {
+  background-color: whitesmoke;
 }
 
 /* Game Area */

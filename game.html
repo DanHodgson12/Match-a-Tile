@@ -33,17 +33,20 @@
   </head>
   <body>
     
+    <!-- Navbar -->
     <header>
-      <div class="container-fluid">
+      <div class="container-fluid p-0">
         <div class="row p-0 m-0 bg-body-tertiary">
 
+          <!-- Header/Logo -->
           <div id="header" class="col-sm-7 p-0 mb-0 mt-2 my-sm-2 d-flex align-items-center justify-content-center mx-auto">
             <a class="navbar-brand" href="#">
               <div id="logo" class="mx-2 tile"></div>
             </a>
-            <h1 class="my-0 mx-2">Match-A-Tile</h1>
+            <h1 class="my-0 mx-2">Match-a-Tile</h1>
           </div>
 
+          <!-- About/Instructions -->
           <div id="game-info" class="col-sm-5 d-lg-none p-0 my-2 my-sm-0 mx-auto d-flex align-items-center justify-content-center">
 
             <button type="button" class="btn btn-dark btn-sm mx-2 p-0" data-bs-toggle="modal" data-bs-target="#aboutModal">
@@ -108,13 +111,45 @@
         </div>
       </div>
     </header>
-    
 
+    <!-- Main Area -->
     <main class="container-fluid m-0 p-0">
       <div class="row m-0 p-0 h-100">
 
         <!-- Side Bar -->
-        <div id="side-bar" class="col-lg-3 m-0 p-0 d-none d-lg-block"></div>
+        <div id="side-bar" class="col-lg-3 m-0 p-2 d-none d-lg-block">
+          
+          <!-- About -->
+          <button id="about-btn" class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
+            data-bs-auto-close="false" aria-expanded="true" aria-controls="about-text">
+            About
+          </button>
+
+          <div id="about-text" class="border rounded w-100">
+            <p class="p-2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+              Voluptatibus ratione esse dolorem. Veritatis, itaque? 
+              Consequuntur dolore tempore nihil laudantium recusandae 
+              assumenda, aperiam provident ipsa totam.
+            </p>
+          </div>
+
+          <!-- Instructions -->
+          <button id="instructions-btn" class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
+            data-bs-auto-close="false" aria-expanded="true" aria-controls="instructions-text">
+            Instructions
+          </button>
+          
+          <div id="instructions-text" class="border rounded w-100">
+            <p class="p-2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Voluptatibus ratione esse dolorem. Veritatis, itaque?
+              Consequuntur dolore tempore nihil laudantium recusandae
+              assumenda, aperiam provident ipsa totam.
+            </p>
+          </div>
+
+        </div>
 
         <!-- Main Area -->
         <div id="main-area" class="col-lg-9 m-0 p-0">

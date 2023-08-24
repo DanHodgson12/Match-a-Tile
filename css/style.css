@@ -51,8 +51,8 @@
 }
 
 #c-tiles .grid-item {
-  height: 100px;
-  width: 100px;
+  height: 140px;
+  width: 140px;
 }
 
 .tile {
@@ -70,9 +70,38 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 60%;
 }
 
 #p-tiles .grid-item {
-  height: 75px;
-  width: 75px;
+  height: 90px;
+  width: 90px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 992px) {
+
+  #c-tiles .grid-item {
+    height: 100px;
+    width: 100px;
+  }
+
+  #p-tiles {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  #p-tiles {
+    width: 100%;
+  }
+
+  #p-tiles .grid-item {
+    height: 80px;
+    width: 80px;
+  }
+
 }

@@ -26,17 +26,18 @@
 /* Side-Bar */
 
 #side-bar {
-  background-color: #eac086;
+  background-color: papayawhip;
 }
 
 #about-text, #instructions-text {
-  background-color: whitesmoke;
+  background-color: #3d3d3d;
+  color: ghostwhite;
 }
 
 /* Game Area */
 
 #game-area {
-  background-color: grey;
+  background-color: darkgrey;
 }
 
 .grid-container {
@@ -62,6 +63,6 @@
 
 
 #guess-tiles {
-  background-color: rgb(61, 61, 61);
+  background-color: #3d3d3d;
   min-height: 100px;
 }

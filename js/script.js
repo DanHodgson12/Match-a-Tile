@@ -11,13 +11,13 @@ $('#instructions-btn').click(function () {
 function modeDisplay(mode) {
 
   if (mode === 'Easy') {
-    $('#mode-display').html('EASY');
+    $('#mode-display').html('EASY').css('color', 'green');
     $('#timer').html('01:00');
   } else if (mode === 'Normal') {
-    $('#mode-display').html('NORMAL');
+    $('#mode-display').html('NORMAL').css('color', 'black');
     $('#timer').html('00:30');
   } else if (mode === 'Hard') {
-    $('#mode-display').html('HARD');
+    $('#mode-display').html('HARD').css('color', 'red');
     $('#timer').html('00:15');
   }
 

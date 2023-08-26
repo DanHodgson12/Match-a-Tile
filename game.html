@@ -181,12 +181,12 @@
             <!-- Controls -->
             <div id="controls" class="row m-0 px-2 py-0 bg-body-secondary">
 
-              <!-- Difficulty Selector -->
-              <div class="col-4 p-0 pt-2 text-center align-items-center justify-content-center" id="diff-selector">
+              <!-- Mode Selector -->
+              <div class="col-4 p-0 pt-2 text-center align-items-center justify-content-center" id="mode-selector">
               
                 <div class="dropdown">
                   <button class="btn btn-sm btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Difficulty
+                    Mode
                   </button>
                   <ul class="dropdown-menu dropdown-menu-dark">
                     <li><a class="dropdown-item" data-value="Easy">Easy</a></li>
@@ -195,8 +195,8 @@
                   </ul>
                 </div>
 
-                <div id="diff-selection" class="mt-1">
-                  Mode: Easy!
+                <div id="mode-selection" class="mt-1">
+                  Mode: <span id="mode">Easy</span>
                 </div>
               
               </div>
@@ -218,6 +218,7 @@
 
               <div id="timer-score" class="row m-0 p-0">
 
+                <!-- Timer -->
                 <div class="col-6">
                   <div id="timer-container" class="text-center d-flex justify-content-center m-0 p-0">
                     <p id="timer" class="bg-white rounded-bottom px-2 fs-3">01:00</p>
@@ -225,6 +226,7 @@
                   </div>
                 </div>
 
+                <!-- Score -->
                 <div class="col-6">
                   <div id="score-container" class="text-center d-flex justify-content-center m-0 p-0">
                     <p class="bg-white rounded-bottom px-2 fs-3">
@@ -236,6 +238,7 @@
 
               </div>
 
+              <!-- Computer Tiles -->
               <div class="row m-0 p-0">
                 <div class="col mx-auto m-0 mb-3 p-0">
                   <div id="c-tiles" class="grid-container m-0 p-0">

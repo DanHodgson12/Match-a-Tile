@@ -76,6 +76,15 @@
   background-color: #eac086;
   border-radius: 10px;
   box-shadow: 0 0px 2px 2px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 90%;
 }
 
 /* Player Area */

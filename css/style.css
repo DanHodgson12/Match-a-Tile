@@ -40,6 +40,10 @@
   cursor: pointer;
 }
 
+#mode-display {
+  color: green;
+}
+
 #startButton {
   font-size: 2rem;
 }

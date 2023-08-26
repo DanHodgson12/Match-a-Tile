@@ -12,10 +12,13 @@ function modeDisplay(mode) {
 
   if (mode === 'Easy') {
     $('#mode-display').html('EASY');
+    $('#timer').html('01:00');
   } else if (mode === 'Normal') {
     $('#mode-display').html('NORMAL');
+    $('#timer').html('00:30');
   } else if (mode === 'Hard') {
     $('#mode-display').html('HARD');
+    $('#timer').html('00:15');
   }
 
 }

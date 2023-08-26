@@ -27,3 +27,25 @@ $('.mode-item').click(function() {
   let modeSelection = $(this).data('value');
   modeDisplay(modeSelection);
 });
+
+// Images
+let images = [
+  'images/book.svg',
+  'images/chess-board.svg',
+  'images/chess-queen.svg',
+  'images/chess.svg',
+  'images/diamond.svg',
+  'images/dice-d20.svg',
+  'images/dice-three.svg',
+  'images/dice.svg',
+  'images/dragon.svg',
+  'images/dungeon.svg',
+  'images/fist.svg',
+  'images/gamepad.svg',
+  'images/heart.svg',
+  'images/puzzle.svg',
+  'images/ring.svg',
+  'images/scroll.svg',
+  'images/shield.svg',
+  'images/vr.svg'
+]

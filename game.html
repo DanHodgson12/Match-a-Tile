@@ -192,27 +192,43 @@
 
           <!-- Computer Area -->
           <div id="computer-area" class="container-fluid p-0">
-            <div class="row m-0 py-4">
 
-              <div class="col-2"></div>
+            <div class="row m-0 p-0">
 
-                <div class="col-8 m-0 my-lg-3 p-0">
-                  <div id="c-tiles" class="grid-container m-0 p-0">
-                    <div class="grid-item tile" id="c-tile-1"></div>
-                    <div class="grid-item tile" id="c-tile-2"></div>
-                    <div class="grid-item tile" id="c-tile-3"></div>
-                    <div class="grid-item tile" id="c-tile-4"></div>
-                    <div class="grid-item tile" id="c-tile-5"></div>
-                    <div class="grid-item tile" id="c-tile-6"></div>
-                    <div class="grid-item tile" id="c-tile-7"></div>
-                    <div class="grid-item tile" id="c-tile-8"></div>
-                    <div class="grid-item tile" id="c-tile-9"></div>
-                  </div>
+              <div class="col-6">
+                <div id="timer-container" class="text-center d-flex justify-content-center m-0 p-0">
+                  <p id="timer" class="bg-white rounded-bottom px-2 fs-3">01:00</p>
+                  <!-- Use this to adjust countdown timer after user has clicked Start button -->
                 </div>
+              </div>
 
-              <div class="col-2"></div>
+              <div class="col-6">
+                <div id="score-container" class="text-center d-flex justify-content-center m-0 p-0">
+                  <p class="bg-white rounded-bottom px-2 fs-3">
+                    Score: <span id="score">0 / 9</span>
+                    <!-- Use this to adjust score depending on outcome of game -->
+                  </p>
+                </div>
+              </div>
 
             </div>
+
+            <div class="row m-0 p-0">
+              <div class="col mx-auto m-0 my-lg-3 p-0">
+                <div id="c-tiles" class="grid-container m-0 p-0">
+                  <div class="grid-item tile" id="c-tile-1"></div>
+                  <div class="grid-item tile" id="c-tile-2"></div>
+                  <div class="grid-item tile" id="c-tile-3"></div>
+                  <div class="grid-item tile" id="c-tile-4"></div>
+                  <div class="grid-item tile" id="c-tile-5"></div>
+                  <div class="grid-item tile" id="c-tile-6"></div>
+                  <div class="grid-item tile" id="c-tile-7"></div>
+                  <div class="grid-item tile" id="c-tile-8"></div>
+                  <div class="grid-item tile" id="c-tile-9"></div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <!-- Player Area -->

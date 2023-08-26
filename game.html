@@ -34,74 +34,217 @@
   <body>
     <div class="content-container">
 
-    <!-- Navbar -->
-    <header>
-      <div class="container-fluid p-0">
-        <div class="row p-0 m-0 bg-body-tertiary">
+      <!-- Navbar -->
+      <header>
+        <div class="container-fluid p-0">
+          <div class="row p-0 m-0 bg-body-tertiary">
 
-          <!-- Header/Logo -->
-          <div id="header" class="col-sm-7 p-0 mb-0 mt-2 my-sm-2 d-flex align-items-center justify-content-center mx-auto">
-            <a class="navbar-brand" href="#">
-              <div id="logo" class="mx-2 tile"></div>
-            </a>
-            <h1 class="my-0 mx-2">Match-a-Tile</h1>
-          </div>
+            <!-- Header/Logo -->
+            <div id="header" class="col-sm-7 p-0 mb-0 mt-2 my-sm-2 d-flex align-items-center justify-content-center mx-auto">
+              <a class="navbar-brand" href="#">
+                <div id="logo" class="mx-2 tile"></div>
+              </a>
+              <h1 class="my-0 mx-2">Match-a-Tile</h1>
+            </div>
 
-          <!-- About/Instructions -->
-          <div id="game-info" class="col-sm-5 d-lg-none p-0 my-2 my-sm-0 mx-auto d-flex align-items-center justify-content-center">
+            <!-- About/Instructions -->
+            <div id="game-info" class="col-sm-5 d-lg-none p-0 my-2 my-sm-0 mx-auto d-flex align-items-center justify-content-center">
 
-            <button type="button" class="btn btn-dark btn-sm mx-2 p-0" data-bs-toggle="modal" data-bs-target="#aboutModal">
-              About
-            </button>
-            
-            <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="aboutModalLabel">About the game</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cupiditate illum reprehenderit amet quae
-                    veritatis quidem, provident vero! Fuga blanditiis repellendus aut maxime, nulla nemo rem eos maiores nobis error
-                    perferendis? Praesentium cum possimus, ad numquam, minima, illum placeat voluptate facere beatae iure doloribus
-                    magni nisi expedita. Totam consectetur deserunt odit molestias quisquam aliquam, earum perferendis amet nesciunt
-                    eligendi porro consequatur est natus voluptatem ratione consequuntur quasi officia eaque tenetur placeat illo
-                    aliquid corrupti? Quos ex rem, accusantium provident officiis odit quia illo distinctio blanditiis magni
-                    laboriosam voluptas aut, sapiente assumenda dolore eaque cupiditate, necessitatibus tempora sequi voluptatibus
-                    tempore eligendi.
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-dark btn-sm mx-2 p-0" data-bs-toggle="modal" data-bs-target="#aboutModal">
+                About
+              </button>
+              
+              <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="aboutModalLabel">About the game</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cupiditate illum reprehenderit amet quae
+                      veritatis quidem, provident vero! Fuga blanditiis repellendus aut maxime, nulla nemo rem eos maiores nobis error
+                      perferendis? Praesentium cum possimus, ad numquam, minima, illum placeat voluptate facere beatae iure doloribus
+                      magni nisi expedita. Totam consectetur deserunt odit molestias quisquam aliquam, earum perferendis amet nesciunt
+                      eligendi porro consequatur est natus voluptatem ratione consequuntur quasi officia eaque tenetur placeat illo
+                      aliquid corrupti? Quos ex rem, accusantium provident officiis odit quia illo distinctio blanditiis magni
+                      laboriosam voluptas aut, sapiente assumenda dolore eaque cupiditate, necessitatibus tempora sequi voluptatibus
+                      tempore eligendi.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                   </div>
                 </div>
               </div>
+              
+              <button type="button" class="btn btn-dark btn-sm mx-2 p-0" data-bs-toggle="modal" data-bs-target="#instructionsModal">
+                Instructions
+              </button>
+              
+              <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="instructionsModalLabel">Instructions</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cupiditate illum reprehenderit amet quae
+                      veritatis quidem, provident vero! Fuga blanditiis repellendus aut maxime, nulla nemo rem eos maiores nobis error
+                      perferendis? Praesentium cum possimus, ad numquam, minima, illum placeat voluptate facere beatae iure doloribus
+                      magni nisi expedita. Totam consectetur deserunt odit molestias quisquam aliquam, earum perferendis amet nesciunt
+                      eligendi porro consequatur est natus voluptatem ratione consequuntur quasi officia eaque tenetur placeat illo
+                      aliquid corrupti? Quos ex rem, accusantium provident officiis odit quia illo distinctio blanditiis magni
+                      laboriosam voluptas aut, sapiente assumenda dolore eaque cupiditate, necessitatibus tempora sequi voluptatibus
+                      tempore eligendi.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
+
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Area -->
+      <main class="container-fluid m-0 p-0">
+        <div class="row m-0 p-0">
+
+          <!-- Side Bar -->
+          <div id="side-bar" class="col-lg-3 m-0 p-2 d-none d-lg-block">
             
-            <button type="button" class="btn btn-dark btn-sm mx-2 p-0" data-bs-toggle="modal" data-bs-target="#instructionsModal">
+            <!-- About -->
+            <button id="about-btn" class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
+              data-bs-auto-close="false" aria-expanded="true" aria-controls="about-text">
+              About
+            </button>
+
+            <div id="about-text" class="border rounded w-100">
+              <p class="p-2">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Voluptatibus ratione esse dolorem. Veritatis, itaque? 
+                Consequuntur dolore tempore nihil laudantium recusandae 
+                assumenda, aperiam provident ipsa totam.
+              </p>
+            </div>
+
+            <!-- Instructions -->
+            <button id="instructions-btn" class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
+              data-bs-auto-close="false" aria-expanded="true" aria-controls="instructions-text">
               Instructions
             </button>
             
-            <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="instructionsModalLabel">Instructions</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div id="instructions-text" class="border rounded w-100">
+              <p class="p-2">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Voluptatibus ratione esse dolorem. Veritatis, itaque?
+                Consequuntur dolore tempore nihil laudantium recusandae
+                assumenda, aperiam provident ipsa totam.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Game Area -->
+          <div id="game-area" class="col-lg-9 m-0 p-0">
+
+            <!-- Controls -->
+            <div id="controls" class="row m-0 px-2 py-0 bg-body-secondary">
+
+              <!-- Difficulty Selector -->
+              <div class="col-4 p-0 pt-2 text-center align-items-center justify-content-center" id="diff-selector">
+              
+                <div class="dropdown">
+                  <button class="btn btn-sm btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Difficulty
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" data-value="Easy">Easy</a></li>
+                    <li><a class="dropdown-item" data-value="Normal">Normal</a></li>
+                    <li><a class="dropdown-item" data-value="Hard">Hard</a></li>
+                  </ul>
+                </div>
+
+                <div id="diff-selection" class="mt-1">
+                  Mode: Easy!
+                </div>
+              
+              </div>
+
+              <!-- Start Button -->
+              <div class="col-4 p-2 d-flex align-items-center justify-content-center" id="start">
+                <button type="button" class="btn btn-success" id="startButton" aria-label="Start">Start</button>
+              </div>
+
+              <!-- Reset Button -->
+              <div class="col-4 p-0 d-flex align-items-center justify-content-center" id="reset">
+                <button type="button" class="btn btn-danger py-0" id="resetButton" aria-label="Reset">Reset</button>
+              </div>
+
+            </div>
+
+            <!-- Computer Area -->
+            <div id="computer-area" class="container-fluid p-0">
+
+              <div class="row m-0 p-0">
+
+                <div class="col-6">
+                  <div id="timer-container" class="text-center d-flex justify-content-center m-0 p-0">
+                    <p id="timer" class="bg-white rounded-bottom px-2 fs-3">01:00</p>
+                    <!-- Use this to adjust countdown timer after user has clicked Start button -->
                   </div>
-                  <div class="modal-body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cupiditate illum reprehenderit amet quae
-                    veritatis quidem, provident vero! Fuga blanditiis repellendus aut maxime, nulla nemo rem eos maiores nobis error
-                    perferendis? Praesentium cum possimus, ad numquam, minima, illum placeat voluptate facere beatae iure doloribus
-                    magni nisi expedita. Totam consectetur deserunt odit molestias quisquam aliquam, earum perferendis amet nesciunt
-                    eligendi porro consequatur est natus voluptatem ratione consequuntur quasi officia eaque tenetur placeat illo
-                    aliquid corrupti? Quos ex rem, accusantium provident officiis odit quia illo distinctio blanditiis magni
-                    laboriosam voluptas aut, sapiente assumenda dolore eaque cupiditate, necessitatibus tempora sequi voluptatibus
-                    tempore eligendi.
+                </div>
+
+                <div class="col-6">
+                  <div id="score-container" class="text-center d-flex justify-content-center m-0 p-0">
+                    <p class="bg-white rounded-bottom px-2 fs-3">
+                      Score: <span id="score">0 / 9</span>
+                      <!-- Use this to adjust score depending on outcome of game -->
+                    </p>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+
+              </div>
+
+              <div class="row m-0 p-0">
+                <div class="col mx-auto m-0 mb-3 p-0">
+                  <div id="c-tiles" class="grid-container m-0 p-0">
+                    <div class="grid-item tile" id="c-tile-1"></div>
+                    <div class="grid-item tile" id="c-tile-2"></div>
+                    <div class="grid-item tile" id="c-tile-3"></div>
+                    <div class="grid-item tile" id="c-tile-4"></div>
+                    <div class="grid-item tile" id="c-tile-5"></div>
+                    <div class="grid-item tile" id="c-tile-6"></div>
+                    <div class="grid-item tile" id="c-tile-7"></div>
+                    <div class="grid-item tile" id="c-tile-8"></div>
+                    <div class="grid-item tile" id="c-tile-9"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Player Area -->
+            <div id="player-area" class="container-fluid p-0">
+              <div class="row m-0 p-0">
+                <div class="col m-0 my-lg-3 p-0">
+                  <div id="p-tiles" class="flex-container my-3 mx-auto p-0">
+                    <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-1"></div>
+                    <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-2"></div>
+                    <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-3"></div>
+                    <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-4"></div>
+                    <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-5"></div>
+                    <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-6"></div>
+                    <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-7"></div>
+                    <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-8"></div>
+                    <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-9"></div>
                   </div>
                 </div>
               </div>
@@ -110,157 +253,14 @@
           </div>
 
         </div>
-      </div>
-    </header>
+      </main>
 
-    <!-- Main Area -->
-    <main class="container-fluid m-0 p-0">
-      <div class="row m-0 p-0">
-
-        <!-- Side Bar -->
-        <div id="side-bar" class="col-lg-3 m-0 p-2 d-none d-lg-block">
-          
-          <!-- About -->
-          <button id="about-btn" class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
-            data-bs-auto-close="false" aria-expanded="true" aria-controls="about-text">
-            About
-          </button>
-
-          <div id="about-text" class="border rounded w-100">
-            <p class="p-2">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-              Voluptatibus ratione esse dolorem. Veritatis, itaque? 
-              Consequuntur dolore tempore nihil laudantium recusandae 
-              assumenda, aperiam provident ipsa totam.
-            </p>
-          </div>
-
-          <!-- Instructions -->
-          <button id="instructions-btn" class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
-            data-bs-auto-close="false" aria-expanded="true" aria-controls="instructions-text">
-            Instructions
-          </button>
-          
-          <div id="instructions-text" class="border rounded w-100">
-            <p class="p-2">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Voluptatibus ratione esse dolorem. Veritatis, itaque?
-              Consequuntur dolore tempore nihil laudantium recusandae
-              assumenda, aperiam provident ipsa totam.
-            </p>
-          </div>
-
+      <!-- Footer -->
+      <footer class="bg-dark-subtle text-black text-center py-3 mt-auto">
+        <div class="container">
+          <p class="m-0">&copy; Match-a-Tile</p>
         </div>
-
-        <!-- Game Area -->
-        <div id="game-area" class="col-lg-9 m-0 p-0">
-
-          <!-- Controls -->
-          <div id="controls" class="row m-0 px-2 py-0 bg-body-secondary">
-
-            <!-- Difficulty Selector -->
-            <div class="col-4 p-0 pt-2 text-center align-items-center justify-content-center" id="diff-selector">
-            
-              <div class="dropdown">
-                <button class="btn btn-sm btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Difficulty
-                </button>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" data-value="Easy">Easy</a></li>
-                  <li><a class="dropdown-item" data-value="Normal">Normal</a></li>
-                  <li><a class="dropdown-item" data-value="Hard">Hard</a></li>
-                </ul>
-              </div>
-
-              <div id="diff-selection" class="mt-1">
-                Mode: Easy!
-              </div>
-            
-            </div>
-
-            <!-- Start Button -->
-            <div class="col-4 p-2 d-flex align-items-center justify-content-center" id="start">
-              <button type="button" class="btn btn-success" id="startButton" aria-label="Start">Start</button>
-            </div>
-
-            <!-- Reset Button -->
-            <div class="col-4 p-0 d-flex align-items-center justify-content-center" id="reset">
-              <button type="button" class="btn btn-danger py-0" id="resetButton" aria-label="Reset">Reset</button>
-            </div>
-
-          </div>
-
-          <!-- Computer Area -->
-          <div id="computer-area" class="container-fluid p-0">
-
-            <div class="row m-0 p-0">
-
-              <div class="col-6">
-                <div id="timer-container" class="text-center d-flex justify-content-center m-0 p-0">
-                  <p id="timer" class="bg-white rounded-bottom px-2 fs-3">01:00</p>
-                  <!-- Use this to adjust countdown timer after user has clicked Start button -->
-                </div>
-              </div>
-
-              <div class="col-6">
-                <div id="score-container" class="text-center d-flex justify-content-center m-0 p-0">
-                  <p class="bg-white rounded-bottom px-2 fs-3">
-                    Score: <span id="score">0 / 9</span>
-                    <!-- Use this to adjust score depending on outcome of game -->
-                  </p>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="row m-0 p-0">
-              <div class="col mx-auto m-0 mb-3 p-0">
-                <div id="c-tiles" class="grid-container m-0 p-0">
-                  <div class="grid-item tile" id="c-tile-1"></div>
-                  <div class="grid-item tile" id="c-tile-2"></div>
-                  <div class="grid-item tile" id="c-tile-3"></div>
-                  <div class="grid-item tile" id="c-tile-4"></div>
-                  <div class="grid-item tile" id="c-tile-5"></div>
-                  <div class="grid-item tile" id="c-tile-6"></div>
-                  <div class="grid-item tile" id="c-tile-7"></div>
-                  <div class="grid-item tile" id="c-tile-8"></div>
-                  <div class="grid-item tile" id="c-tile-9"></div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Player Area -->
-          <div id="player-area" class="container-fluid p-0">
-            <div class="row m-0 p-0">
-              <div class="col m-0 my-lg-3 p-0">
-                <div id="p-tiles" class="flex-container my-3 mx-auto p-0">
-                  <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-1"></div>
-                  <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-2"></div>
-                  <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-3"></div>
-                  <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-4"></div>
-                  <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-5"></div>
-                  <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-6"></div>
-                  <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-7"></div>
-                  <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-8"></div>
-                  <div class="grid-item tile my-1 mx-2 mx-sm-3" id="p-tile-9"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark-subtle text-black text-center py-3 mt-auto">
-      <div class="container">
-        <p class="m-0">&copy; Match-a-Tile</p>
-      </div>
-    </footer>
+      </footer>
 
     </div>
 

@@ -1,10 +1,10 @@
 .content-container {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
-/* Header */
+/*-- Header --*/
 
 #logo {
     height: 60px;
@@ -15,7 +15,7 @@
   min-width: 90px;
 }
 
-/* Side-Bar */
+/*-- Side-Bar --*/
 
 #side-bar {
   background-color: papayawhip;
@@ -25,6 +25,12 @@
 #instructions-text {
   background-color: #3d3d3d;
   color: ghostwhite;
+}
+
+/*-- Game Area --*/
+
+#game-area {
+  background-color: #3d3d3d;
 }
 
 /* Controls */
@@ -41,7 +47,7 @@
   font-size: 1.5rem;
 }
 
-/* Game Area */
+/* Computer Area */
 
 #computer-area {
   background-color: darkgrey;
@@ -67,10 +73,7 @@
   box-shadow: 0 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-#player-area {
-  background-color: #3d3d3d;
-  min-height: 100px;
-}
+/* Player Area */
 
 #p-tiles {
   display: flex;

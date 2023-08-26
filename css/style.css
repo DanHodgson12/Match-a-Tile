@@ -22,7 +22,8 @@
 }
 
 #about-text,
-#instructions-text {
+#instructions-text,
+.modal-body {
   background-color: #3d3d3d;
   color: ghostwhite;
 }

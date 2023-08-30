@@ -29,7 +29,7 @@ $('.mode-item').click(function() {
 });
 
 // Images
-let images = [
+const images = [
   { src: 'images/book.svg', alt: 'An icon of a book with a skull and crossbones.' },
   { src: 'images/chess-board.svg', alt: 'An icon of a chessboard.' },
   { src: 'images/chess-queen.svg', alt: 'An icon of the Queen piece from a chess-set.' },
@@ -49,3 +49,14 @@ let images = [
   { src: 'images/shield.svg', alt: 'An icon of a shield.' },
   { src: 'images/vr.svg', alt: 'An icon of a virtual-reality headset.' }
 ]
+
+/** 
+ * Shuffles/reorganises the passed array - in this case: 'images'. Idea taken from The Fisher-Yates (Knuth) Shuffle Algorithm.
+ */
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}

@@ -61,22 +61,29 @@ function shuffle(array) {
   return array;
 }
 
+/** 
+ * Assigns images from the images array to either the computer or player tiles, depending on the argument passed in.
+ */
+function assignImagesToTiles(images, tiles) {
+  tiles.each(function (index) { // Itterates over the computer tiles and does the following...
+
+    const frontTile = $(this).find('.t-front'); // Targets the 't-front' div, i.e. the front of the tile
+    const image = document.createElement('img'); // Creates a new <img> element and assigns it to the 'image' variable
+
+    image.src = images[index].src; // Sets the src of the image to that of the src of the current image in the shuffled array
+    image.alt = images[index].alt; // Sets the alt of the image to that of the alt of the current image in the shuffled array
+
+    frontTile.empty().append(image); // Appends the randomly selected image with the assigned src and alt to one of the tiles
+
+    // Function repeats until all images have been assigned to the available tiles
+  });
+}
+
 $('#start button').click(function () {
   const cTiles = $('#c-tiles .tile'); // Targets the computer tiles
 
   shuffle(images);
 
-  cTiles.each(function(index) { // Itterates over the computer tiles and does the following...
-
-    const frontTile = $(this).find('.t-front') // Targets the 't-front' div, i.e. the front of the tile
-    const image = document.createElement('img'); // Creates a new <img> element and assigns it to the 'image' variable
-
-    image.src = images[index].src // Sets the src of the image to that of the src of the current image in the shuffled array
-    image.alt = images[index].alt; // Sets the alt of the image to that of the alt of the current image in the shuffled array
-    
-    frontTile.empty().append(image); // Appends the randomly selected image with the assigned src and alt to one of the tiles
-
-    // Function repeats until all images have been assigned to the available tiles
-  });
+  assignImagesToTiles(images, cTiles);
 
 });

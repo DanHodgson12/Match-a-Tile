@@ -45,7 +45,7 @@
 
 ### Browser Compatibility
   
-### Device compatibility
+### Device Compatibility
 
 ### Common Elements Testing
 

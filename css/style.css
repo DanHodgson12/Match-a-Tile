@@ -136,4 +136,9 @@ img {
     width: 80px;
   }
 
+  #p-tiles .grid-item {
+    height: 70px;
+    width: 70px;
+  }
+
 }

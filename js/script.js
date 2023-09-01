@@ -37,7 +37,6 @@ const images = [
   { src: 'images/diamond.svg', alt: 'An icon of a diamond.' },
   { src: 'images/dice-d20.svg', alt: 'An icon of a D-20 die/dice.' },
   { src: 'images/dice-three.svg', alt: 'An icon of the "three" side of a die/dice.' },
-  { src: 'images/dice.svg', alt: 'An icon of two dice.' },
   { src: 'images/dragon.svg', alt: 'An icon of a dragon.' },
   { src: 'images/dungeon.svg', alt: 'An icon of a dungeon door.' },
   { src: 'images/fist.svg', alt: 'An icon of a fist.' },
@@ -46,8 +45,9 @@ const images = [
   { src: 'images/puzzle.svg', alt: 'An icon of a puzzle piece.' },
   { src: 'images/ring.svg', alt: 'An icon of a ring.' },
   { src: 'images/scroll.svg', alt: 'An icon of a scroll.' },
-  { src: 'images/shield.svg', alt: 'An icon of a shield.' },
-  { src: 'images/vr.svg', alt: 'An icon of a virtual-reality headset.' }
+  { src: 'images/shield.svg', alt: 'An icon of a shield.' }
+  // { src: 'images/vr.svg', alt: 'An icon of a virtual-reality headset.' },
+  // { src: 'images/dice.svg', alt: 'An icon of two dice.' }
 ]
 
 /** 
@@ -81,9 +81,11 @@ function assignImagesToTiles(images, tiles) {
 
 $('#start button').click(function () {
   const cTiles = $('#c-tiles .tile'); // Targets the computer tiles
+  const pTiles = $('#p-tiles .tile'); // Targets the computer tiles
 
   shuffle(images);
-
   assignImagesToTiles(images, cTiles);
+  shuffle(images);
+  assignImagesToTiles(images, pTiles);
 
 });

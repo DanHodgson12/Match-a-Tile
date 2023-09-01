@@ -93,7 +93,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 60%;
 }
 
 #p-tiles .grid-item {
@@ -110,17 +109,9 @@ img {
     width: 100px;
   }
 
-  #p-tiles {
-    width: 80%;
-  }
-
 }
 
 @media screen and (max-width: 600px) {
-
-  #p-tiles {
-    width: 100%;
-  }
 
   #p-tiles .grid-item {
     height: 80px;

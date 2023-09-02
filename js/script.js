@@ -21,6 +21,7 @@ $('#start button').click(function () {
 
   clearTimeout(countdownGame); // Clears countdown
   countdown = countdownStart; // Resets countdownTimer
+  countdownDisplay.css('color', 'red');
 
   shuffle(images); // Shuffle a first time 
   assignImagesToTiles(images, cTiles); // Assign images to computer tiles
@@ -52,6 +53,7 @@ $('#reset button').click(function() {
   clearInterval(countdownTimer); // Stops countdownTimer
   countdown = countdownStart; // Resets countdownTimer
   countdownDisplay.text(countdown);
+  countdownDisplay.css('color', 'red');
   
   $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
   $('.t-front').empty(); // Remove all images from tiles

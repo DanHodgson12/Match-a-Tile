@@ -7,21 +7,31 @@ $('#instructions-btn').click(function () {
   $('#instructions-text').slideToggle('slow');
 });
 
+let countdown;
+
 // Start Game
 $('#start button').click(function () {
   const cTiles = $('#c-tiles .tile'); // Targets the computer tiles
   const pTiles = $('#p-tiles .tile'); // Targets the computer tiles
 
+  clearTimeout(countdown); // Clears countdown
   shuffle(images); // Shuffle a first time 
   assignImagesToTiles(images, cTiles); // Assign images to computer tiles
   shuffle(images); // Shuffle a second time
   assignImagesToTiles(images, pTiles); // Assign images to player tiles
   flipTiles(cTiles); // Shows computer tiles
 
-  setTimeout(function() {
+  countdown = setTimeout(function() {
     flipTiles(cTiles); // Hides computer tiles
     flipTiles(pTiles); // Shows player tiles
   }, 5000); // Delay of 5 seconds
+});
+
+// Reset Game
+$('#reset button').click(function() {
+  clearTimeout(countdown); // Clears countdown
+  $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
+  $('.t-front').empty(); // Remove all images from tiles
 });
 
 // Flip test button

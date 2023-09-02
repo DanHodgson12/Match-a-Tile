@@ -19,9 +19,7 @@ $('#start button').click(function () {
   const pTiles = $('#p-tiles .tile'); // Targets the computer tiles
   $('#start button').prop('disabled', true); // Disables Start button
 
-  clearTimeout(countdownGame); // Clears countdown
-  countdown = countdownStart; // Resets countdownTimer
-  countdownDisplay.css('color', 'red');
+  resetCountdown();
 
   shuffle(images); // Shuffle a first time 
   assignImagesToTiles(images, cTiles); // Assign images to computer tiles
@@ -49,12 +47,8 @@ $('#start button').click(function () {
 
 // Reset Game
 $('#reset button').click(function() {
-  clearTimeout(countdownGame); // Clears countdownGame
-  clearInterval(countdownTimer); // Stops countdownTimer
-  countdown = countdownStart; // Resets countdownTimer
-  countdownDisplay.text(countdown);
-  countdownDisplay.css('color', 'red');
-  
+  resetCountdown();
+
   $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
   $('.t-front').empty(); // Remove all images from tiles
   $('#start button').prop('disabled', false);
@@ -87,6 +81,17 @@ function modeDisplay(mode) {
  */
 function flipTiles(tiles) {
   tiles.find('.t-inner').toggleClass('flipped');
+}
+
+/** 
+ * Clears the countdownGame timeout and countdownTimer intervals, and sets the countdown value to 5.
+ */
+function resetCountdown() {
+  clearTimeout(countdownGame); // Clears countdownGame
+  clearInterval(countdownTimer); // Stops countdownTimer
+  countdown = countdownStart; // Resets countdownTimer
+  countdownDisplay.text(countdown); // Sets value to 5
+  countdownDisplay.css('color', 'red'); // Sets color to Red
 }
 
 /** 

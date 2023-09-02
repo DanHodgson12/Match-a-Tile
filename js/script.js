@@ -19,13 +19,12 @@ $('#start button').click(function () {
   const pTiles = $('#p-tiles .tile'); // Targets the computer tiles
   $('#start button').prop('disabled', true); // Disables Start button
 
-  resetCountdown();
-
   shuffle(images); // Shuffle a first time 
   assignImagesToTiles(images, cTiles); // Assign images to computer tiles
   shuffle(images); // Shuffle a second time
   assignImagesToTiles(images, pTiles); // Assign images to player tiles
   flipTiles(cTiles); // Shows computer tiles
+  countdownDisplay.text(countdownStart);
 
   countdownGame = setTimeout(function() {
     flipTiles(cTiles); // Hides computer tiles
@@ -90,7 +89,7 @@ function resetCountdown() {
   clearTimeout(countdownGame); // Clears countdownGame
   clearInterval(countdownTimer); // Stops countdownTimer
   countdown = countdownStart; // Resets countdownTimer
-  countdownDisplay.text(countdown); // Sets value to 5
+  countdownDisplay.empty(); // Sets value to 5
   countdownDisplay.css('color', 'red'); // Sets color to Red
 }
 

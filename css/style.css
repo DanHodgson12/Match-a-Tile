@@ -111,6 +111,7 @@ img {
 /* Timer-Countdown-Score */
 
 #countdown {
+  color: red;
   animation: countdown 5s steps(5, end) forwards;
 }
 

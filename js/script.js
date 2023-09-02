@@ -16,7 +16,25 @@ $('#start button').click(function () {
   assignImagesToTiles(images, cTiles); // Assign images to computer tiles
   shuffle(images); // Shuffle a second time
   assignImagesToTiles(images, pTiles); // Assign images to player tiles
+  flipTiles(cTiles); // Shows computer tiles
 
+  setTimeout(function() {
+    flipTiles(cTiles); // Hides computer tiles
+    flipTiles(pTiles); // Shows player tiles
+  }, 5000); // Delay of 5 seconds
+
+});
+
+/** 
+ * Flips the tiles 180 degrees on the Y axis.
+ */
+function flipTiles(tiles) {
+  tiles.find('.t-inner').toggleClass('flipped');
+}
+
+// Flip test button
+$('#flip-button').click(function () {
+  $('.t-inner').toggleClass('flipped');
 });
 
 // Mode-selection

@@ -7,7 +7,11 @@ $('#instructions-btn').click(function () {
   $('#instructions-text').slideToggle('slow');
 });
 
-let countdown;
+let countdownGame;
+let countdownTimer;
+let countdownDisplay = $('#countdown');;
+const countdownStart = 5;
+let countdown = countdownStart;
 
 // Start Game
 $('#start button').click(function () {
@@ -15,22 +19,40 @@ $('#start button').click(function () {
   const pTiles = $('#p-tiles .tile'); // Targets the computer tiles
   $('#start button').prop('disabled', true); // Disables Start button
 
-  clearTimeout(countdown); // Clears countdown
+  clearTimeout(countdownGame); // Clears countdown
+  countdown = countdownStart; // Resets countdownTimer
+
   shuffle(images); // Shuffle a first time 
   assignImagesToTiles(images, cTiles); // Assign images to computer tiles
   shuffle(images); // Shuffle a second time
   assignImagesToTiles(images, pTiles); // Assign images to player tiles
   flipTiles(cTiles); // Shows computer tiles
 
-  countdown = setTimeout(function() {
+  countdownGame = setTimeout(function() {
     flipTiles(cTiles); // Hides computer tiles
     flipTiles(pTiles); // Shows player tiles
   }, 5000); // Delay of 5 seconds
+
+  countdownTimer = setInterval(function() { // Sets countdown timer for 5 seconds
+    countdown--;
+    if (countdown >= 1) {
+      countdownDisplay.text(countdown);
+      countdownDisplay.css('color', 'red');
+    } else {
+      clearInterval(countdownTimer);
+      countdownDisplay.text('GO');
+      countdownDisplay.css('color', 'green');
+    }
+  }, 1000);
 });
 
 // Reset Game
 $('#reset button').click(function() {
-  clearTimeout(countdown); // Clears countdown
+  clearTimeout(countdownGame); // Clears countdownGame
+  clearInterval(countdownTimer); // Stops countdownTimer
+  countdown = countdownStart; // Resets countdownTimer
+  countdownDisplay.text(countdown);
+  
   $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
   $('.t-front').empty(); // Remove all images from tiles
   $('#start button').prop('disabled', false);

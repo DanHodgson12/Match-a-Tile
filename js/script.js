@@ -7,23 +7,20 @@ $('#instructions-btn').click(function () {
   $('#instructions-text').slideToggle('slow');
 });
 
+// Start Game
+$('#start button').click(function () {
+  const cTiles = $('#c-tiles .tile'); // Targets the computer tiles
+  const pTiles = $('#p-tiles .tile'); // Targets the computer tiles
+
+  shuffle(images); // Shuffle a first time 
+  assignImagesToTiles(images, cTiles); // Assign images to computer tiles
+  shuffle(images); // Shuffle a second time
+  assignImagesToTiles(images, pTiles); // Assign images to player tiles
+
+});
+
 // Mode-selection
-function modeDisplay(mode) {
-
-  if (mode === 'Easy') {
-    $('#mode-display').html('EASY').css('color', 'green');
-    $('#timer').html('01:00');
-  } else if (mode === 'Normal') {
-    $('#mode-display').html('NORMAL').css('color', 'black');
-    $('#timer').html('00:30');
-  } else if (mode === 'Hard') {
-    $('#mode-display').html('HARD').css('color', 'red');
-    $('#timer').html('00:15');
-  }
-
-}
-
-$('.mode-item').click(function() {
+$('.mode-item').click(function () {
   let modeSelection = $(this).data('value');
   modeDisplay(modeSelection);
 });
@@ -49,6 +46,24 @@ const images = [
   // { src: 'images/vr.svg', alt: 'An icon of a virtual-reality headset.' },
   // { src: 'images/dice.svg', alt: 'An icon of two dice.' }
 ]
+
+/** 
+ * Displays the mode selected from the 'Mode' dropdown menu.
+ */
+function modeDisplay(mode) {
+
+  if (mode === 'Easy') {
+    $('#mode-display').html('EASY').css('color', 'green');
+    $('#timer').html('01:00');
+  } else if (mode === 'Normal') {
+    $('#mode-display').html('NORMAL').css('color', 'black');
+    $('#timer').html('00:30');
+  } else if (mode === 'Hard') {
+    $('#mode-display').html('HARD').css('color', 'red');
+    $('#timer').html('00:15');
+  }
+
+}
 
 /** 
  * Shuffles/reorganises the passed array - in this case: 'images'. Idea taken from The Fisher-Yates (Knuth) Shuffle Algorithm.
@@ -78,14 +93,3 @@ function assignImagesToTiles(images, tiles) {
     // Function repeats until all images have been assigned to the available tiles
   });
 }
-
-$('#start button').click(function () {
-  const cTiles = $('#c-tiles .tile'); // Targets the computer tiles
-  const pTiles = $('#p-tiles .tile'); // Targets the computer tiles
-
-  shuffle(images);
-  assignImagesToTiles(images, cTiles);
-  shuffle(images);
-  assignImagesToTiles(images, pTiles);
-
-});

@@ -13,6 +13,7 @@ let countdown;
 $('#start button').click(function () {
   const cTiles = $('#c-tiles .tile'); // Targets the computer tiles
   const pTiles = $('#p-tiles .tile'); // Targets the computer tiles
+  $('#start button').prop('disabled', true); // Disables Start button
 
   clearTimeout(countdown); // Clears countdown
   shuffle(images); // Shuffle a first time 
@@ -32,6 +33,7 @@ $('#reset button').click(function() {
   clearTimeout(countdown); // Clears countdown
   $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
   $('.t-front').empty(); // Remove all images from tiles
+  $('#start button').prop('disabled', false);
 });
 
 // Flip test button

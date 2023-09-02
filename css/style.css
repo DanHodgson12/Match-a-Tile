@@ -108,6 +108,21 @@ img {
   font-size: 1.5rem;
 }
 
+/* Timer-Countdown-Score */
+
+#countdown {
+  animation: countdown 5s steps(5, end) forwards;
+}
+
+@keyframes countdown {
+  from {
+    content: '5';
+  }
+  to {
+    content: 'GO';
+  }
+}
+
 /* Computer Area */
 
 #computer-area {

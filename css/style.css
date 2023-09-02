@@ -102,6 +102,12 @@ img {
 
 /* Media Queries */
 
+@media screen and (min-width: 1400px) {
+  #p-tiles {
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 992px) {
 
   #c-tiles .grid-item {

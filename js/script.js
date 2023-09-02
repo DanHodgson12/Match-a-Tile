@@ -36,11 +36,6 @@ $('#reset button').click(function() {
   $('#start button').prop('disabled', false);
 });
 
-// Flip test button
-$('#flip-button').click(function () {
-  $('.t-inner').toggleClass('flipped');
-});
-
 // Mode-selection
 $('.mode-item').click(function () {
   let modeSelection = $(this).data('value');

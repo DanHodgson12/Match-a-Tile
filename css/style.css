@@ -34,6 +34,21 @@
   background-color: #3d3d3d;
 }
 
+.tile {
+  background-color: #eac086;
+  border-radius: 10px;
+  box-shadow: 0 0px 2px 2px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 90%;
+}
+
 /* Controls */
 
 .dropdown-item {
@@ -72,21 +87,6 @@
   width: 120px;
 }
 
-.tile {
-  background-color: #eac086;
-  border-radius: 10px;
-  box-shadow: 0 0px 2px 2px rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-img {
-  width: 90%;
-}
-
 /* Player Area */
 
 #p-tiles {
@@ -109,33 +109,26 @@ img {
 }
 
 @media screen and (max-width: 992px) {
-
   #c-tiles .tile {
     height: 100px;
     width: 100px;
   }
-
 }
 
 @media screen and (max-width: 600px) {
-
   #p-tiles .tile {
     height: 80px;
     width: 80px;
   }
-
 }
 
 @media screen and (max-width: 360px) {
-
   #c-tiles .tile {
     height: 80px;
     width: 80px;
   }
-
   #p-tiles .tile {
     height: 70px;
     width: 70px;
   }
-
 }

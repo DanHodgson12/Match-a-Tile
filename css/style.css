@@ -7,8 +7,11 @@
 /*-- Header --*/
 
 #logo {
-    height: 60px;
-    width: 60px;
+  height: 60px;
+  width: 60px;
+  background-color: #eac086;
+  box-shadow: 0 0px 2px 2px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
 }
 
 #game-info button {

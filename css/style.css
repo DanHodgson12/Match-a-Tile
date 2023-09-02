@@ -110,6 +110,10 @@ img {
 
 /* Timer-Countdown-Score */
 
+#countdown-container p {
+  line-height: normal;
+}
+
 #countdown {
   color: red;
   animation: countdown 5s steps(5, end) forwards;

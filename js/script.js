@@ -16,6 +16,7 @@ const countdownStart = 5;
 let countdown = countdownStart;
 let pTilesSelection;
 let cTilesSelection;
+let oldSelection;
 
 // Start Game
 $('#start button').click(function () {
@@ -55,14 +56,33 @@ $('#start button').click(function () {
   }, 1000);
 
   pTiles.click(function() {
+    pTilesSelection = $(this);
     let pTilesOther = $(this).siblings();
+    disableTiles(pTilesOther);
+    pTilesSelection.removeClass('t-active').addClass('t-clicked');
+    disableTiles(pTilesSelection);
 
-    $(this).removeClass('t-active').addClass('t-clicked');
-    pTilesOther.prop('disabled', true).removeClass('t-active');
+    activateTiles(cTiles);
+  });
 
-  })
+  cTiles.click(function() {
+    cTilesSelection = $(this);
+    let cTilesOther = $(this).siblings();
+    disableTiles(cTilesOther);
+    checkTileMatch();
+  });
 
 });
+
+function checkTileMatch() {
+  let pContent = pTilesSelection.find('.t-front').text();
+  let cContent = cTilesSelection.find('.t-front').text();
+  if (pContent === cContent) {
+    pTilesSelection.addClass('t-correct').removeClass('t-clicked');
+    cTilesSelection.addClass('t-correct').removeClass('t-clicked t-active');
+    cTilesSelection.find('.t-inner').removeClass('flipped');
+  }
+}
 
 // Reset Game
 $('#reset button').click(function() {
@@ -70,6 +90,7 @@ $('#reset button').click(function() {
   disableTiles(cTiles);
   disableTiles(pTiles);
 
+  cTiles.removeClass('t-active t-correct t-incorrect t-clicked');
   $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
   $('.t-front').empty(); // Remove all images from tiles
   $('#start button').prop('disabled', false);

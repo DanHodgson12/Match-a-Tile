@@ -60,6 +60,22 @@ img {
   perspective: 1000px;
 }
 
+.t-active:hover {
+  box-shadow: 0px 0px 9px 4px rgba(0, 0, 0, 0.7);
+}
+
+.t-clicked {
+  box-shadow: 0px 0px 9px 4px blue;
+}
+
+.t-correct {
+  box-shadow: 0px 0px 9px 4px green;
+}
+
+.t-incorrect {
+  box-shadow: 0px 0px 9px 4px red;
+}
+
 /* Flip Functionality */
 
 .t-inner {

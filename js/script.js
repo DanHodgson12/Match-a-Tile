@@ -139,7 +139,7 @@ function assignImagesToTiles(images, tiles) {
  * Disables all tiles (buttons) so they cannot be clicked.
  */
 function disableTiles(tiles) {
-  tiles.prop('disable', true);
+  tiles.prop('disabled', true);
   tiles.find('.t-inner').removeClass('t-active');
 }
 
@@ -147,7 +147,7 @@ function disableTiles(tiles) {
  * Activates all tiles (buttons) so they can be clicked.
  */
 function activateTiles(tiles) {
-  tiles.prop('disable', false);
+  tiles.prop('disabled', false);
   tiles.find('.t-inner').addClass('t-active');
 }
 

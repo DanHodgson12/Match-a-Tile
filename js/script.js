@@ -69,17 +69,25 @@ $('#start button').click(function () {
     cTilesSelection = $(this);
     let cTilesOther = $(this).siblings();
     disableTiles(cTilesOther);
+    disableTiles(cTilesSelection);
+
     checkTileMatch();
+    activateTiles(pTiles);
+
   });
 
 });
 
 function checkTileMatch() {
-  let pContent = pTilesSelection.find('.t-front').text();
-  let cContent = cTilesSelection.find('.t-front').text();
+  let pContent = pTilesSelection.find('.t-front').html();
+  let cContent = cTilesSelection.find('.t-front').html();
   if (pContent === cContent) {
-    pTilesSelection.addClass('t-correct').removeClass('t-clicked');
-    cTilesSelection.addClass('t-correct').removeClass('t-clicked t-active');
+    pTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
+    cTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
+    cTilesSelection.find('.t-inner').removeClass('flipped');
+  } else if (pContent !== cContent) {
+    pTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
+    cTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
     cTilesSelection.find('.t-inner').removeClass('flipped');
   }
 }
@@ -91,6 +99,7 @@ $('#reset button').click(function() {
   disableTiles(pTiles);
 
   cTiles.removeClass('t-active t-correct t-incorrect t-clicked');
+  pTiles.removeClass('t-active t-correct t-incorrect t-clicked');
   $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
   $('.t-front').empty(); // Remove all images from tiles
   $('#start button').prop('disabled', false);

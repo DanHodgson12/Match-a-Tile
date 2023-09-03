@@ -14,6 +14,8 @@ let countdownTimer;
 let countdownDisplay = $('#countdown');;
 const countdownStart = 5;
 let countdown = countdownStart;
+let pTilesSelection;
+let cTilesSelection;
 
 // Start Game
 $('#start button').click(function () {
@@ -32,8 +34,7 @@ $('#start button').click(function () {
   countdownGame = setTimeout(function() {
     flipTiles(cTiles); // Hides computer tiles
     flipTiles(pTiles); // Shows player tiles
-    activateTiles(cTiles);
-    activateTiles(pTiles);
+    activateTiles(pTiles); // Activate player tiles
   }, 5000); // Delay of 5 seconds
 
   countdownTimer = setInterval(function() { // Sets countdown timer for 5 seconds
@@ -53,7 +54,14 @@ $('#start button').click(function () {
     }
   }, 1000);
 
-  
+  pTiles.click(function() {
+    let pTilesOther = $(this).siblings();
+
+    $(this).removeClass('t-active').addClass('t-clicked');
+    pTilesOther.prop('disabled', true).removeClass('t-active');
+
+  })
+
 });
 
 // Reset Game
@@ -140,7 +148,7 @@ function assignImagesToTiles(images, tiles) {
  */
 function disableTiles(tiles) {
   tiles.prop('disabled', true);
-  tiles.find('.t-inner').removeClass('t-active');
+  tiles.removeClass('t-active');
 }
 
 /** 
@@ -148,7 +156,7 @@ function disableTiles(tiles) {
  */
 function activateTiles(tiles) {
   tiles.prop('disabled', false);
-  tiles.find('.t-inner').addClass('t-active');
+  tiles.addClass('t-active');
 }
 
 // Images

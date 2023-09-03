@@ -7,6 +7,8 @@ $('#instructions-btn').click(function () {
   $('#instructions-text').slideToggle('slow');
 });
 
+const cTiles = $('#c-tiles .tile'); // Targets the computer tiles
+const pTiles = $('#p-tiles .tile'); // Targets the player tiles
 let countdownGame;
 let countdownTimer;
 let countdownDisplay = $('#countdown');;
@@ -15,11 +17,11 @@ let countdown = countdownStart;
 
 // Start Game
 $('#start button').click(function () {
-  const cTiles = $('#c-tiles .tile'); // Targets the computer tiles
-  const pTiles = $('#p-tiles .tile'); // Targets the computer tiles
   $('#start button').prop('disabled', true); // Disables Start button
+  disableTiles(cTiles);
+  disableTiles(pTiles);
 
-  resetCountdown();
+  resetCountdown(); // Resets countdown
   shuffle(images); // Shuffle a first time 
   assignImagesToTiles(images, cTiles); // Assign images to computer tiles
   shuffle(images); // Shuffle a second time
@@ -30,6 +32,8 @@ $('#start button').click(function () {
   countdownGame = setTimeout(function() {
     flipTiles(cTiles); // Hides computer tiles
     flipTiles(pTiles); // Shows player tiles
+    activateTiles(cTiles);
+    activateTiles(pTiles);
   }, 5000); // Delay of 5 seconds
 
   countdownTimer = setInterval(function() { // Sets countdown timer for 5 seconds
@@ -45,15 +49,18 @@ $('#start button').click(function () {
         countdownDisplay.fadeOut('slow', function() {
           countdownDisplay.text(countdownStart);
         });
-      }, 500);
-
+      }, 1500);
     }
   }, 1000);
+
+  
 });
 
 // Reset Game
 $('#reset button').click(function() {
   resetCountdown();
+  disableTiles(cTiles);
+  disableTiles(pTiles);
 
   $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
   $('.t-front').empty(); // Remove all images from tiles
@@ -126,6 +133,22 @@ function assignImagesToTiles(images, tiles) {
     frontTile.empty().append(image); // Appends the randomly selected image with the assigned src and alt to one of the tiles
     // Function repeats until all images have been assigned to the available tiles
   });
+}
+
+/** 
+ * Disables all tiles (buttons) so they cannot be clicked.
+ */
+function disableTiles(tiles) {
+  tiles.prop('disable', true);
+  tiles.find('.t-inner').removeClass('t-active');
+}
+
+/** 
+ * Activates all tiles (buttons) so they can be clicked.
+ */
+function activateTiles(tiles) {
+  tiles.prop('disable', false);
+  tiles.find('.t-inner').addClass('t-active');
 }
 
 // Images

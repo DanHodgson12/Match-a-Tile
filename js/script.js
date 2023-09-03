@@ -19,6 +19,7 @@ $('#start button').click(function () {
   const pTiles = $('#p-tiles .tile'); // Targets the computer tiles
   $('#start button').prop('disabled', true); // Disables Start button
 
+  resetCountdown();
   shuffle(images); // Shuffle a first time 
   assignImagesToTiles(images, cTiles); // Assign images to computer tiles
   shuffle(images); // Shuffle a second time
@@ -40,6 +41,12 @@ $('#start button').click(function () {
       clearInterval(countdownTimer);
       countdownDisplay.text('GO');
       countdownDisplay.css('color', 'green');
+      setTimeout(function() {
+        countdownDisplay.fadeOut('slow', function() {
+          countdownDisplay.text(countdownStart);
+        });
+      }, 500);
+
     }
   }, 1000);
 });
@@ -91,6 +98,7 @@ function resetCountdown() {
   countdown = countdownStart; // Resets countdownTimer
   countdownDisplay.empty(); // Sets value to 5
   countdownDisplay.css('color', 'red'); // Sets color to Red
+  countdownDisplay.show();
 }
 
 /** 

@@ -46,6 +46,8 @@ $(document).ready(function() {
     modeDisplay(modeSelection);
   });
 
+  resetGame();
+
   // Start Game
   $('#start button').click(function () {
     $('#start button').prop('disabled', true); // Disables Start button

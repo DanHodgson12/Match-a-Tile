@@ -139,7 +139,8 @@ img {
 
 /* Timer-Countdown-Score */
 
-#countdown-container p {
+#countdown-container p,
+#score-container p {
   line-height: normal;
 }
 

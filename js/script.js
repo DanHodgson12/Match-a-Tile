@@ -29,30 +29,8 @@ $('#start button').click(function () {
   shuffle(images); // Shuffle a second time
   assignImagesToTiles(images, pTiles); // Assign images to player tiles
   flipTiles(cTiles); // Shows computer tiles
-  countdownDisplay.text(countdownStart);
-
-  countdownGame = setTimeout(function() {
-    flipTiles(cTiles); // Hides computer tiles
-    flipTiles(pTiles); // Shows player tiles
-    activateTiles(pTiles); // Activate player tiles
-  }, 5000); // Delay of 5 seconds
-
-  countdownTimer = setInterval(function() { // Sets countdown timer for 5 seconds
-    countdown--;
-    if (countdown >= 1) {
-      countdownDisplay.text(countdown);
-      countdownDisplay.css('color', 'red');
-    } else {
-      clearInterval(countdownTimer);
-      countdownDisplay.text('GO');
-      countdownDisplay.css('color', 'green');
-      setTimeout(function() {
-        countdownDisplay.fadeOut('slow', function() {
-          countdownDisplay.text(countdownStart);
-        });
-      }, 1500);
-    }
-  }, 1000);
+  
+  setCountdown();
 
   pTiles.click(function() {
     pTilesSelection = $(this);
@@ -138,18 +116,6 @@ function flipTiles(tiles) {
 }
 
 /** 
- * Clears the countdownGame timeout and countdownTimer intervals, and sets the countdown value to 5.
- */
-function resetCountdown() {
-  clearTimeout(countdownGame); // Clears countdownGame
-  clearInterval(countdownTimer); // Stops countdownTimer
-  countdown = countdownStart; // Resets countdownTimer
-  countdownDisplay.empty(); // Sets value to 5
-  countdownDisplay.css('color', 'red'); // Sets color to Red
-  countdownDisplay.show();
-}
-
-/** 
  * Shuffles/reorganises the passed array - in this case: 'images'. Idea taken from The Fisher-Yates (Knuth) Shuffle Algorithm.
  */
 function shuffle(array) {
@@ -225,3 +191,45 @@ const images = [
   // { src: 'images/vr.svg', alt: 'An icon of a virtual-reality headset.' },
   // { src: 'images/dice.svg', alt: 'An icon of two dice.' }
 ];
+
+/** 
+ * Sets the countdown timer and the timer to flip the cTiles and pTiles to the relevant starting positions.
+ */
+function setCountdown() {
+  countdownDisplay.text(countdownStart);
+
+  countdownGame = setTimeout(function () {
+    flipTiles(cTiles); // Hides computer tiles
+    flipTiles(pTiles); // Shows player tiles
+    activateTiles(pTiles); // Activate player tiles
+  }, 5000); // Delay of 5 seconds
+
+  countdownTimer = setInterval(function () { // Sets countdown timer for 5 seconds
+    countdown--;
+    if (countdown >= 1) {
+      countdownDisplay.text(countdown);
+      countdownDisplay.css('color', 'red');
+    } else {
+      clearInterval(countdownTimer);
+      countdownDisplay.text('GO');
+      countdownDisplay.css('color', 'green');
+      setTimeout(function () {
+        countdownDisplay.fadeOut('slow', function () {
+          countdownDisplay.text(countdownStart);
+        });
+      }, 1500);
+    }
+  }, 1000);
+}
+
+/** 
+ * Clears the countdownGame timeout and countdownTimer intervals, and sets the countdown value to 5.
+ */
+function resetCountdown() {
+  clearTimeout(countdownGame); // Clears countdownGame
+  clearInterval(countdownTimer); // Stops countdownTimer
+  countdown = countdownStart; // Resets countdownTimer
+  countdownDisplay.empty(); // Sets value to 5
+  countdownDisplay.css('color', 'red'); // Sets color to Red
+  countdownDisplay.show();
+}

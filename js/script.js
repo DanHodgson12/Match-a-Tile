@@ -16,7 +16,6 @@ const countdownStart = 5;
 let countdown = countdownStart;
 let pTilesSelection;
 let cTilesSelection;
-let oldSelection;
 
 // Start Game
 $('#start button').click(function () {
@@ -78,6 +77,9 @@ $('#start button').click(function () {
 
 });
 
+/** 
+ * Checks if the player tiles matches the computer tile clicked on.
+ */
 function checkTileMatch() {
   let pContent = pTilesSelection.find('.t-front').html();
   let cContent = cTilesSelection.find('.t-front').html();
@@ -86,10 +88,11 @@ function checkTileMatch() {
     cTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
     cTilesSelection.find('.t-inner').removeClass('flipped');
   } else if (pContent !== cContent) {
-    pTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
+    pTilesSelection.removeClass('t-clicked t-active t-correct');
     cTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
     cTilesSelection.find('.t-inner').removeClass('flipped');
   }
+  
 }
 
 // Reset Game
@@ -185,7 +188,16 @@ function disableTiles(tiles) {
  * Activates all tiles (buttons) so they can be clicked.
  */
 function activateTiles(tiles) {
-  tiles.prop('disabled', false);
+  tiles.each(function () {
+    const tile = $(this);
+    if (tile.hasClass('t-correct')) {
+      tile.prop('disabled', true);
+    } else if (tile.hasClass('t-incorrect')) {
+      tile.prop('disabled', true);
+    } else {
+      tile.prop('disabled', false);
+    }
+  });
   tiles.addClass('t-active');
 }
 

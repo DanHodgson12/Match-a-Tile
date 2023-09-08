@@ -30,7 +30,7 @@ let countdown = countdownStart;
 let pTilesSelection;
 let cTilesSelection;
 
-$(documnent).ready(function() {
+$(document).ready(function() {
   // Side-bar info toggle divs
   $('#about-btn').click(function () {
     $('#about-text').slideToggle('slow');

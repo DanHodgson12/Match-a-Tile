@@ -192,13 +192,16 @@ function activateTiles(tiles) {
     const tile = $(this);
     if (tile.hasClass('t-correct')) {
       tile.prop('disabled', true);
+      tile.removeClass('t-active');
     } else if (tile.hasClass('t-incorrect')) {
       tile.prop('disabled', true);
+      tile.removeClass('t-active');
     } else {
       tile.prop('disabled', false);
+      tile.addClass('t-active');
     }
   });
-  tiles.addClass('t-active');
+  
 }
 
 // Images

@@ -84,16 +84,7 @@ $(documnent).ready(function() {
   });
 
   // Reset Game
-  $('#reset button').click(function () {
-    resetCountdown();
-    disableTiles(cTiles);
-    disableTiles(pTiles);
-    cTiles.removeClass('t-active t-correct t-incorrect t-clicked');
-    pTiles.removeClass('t-active t-correct t-incorrect t-clicked');
-    $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
-    $('.t-front').empty(); // Remove all images from tiles
-    $('#start button').prop('disabled', false);
-  });
+  $('#reset button').click(resetGame);
 });
 
 /** 
@@ -228,4 +219,18 @@ function modeDisplay(mode) {
     $('#mode-display').html('HARD').css('color', 'red');
     $('#timer').html('00:15');
   }
+}
+
+/** 
+ * Resets the game.
+ */
+function resetGame() {
+  resetCountdown();
+  disableTiles(cTiles);
+  disableTiles(pTiles);
+  cTiles.removeClass('t-active t-correct t-incorrect t-clicked');
+  pTiles.removeClass('t-active t-correct t-incorrect t-clicked');
+  $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
+  $('.t-front').empty(); // Remove all images from tiles
+  $('#start button').prop('disabled', false);
 }

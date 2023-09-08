@@ -53,6 +53,8 @@ img {
 .tile {
   background-color: transparent;
   border-radius: 10px;
+  height: 120px;
+  width: 120px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -161,7 +163,8 @@ img {
   background-color: darkgrey;
 }
 
-#c-tiles {
+#c-tiles,
+#p-tiles {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(3, auto);
@@ -170,14 +173,16 @@ img {
   justify-content: center;
 }
 
-#c-tiles .tile {
+/* #c-tiles .tile {
   height: 120px;
   width: 120px;
-}
+} */
 
 /* Player Area */
 
-#p-tiles {
+
+
+/* #p-tiles {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -186,11 +191,29 @@ img {
 #p-tiles .tile {
   height: 90px;
   width: 90px;
-}
+} */
 
 /* Media Queries */
 
-@media screen and (min-width: 1400px) {
+@media screen and (max-width: 992px) {
+  .tile {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .tile {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+
+
+
+
+/* @media screen and (min-width: 1400px) {
   #p-tiles {
     width: 80%;
   }
@@ -219,4 +242,4 @@ img {
     height: 70px;
     width: 70px;
   }
-}
+} */

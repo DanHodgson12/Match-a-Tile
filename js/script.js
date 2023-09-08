@@ -7,6 +7,28 @@ $('#instructions-btn').click(function () {
   $('#instructions-text').slideToggle('slow');
 });
 
+// Images
+let images = [
+  { src: 'images/book.svg', alt: 'An icon of a book with a skull and crossbones.' },
+  { src: 'images/chess-board.svg', alt: 'An icon of a chessboard.' },
+  { src: 'images/chess-queen.svg', alt: 'An icon of the Queen piece from a chess-set.' },
+  { src: 'images/chess-king-rook.svg', alt: 'An icon of the King and Rook pieces from a chess set.' },
+  { src: 'images/diamond.svg', alt: 'An icon of a diamond.' },
+  { src: 'images/dice-d20.svg', alt: 'An icon of a D-20 die/dice.' },
+  { src: 'images/dice-three.svg', alt: 'An icon of the "three" side of a die/dice.' },
+  { src: 'images/dragon.svg', alt: 'An icon of a dragon.' },
+  { src: 'images/dungeon.svg', alt: 'An icon of a dungeon door.' },
+  { src: 'images/fist.svg', alt: 'An icon of a fist.' },
+  { src: 'images/gamepad.svg', alt: 'An icon of a video-game controller.' },
+  { src: 'images/heart.svg', alt: 'An icon of a heart.' },
+  { src: 'images/puzzle.svg', alt: 'An icon of a puzzle piece.' },
+  { src: 'images/ring.svg', alt: 'An icon of a ring.' },
+  { src: 'images/scroll.svg', alt: 'An icon of a scroll.' },
+  { src: 'images/shield.svg', alt: 'An icon of a shield.' },
+  { src: 'images/vr.svg', alt: 'An icon of a virtual-reality headset.' },
+  { src: 'images/dice.svg', alt: 'An icon of two dice.' }
+];
+
 const cTiles = $('#c-tiles .tile'); // Targets the computer tiles
 const pTiles = $('#p-tiles .tile'); // Targets the player tiles
 let countdownGame;
@@ -24,10 +46,13 @@ $('#start button').click(function () {
   disableTiles(pTiles);
 
   resetCountdown(); // Resets countdown
-  shuffle(images); // Shuffle a first time 
-  assignImagesToTiles(images, cTiles); // Assign images to computer tiles
-  shuffle(images); // Shuffle a second time
-  assignImagesToTiles(images, pTiles); // Assign images to player tiles
+  shuffle(images); // Shuffle all images
+  let copiedImages = [...images]; // Copy of images array
+  copiedImages.splice(0, 9); // Take first 9 images from array
+
+  assignImagesToTiles(copiedImages, cTiles); // Assign images to computer tiles
+  shuffle(copiedImages); // Shuffle a second time
+  assignImagesToTiles(copiedImages, pTiles); // Assign images to player tiles
   flipTiles(cTiles); // Shows computer tiles
   
   setCountdown();
@@ -169,28 +194,6 @@ function activateTiles(tiles) {
   });
   
 }
-
-// Images
-const images = [
-  { src: 'images/book.svg', alt: 'An icon of a book with a skull and crossbones.' },
-  { src: 'images/chess-board.svg', alt: 'An icon of a chessboard.' },
-  { src: 'images/chess-queen.svg', alt: 'An icon of the Queen piece from a chess-set.' },
-  { src: 'images/chess-king-rook.svg', alt: 'An icon of the King and Rook pieces from a chess set.' },
-  { src: 'images/diamond.svg', alt: 'An icon of a diamond.' },
-  { src: 'images/dice-d20.svg', alt: 'An icon of a D-20 die/dice.' },
-  { src: 'images/dice-three.svg', alt: 'An icon of the "three" side of a die/dice.' },
-  { src: 'images/dragon.svg', alt: 'An icon of a dragon.' },
-  { src: 'images/dungeon.svg', alt: 'An icon of a dungeon door.' },
-  { src: 'images/fist.svg', alt: 'An icon of a fist.' },
-  { src: 'images/gamepad.svg', alt: 'An icon of a video-game controller.' },
-  { src: 'images/heart.svg', alt: 'An icon of a heart.' },
-  { src: 'images/puzzle.svg', alt: 'An icon of a puzzle piece.' },
-  { src: 'images/ring.svg', alt: 'An icon of a ring.' },
-  { src: 'images/scroll.svg', alt: 'An icon of a scroll.' },
-  { src: 'images/shield.svg', alt: 'An icon of a shield.' }
-  // { src: 'images/vr.svg', alt: 'An icon of a virtual-reality headset.' },
-  // { src: 'images/dice.svg', alt: 'An icon of two dice.' }
-];
 
 /** 
  * Sets the countdown timer and the timer to flip the cTiles and pTiles to the relevant starting positions.

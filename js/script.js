@@ -51,6 +51,7 @@ $(document).ready(function() {
   // Start Game
   $('#start button').click(function () {
     $('#start button').prop('disabled', true); // Disables Start button
+    $('#mode button').prop('disabled', true); // Disables Mode button
     disableTiles(cTiles);
     disableTiles(pTiles);
 
@@ -235,4 +236,5 @@ function resetGame() {
   $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
   $('.t-front').empty(); // Remove all images from tiles
   $('#start button').prop('disabled', false);
+  $('#mode button').prop('disabled', false);
 }

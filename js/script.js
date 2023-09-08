@@ -1,12 +1,3 @@
-// Side-bar info toggle divs
-$('#about-btn').click(function() {
-  $('#about-text').slideToggle('slow');
-});
-
-$('#instructions-btn').click(function () {
-  $('#instructions-text').slideToggle('slow');
-});
-
 // Images
 let images = [
   { src: 'images/book.svg', alt: 'An icon of a book with a skull and crossbones.' },
@@ -39,45 +30,70 @@ let countdown = countdownStart;
 let pTilesSelection;
 let cTilesSelection;
 
-// Start Game
-$('#start button').click(function () {
-  $('#start button').prop('disabled', true); // Disables Start button
-  disableTiles(cTiles);
-  disableTiles(pTiles);
-
-  resetCountdown(); // Resets countdown
-  shuffle(images); // Shuffle all images
-  let copiedImages = [...images]; // Copy of images array
-  copiedImages.splice(0, 9); // Take first 9 images from array
-
-  assignImagesToTiles(copiedImages, cTiles); // Assign images to computer tiles
-  shuffle(copiedImages); // Shuffle a second time
-  assignImagesToTiles(copiedImages, pTiles); // Assign images to player tiles
-  flipTiles(cTiles); // Shows computer tiles
-  
-  setCountdown();
-
-  pTiles.click(function() {
-    pTilesSelection = $(this);
-    let pTilesOther = $(this).siblings();
-    disableTiles(pTilesOther);
-    pTilesSelection.removeClass('t-active').addClass('t-clicked');
-    disableTiles(pTilesSelection);
-
-    activateTiles(cTiles);
+$(documnent).ready(function() {
+  // Side-bar info toggle divs
+  $('#about-btn').click(function () {
+    $('#about-text').slideToggle('slow');
   });
 
-  cTiles.click(function() {
-    cTilesSelection = $(this);
-    let cTilesOther = $(this).siblings();
-    disableTiles(cTilesOther);
-    disableTiles(cTilesSelection);
-
-    checkTileMatch();
-    activateTiles(pTiles);
-
+  $('#instructions-btn').click(function () {
+    $('#instructions-text').slideToggle('slow');
   });
 
+  // Mode-selection
+  $('.mode-item').click(function () {
+    let modeSelection = $(this).data('value');
+    modeDisplay(modeSelection);
+  });
+
+  // Start Game
+  $('#start button').click(function () {
+    $('#start button').prop('disabled', true); // Disables Start button
+    disableTiles(cTiles);
+    disableTiles(pTiles);
+
+    resetCountdown(); // Resets countdown
+    shuffle(images); // Shuffle all images
+    let copiedImages = [...images]; // Copy of images array
+    copiedImages.splice(0, 9); // Take first 9 images from array
+
+    assignImagesToTiles(copiedImages, cTiles); // Assign images to computer tiles
+    shuffle(copiedImages); // Shuffle a second time
+    assignImagesToTiles(copiedImages, pTiles); // Assign images to player tiles
+    flipTiles(cTiles); // Shows computer tiles
+
+    setCountdown();
+
+    pTiles.click(function () {
+      pTilesSelection = $(this);
+      let pTilesOther = $(this).siblings();
+      disableTiles(pTilesOther);
+      pTilesSelection.removeClass('t-active').addClass('t-clicked');
+      disableTiles(pTilesSelection);
+      activateTiles(cTiles);
+    });
+
+    cTiles.click(function () {
+      cTilesSelection = $(this);
+      let cTilesOther = $(this).siblings();
+      disableTiles(cTilesOther);
+      disableTiles(cTilesSelection);
+      checkTileMatch();
+      activateTiles(pTiles);
+    });
+  });
+
+  // Reset Game
+  $('#reset button').click(function () {
+    resetCountdown();
+    disableTiles(cTiles);
+    disableTiles(pTiles);
+    cTiles.removeClass('t-active t-correct t-incorrect t-clicked');
+    pTiles.removeClass('t-active t-correct t-incorrect t-clicked');
+    $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
+    $('.t-front').empty(); // Remove all images from tiles
+    $('#start button').prop('disabled', false);
+  });
 });
 
 /** 
@@ -95,27 +111,7 @@ function checkTileMatch() {
     cTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
     cTilesSelection.find('.t-inner').removeClass('flipped');
   }
-  
 }
-
-// Reset Game
-$('#reset button').click(function() {
-  resetCountdown();
-  disableTiles(cTiles);
-  disableTiles(pTiles);
-
-  cTiles.removeClass('t-active t-correct t-incorrect t-clicked');
-  pTiles.removeClass('t-active t-correct t-incorrect t-clicked');
-  $('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
-  $('.t-front').empty(); // Remove all images from tiles
-  $('#start button').prop('disabled', false);
-});
-
-// Mode-selection
-$('.mode-item').click(function () {
-  let modeSelection = $(this).data('value');
-  modeDisplay(modeSelection);
-});
 
 /** 
  * Displays the mode selected from the 'Mode' dropdown menu.
@@ -158,10 +154,8 @@ function assignImagesToTiles(images, tiles) {
   tiles.each(function (index) { // Itterates over the computer tiles and does the following...
     const frontTile = $(this).find('.t-front'); // Targets the 't-front' div, i.e. the front of the tile
     const image = document.createElement('img'); // Creates a new <img> element and assigns it to the 'image' variable
-
     image.src = images[index].src; // Sets the src of the image to that of the src of the current image in the shuffled array
     image.alt = images[index].alt; // Sets the alt of the image to that of the alt of the current image in the shuffled array
-
     frontTile.empty().append(image); // Appends the randomly selected image with the assigned src and alt to one of the tiles
     // Function repeats until all images have been assigned to the available tiles
   });
@@ -192,7 +186,6 @@ function activateTiles(tiles) {
       tile.addClass('t-active');
     }
   });
-  
 }
 
 /** 

@@ -97,95 +97,10 @@ $(documnent).ready(function() {
 });
 
 /** 
- * Checks if the player tiles matches the computer tile clicked on.
- */
-function checkTileMatch() {
-  let pContent = pTilesSelection.find('.t-front').html();
-  let cContent = cTilesSelection.find('.t-front').html();
-  if (pContent === cContent) {
-    pTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
-    cTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
-    cTilesSelection.find('.t-inner').removeClass('flipped');
-  } else if (pContent !== cContent) {
-    pTilesSelection.removeClass('t-clicked t-active t-correct');
-    cTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
-    cTilesSelection.find('.t-inner').removeClass('flipped');
-  }
-}
-
-/** 
- * Displays the mode selected from the 'Mode' dropdown menu.
- */
-function modeDisplay(mode) {
-  if (mode === 'Easy') {
-    $('#mode-display').html('EASY').css('color', 'green');
-    $('#timer').html('01:00');
-  } else if (mode === 'Normal') {
-    $('#mode-display').html('NORMAL').css('color', 'black');
-    $('#timer').html('00:30');
-  } else if (mode === 'Hard') {
-    $('#mode-display').html('HARD').css('color', 'red');
-    $('#timer').html('00:15');
-  }
-}
-
-/** 
  * Flips the tiles 180 degrees on the Y axis.
  */
 function flipTiles(tiles) {
   tiles.find('.t-inner').toggleClass('flipped');
-}
-
-/** 
- * Shuffles/reorganises the passed array - in this case: 'images'. Idea taken from The Fisher-Yates (Knuth) Shuffle Algorithm.
- */
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
-/** 
- * Assigns images from the images array to either the computer or player tiles, depending on the argument passed in.
- */
-function assignImagesToTiles(images, tiles) {
-  tiles.each(function (index) { // Itterates over the computer tiles and does the following...
-    const frontTile = $(this).find('.t-front'); // Targets the 't-front' div, i.e. the front of the tile
-    const image = document.createElement('img'); // Creates a new <img> element and assigns it to the 'image' variable
-    image.src = images[index].src; // Sets the src of the image to that of the src of the current image in the shuffled array
-    image.alt = images[index].alt; // Sets the alt of the image to that of the alt of the current image in the shuffled array
-    frontTile.empty().append(image); // Appends the randomly selected image with the assigned src and alt to one of the tiles
-    // Function repeats until all images have been assigned to the available tiles
-  });
-}
-
-/** 
- * Disables all tiles (buttons) so they cannot be clicked.
- */
-function disableTiles(tiles) {
-  tiles.prop('disabled', true);
-  tiles.removeClass('t-active');
-}
-
-/** 
- * Activates all tiles (buttons) so they can be clicked.
- */
-function activateTiles(tiles) {
-  tiles.each(function () {
-    const tile = $(this);
-    if (tile.hasClass('t-correct')) {
-      tile.prop('disabled', true);
-      tile.removeClass('t-active');
-    } else if (tile.hasClass('t-incorrect')) {
-      tile.prop('disabled', true);
-      tile.removeClass('t-active');
-    } else {
-      tile.prop('disabled', false);
-      tile.addClass('t-active');
-    }
-  });
 }
 
 /** 
@@ -228,4 +143,89 @@ function resetCountdown() {
   countdownDisplay.empty(); // Sets value to 5
   countdownDisplay.css('color', 'red'); // Sets color to Red
   countdownDisplay.show();
+}
+
+/** 
+ * Disables all tiles (buttons) so they cannot be clicked.
+ */
+function disableTiles(tiles) {
+  tiles.prop('disabled', true);
+  tiles.removeClass('t-active');
+}
+
+/** 
+ * Activates all tiles (buttons) so they can be clicked.
+ */
+function activateTiles(tiles) {
+  tiles.each(function () {
+    const tile = $(this);
+    if (tile.hasClass('t-correct')) {
+      tile.prop('disabled', true);
+      tile.removeClass('t-active');
+    } else if (tile.hasClass('t-incorrect')) {
+      tile.prop('disabled', true);
+      tile.removeClass('t-active');
+    } else {
+      tile.prop('disabled', false);
+      tile.addClass('t-active');
+    }
+  });
+}
+
+/** 
+ * Shuffles/reorganises the passed array - in this case: 'images'. Idea taken from The Fisher-Yates (Knuth) Shuffle Algorithm.
+ */
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+/** 
+ * Assigns images from the images array to either the computer or player tiles, depending on the argument passed in.
+ */
+function assignImagesToTiles(images, tiles) {
+  tiles.each(function (index) { // Itterates over the computer tiles and does the following...
+    const frontTile = $(this).find('.t-front'); // Targets the 't-front' div, i.e. the front of the tile
+    const image = document.createElement('img'); // Creates a new <img> element and assigns it to the 'image' variable
+    image.src = images[index].src; // Sets the src of the image to that of the src of the current image in the shuffled array
+    image.alt = images[index].alt; // Sets the alt of the image to that of the alt of the current image in the shuffled array
+    frontTile.empty().append(image); // Appends the randomly selected image with the assigned src and alt to one of the tiles
+    // Function repeats until all images have been assigned to the available tiles
+  });
+}
+
+/** 
+ * Checks if the player tiles matches the computer tile clicked on.
+ */
+function checkTileMatch() {
+  let pContent = pTilesSelection.find('.t-front').html();
+  let cContent = cTilesSelection.find('.t-front').html();
+  if (pContent === cContent) {
+    pTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
+    cTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
+    cTilesSelection.find('.t-inner').removeClass('flipped');
+  } else if (pContent !== cContent) {
+    pTilesSelection.removeClass('t-clicked t-active t-correct');
+    cTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
+    cTilesSelection.find('.t-inner').removeClass('flipped');
+  }
+}
+
+/** 
+ * Displays the mode selected from the 'Mode' dropdown menu.
+ */
+function modeDisplay(mode) {
+  if (mode === 'Easy') {
+    $('#mode-display').html('EASY').css('color', 'green');
+    $('#timer').html('01:00');
+  } else if (mode === 'Normal') {
+    $('#mode-display').html('NORMAL').css('color', 'black');
+    $('#timer').html('00:30');
+  } else if (mode === 'Hard') {
+    $('#mode-display').html('HARD').css('color', 'red');
+    $('#timer').html('00:15');
+  }
 }

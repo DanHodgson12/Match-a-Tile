@@ -156,9 +156,6 @@ function activateTiles(tiles) {
     if (tile.hasClass('t-correct')) {
       tile.prop('disabled', true);
       tile.removeClass('t-active');
-    } else if (tile.hasClass('t-incorrect')) {
-      tile.prop('disabled', true);
-      tile.removeClass('t-active');
     } else {
       tile.prop('disabled', false);
       tile.addClass('t-active');
@@ -202,9 +199,12 @@ function checkTileMatch() {
     cTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
     cTilesSelection.find('.t-inner').removeClass('flipped');
   } else if (pContent !== cContent) {
-    pTilesSelection.removeClass('t-clicked t-active t-correct');
+    pTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
     cTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
-    cTilesSelection.find('.t-inner').removeClass('flipped');
+    setTimeout(function() {
+      pTilesSelection.removeClass('t-incorrect');
+      cTilesSelection.removeClass('t-incorrect');
+    }, 500);
   }
 }
 

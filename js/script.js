@@ -29,8 +29,9 @@ const countdownStart = 5;
 let countdown = countdownStart;
 let pTilesSelection;
 let cTilesSelection;
+let loadListeners = true;
 
-$(document).ready(function() {
+$(document).ready(function () {
   // Side-bar info toggle divs
   $('#about-btn').click(function () {
     $('#about-text').slideToggle('slow');
@@ -50,6 +51,7 @@ $(document).ready(function() {
 
   // Start Game
   $('#start button').click(function () {
+    $('#score').text('0');
     $('#start button').prop('disabled', true); // Disables Start button
     $('#mode button').prop('disabled', true); // Disables Mode button
     disableTiles(cTiles);
@@ -66,29 +68,69 @@ $(document).ready(function() {
     flipTiles(cTiles); // Shows computer tiles
 
     setCountdown();
+    if (loadListeners) {
+      pTiles.click(function () {
+        pTilesSelection = $(this);
+        let pTilesOther = $(this).siblings();
+        disableTiles(pTilesOther);
+        pTilesSelection.removeClass('t-active').addClass('t-clicked');
+        disableTiles(pTilesSelection);
+        activateTiles(cTiles);
+      });
 
-    pTiles.click(function () {
-      pTilesSelection = $(this);
-      let pTilesOther = $(this).siblings();
-      disableTiles(pTilesOther);
-      pTilesSelection.removeClass('t-active').addClass('t-clicked');
-      disableTiles(pTilesSelection);
-      activateTiles(cTiles);
-    });
+      cTiles.click(function () {
+        cTilesSelection = $(this);
+        let cTilesOther = $(this).siblings();
+        disableTiles(cTilesOther);
+        disableTiles(cTilesSelection);
+        checkTileMatch();
+        activateTiles(pTiles);
+      });
 
-    cTiles.click(function () {
-      cTilesSelection = $(this);
-      let cTilesOther = $(this).siblings();
-      disableTiles(cTilesOther);
-      disableTiles(cTilesSelection);
-      checkTileMatch();
-      activateTiles(pTiles);
-    });
+      loadListeners = false;
+    }
+
+    console.log('Game STARTED');
   });
 
   // Reset Game
   $('#reset button').click(resetGame);
 });
+
+/** 
+ * Checks if the player tiles matches the computer tile clicked on.
+ */
+function checkTileMatch() {
+  let pContent = pTilesSelection.find('.t-front').html();
+  let cContent = cTilesSelection.find('.t-front').html();
+  if (pContent === cContent) {
+    pTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
+    cTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
+    cTilesSelection.find('.t-inner').removeClass('flipped');
+    incrementScore();
+  } else if (pContent !== cContent) {
+    pTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
+    cTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
+    setTimeout(function () {
+      pTilesSelection.removeClass('t-incorrect');
+      cTilesSelection.removeClass('t-incorrect');
+    }, 500);
+  }
+}
+
+function incrementScore() {
+  let score = parseInt($('#score').text());
+  let newScore = score + 1;
+  $('#score').text(newScore);
+  console.log('Score Incremented');
+  console.log(score);
+  console.log(newScore);
+}
+
+function resetScore() {
+  $('#score').text('0');
+  console.log('Score Reset');
+}
 
 /** 
  * Flips the tiles 180 degrees on the Y axis.
@@ -125,6 +167,7 @@ function setCountdown() {
       }, 1500);
     }
   }, 1000);
+
 }
 
 /** 
@@ -188,25 +231,7 @@ function assignImagesToTiles(images, tiles) {
   });
 }
 
-/** 
- * Checks if the player tiles matches the computer tile clicked on.
- */
-function checkTileMatch() {
-  let pContent = pTilesSelection.find('.t-front').html();
-  let cContent = cTilesSelection.find('.t-front').html();
-  if (pContent === cContent) {
-    pTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
-    cTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
-    cTilesSelection.find('.t-inner').removeClass('flipped');
-  } else if (pContent !== cContent) {
-    pTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
-    cTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
-    setTimeout(function() {
-      pTilesSelection.removeClass('t-incorrect');
-      cTilesSelection.removeClass('t-incorrect');
-    }, 500);
-  }
-}
+
 
 /** 
  * Displays the mode selected from the 'Mode' dropdown menu.
@@ -237,4 +262,6 @@ function resetGame() {
   $('.t-front').empty(); // Remove all images from tiles
   $('#start button').prop('disabled', false);
   $('#mode button').prop('disabled', false);
+  resetScore();
+  console.log('Game RESET');
 }

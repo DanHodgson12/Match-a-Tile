@@ -113,6 +113,9 @@ function checkGameOver() {
 	}
 }
 
+/** 
+ * Disables and unflips all tiles, then displays an end-game message (defined externally).
+ */
 function endGame() {
 	disableTiles(cTiles);
 	disableTiles(pTiles);
@@ -121,14 +124,22 @@ function endGame() {
 	
 	setTimeout(function() {
 		cTiles.find('.t-inner').removeClass('flipped');
-		setTimeout(function() {
-			alert('Game Over! You scored ' + currentScore + ' out of 9!');
-		}, 1000);
+		endGameDisplayMsg();
 	}, 100);
 }
 
 /** 
- * Checks if the player tiles matches the computer tile clicked on.
+ * Displays GAME OVER and an alert to let the player know their score.
+ */
+function endGameDisplayMsg() {
+	$('#end-game-msg').show().text('GAME OVER');
+	setTimeout(function() {
+		alert('Well done! You scored ' + currentScore + ' out of 9!');
+	}, 500);
+}
+
+/** 
+ * Checks if the player tile matches the computer tile clicked on.
  */
 function checkTileMatch() {
 	let pContent = pTilesSelection.find('.t-front').html();
@@ -309,10 +320,13 @@ function resetGame() {
 	pTiles.removeClass('t-active t-correct t-incorrect t-clicked');
 	$('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
 	$('.t-front').empty(); // Remove all images from tiles
+
 	$('#start button').prop('disabled', false);
 	$('#mode button').prop('disabled', false);
 	$('#score').text('0');
 	modeDisplay(currentMode);
+
+	$('#end-game-msg').hide();
 
 	console.log('Score Reset');
 	console.log(currentMode);

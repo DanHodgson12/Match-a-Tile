@@ -116,6 +116,19 @@ function checkTileMatch() {
       cTilesSelection.removeClass('t-incorrect');
     }, 500);
   }
+	reduceTurns();
+}
+
+/** 
+ * Removes one turn if an attempt is made to match tiles.
+ */
+function reduceTurns() {
+	let turns = parseInt($('#turns').text());
+	let newTurns = turns - 1;
+	$('#turns').text(newTurns);
+	console.log('Turns Reduced');
+	console.log(turns);
+	console.log(newTurns);
 }
 
 /** 

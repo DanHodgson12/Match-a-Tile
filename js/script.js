@@ -22,6 +22,7 @@ let images = [
 
 const cTiles = $('#c-tiles .tile'); // Targets the computer tiles
 const pTiles = $('#p-tiles .tile'); // Targets the player tiles
+let currentMode = 'Easy';
 let countdownGame;
 let countdownTimer;
 let countdownDisplay = $('#countdown');;
@@ -43,7 +44,7 @@ $(document).ready(function () {
 
   // Mode-selection
   $('.mode-item').click(function () {
-    let modeSelection = $(this).data('value');
+		let modeSelection = $(this).data('value');
     modeDisplay(modeSelection);
   });
 
@@ -249,12 +250,15 @@ function assignImagesToTiles(images, tiles) {
  */
 function modeDisplay(mode) {
   if (mode === 'Easy') {
+		currentMode = 'Easy';
     $('#mode-display').html('EASY').css('color', 'green');
     $('#turns').html('18');
   } else if (mode === 'Normal') {
+		currentMode = 'Normal';
     $('#mode-display').html('NORMAL').css('color', 'black');
     $('#turns').html('14');
   } else if (mode === 'Hard') {
+		currentMode = 'Hard';
     $('#mode-display').html('HARD').css('color', 'red');
     $('#turns').html('9');
   }
@@ -275,5 +279,7 @@ function resetGame() {
   $('#mode button').prop('disabled', false);
   $('#score').text('0');
   console.log('Score Reset');
+	modeDisplay(currentMode);
+	console.log(currentMode);
   console.log('Game RESET');
 }

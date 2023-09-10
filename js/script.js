@@ -91,14 +91,11 @@ $(document).ready(function () {
 				disableTiles(cTilesSelection);
 				checkTileMatch();
 				activateTiles(pTiles);
+
+				checkGameOver();
 			});
 
 			loadListeners = false;
-		}
-
-		if (checkGameOver) {
-			console.log('GAME OVER!');
-			console.log('You scored ' + currentScore + ' out of 9!');
 		}
 
 	});
@@ -111,7 +108,23 @@ $(document).ready(function () {
  * Checks if the player has run out of turns or scored 9/9.
  */
 function checkGameOver() {
-	return currentTurns === 0 || currentScore === 9;
+  if (currentTurns === 0 || currentScore === 9) {
+		endGame();
+	}
+}
+
+function endGame() {
+	disableTiles(cTiles);
+	disableTiles(pTiles);
+	cTiles.removeClass('t-active t-clicked');
+	pTiles.removeClass('t-active t-clicked');
+	
+	setTimeout(function() {
+		cTiles.find('.t-inner').removeClass('flipped');
+		setTimeout(function() {
+			alert('Game Over! You scored ' + currentScore + ' out of 9!');
+		}, 1000);
+	}, 100);
 }
 
 /** 

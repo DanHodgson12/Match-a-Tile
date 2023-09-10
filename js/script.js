@@ -23,6 +23,8 @@ let images = [
 const cTiles = $('#c-tiles .tile'); // Targets the computer tiles
 const pTiles = $('#p-tiles .tile'); // Targets the player tiles
 let currentMode = 'Easy';
+let currentTurns = 18;
+let currentScore = 0;
 let countdownGame;
 let countdownTimer;
 let countdownDisplay = $('#countdown');;
@@ -52,6 +54,7 @@ $(document).ready(function () {
 
   // Start Game
   $('#start button').click(function () {
+		console.log('Game STARTED');
     $('#score').text('0');
     $('#start button').prop('disabled', true); // Disables Start button
     $('#mode button').prop('disabled', true); // Disables Mode button
@@ -62,13 +65,12 @@ $(document).ready(function () {
     shuffle(images); // Shuffle all images
     let copiedImages = [...images]; // Copy of images array
     copiedImages.splice(0, 9); // Take first 9 images from array
-
     assignImagesToTiles(copiedImages, cTiles); // Assign images to computer tiles
     shuffle(copiedImages); // Shuffle a second time
     assignImagesToTiles(copiedImages, pTiles); // Assign images to player tiles
     flipTiles(cTiles); // Shows computer tiles
-
     setCountdown();
+
     if (loadListeners) {
       pTiles.click(function () {
         pTilesSelection = $(this);
@@ -91,7 +93,8 @@ $(document).ready(function () {
       loadListeners = false;
     }
 
-    console.log('Game STARTED');
+		
+    
   });
 
   // Reset Game
@@ -127,9 +130,11 @@ function reduceTurns() {
 	let turns = parseInt($('#turns').text());
 	let newTurns = turns - 1;
 	$('#turns').text(newTurns);
+	currentTurns = newTurns;
+
 	console.log('Turns Reduced');
-	console.log(turns);
-	console.log(newTurns);
+	console.log('Previous Turns Left = ' + turns);
+	console.log('New Turns Left = ' + currentTurns);
 }
 
 /** 
@@ -139,9 +144,11 @@ function incrementScore() {
   let score = parseInt($('#score').text());
   let newScore = score + 1;
   $('#score').text(newScore);
+	currentScore = newScore;
+
   console.log('Score Incremented');
-  console.log(score);
-  console.log(newScore);
+  console.log('Old Score = ' + score);
+	console.log('Current Score = ' + currentScore);
 }
 
 /** 
@@ -243,22 +250,23 @@ function assignImagesToTiles(images, tiles) {
   });
 }
 
-
-
 /** 
  * Displays the mode selected from the 'Mode' dropdown menu.
  */
 function modeDisplay(mode) {
   if (mode === 'Easy') {
 		currentMode = 'Easy';
+		currentTurns = 18;
     $('#mode-display').html('EASY').css('color', 'green');
     $('#turns').html('18');
   } else if (mode === 'Normal') {
 		currentMode = 'Normal';
+		currentTurns = 14;
     $('#mode-display').html('NORMAL').css('color', 'black');
     $('#turns').html('14');
   } else if (mode === 'Hard') {
 		currentMode = 'Hard';
+		currentTurns = 9;
     $('#mode-display').html('HARD').css('color', 'red');
     $('#turns').html('9');
   }
@@ -278,8 +286,11 @@ function resetGame() {
   $('#start button').prop('disabled', false);
   $('#mode button').prop('disabled', false);
   $('#score').text('0');
-  console.log('Score Reset');
 	modeDisplay(currentMode);
+
+	console.log('Score Reset');
 	console.log(currentMode);
   console.log('Game RESET');
+	console.log('New Turns Left = ' + currentTurns);
+	console.log('Current Score = ' + currentScore);
 }

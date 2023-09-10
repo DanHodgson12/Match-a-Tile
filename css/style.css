@@ -159,6 +159,12 @@ img {
   }
 }
 
+#end-game p {
+	color: red;
+	line-height: normal;
+	font-size: 20px;
+}
+
 /* Computer Area */
 
 #computer-area {

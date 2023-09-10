@@ -118,6 +118,9 @@ function checkTileMatch() {
   }
 }
 
+/** 
+ * Adds one to the current score if tiles are matched.
+ */
 function incrementScore() {
   let score = parseInt($('#score').text());
   let newScore = score + 1;
@@ -125,11 +128,6 @@ function incrementScore() {
   console.log('Score Incremented');
   console.log(score);
   console.log(newScore);
-}
-
-function resetScore() {
-  $('#score').text('0');
-  console.log('Score Reset');
 }
 
 /** 
@@ -262,6 +260,7 @@ function resetGame() {
   $('.t-front').empty(); // Remove all images from tiles
   $('#start button').prop('disabled', false);
   $('#mode button').prop('disabled', false);
-  resetScore();
+  $('#score').text('0');
+  console.log('Score Reset');
   console.log('Game RESET');
 }

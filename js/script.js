@@ -57,6 +57,8 @@ $(document).ready(function () {
 
 	// Start Game
 	$('#start button').click(function () {
+		$('#game-view').get(0).scrollIntoView({ behavior: 'smooth' });
+
 		console.log('Game STARTED');
 		$('#score').text('0');
 		$('#start button').prop('disabled', true); // Disables Start button

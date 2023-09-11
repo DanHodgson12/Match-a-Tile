@@ -210,11 +210,21 @@ img {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 425px) {
   .tile {
-    height: 80px;
-    width: 80px;
+    height: 90px;
+    width: 90px;
   }
+
+	#c-tiles,
+	#p-tiles {
+		display: grid;
+		width: 100%;
+		grid-template-columns: repeat(3, auto);
+		grid-template-rows: repeat(3, auto);
+		gap: 8px;
+		justify-content: center;
+	}
 }
 
 

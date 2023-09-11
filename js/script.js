@@ -79,7 +79,8 @@ $(document).ready(function () {
 				pTilesSelection = $(this);
 				let pTilesOther = $(this).siblings();
 				disableTiles(pTilesOther);
-				pTilesSelection.removeClass('t-active').addClass('t-clicked');
+				pTilesSelection.removeClass('t-active');
+				pTilesSelection.find('.t-front').addClass('t-clicked');
 				disableTiles(pTilesSelection);
 				activateTiles(cTiles);
 			});
@@ -145,13 +146,17 @@ function checkTileMatch() {
 	let pContent = pTilesSelection.find('.t-front').html();
 	let cContent = cTilesSelection.find('.t-front').html();
 	if (pContent === cContent) {
-		pTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
-		cTilesSelection.removeClass('t-clicked t-active t-incorrect').addClass('t-correct');
+		pTilesSelection.removeClass('t-active');
+		pTilesSelection.find('.t-front').removeClass('t-clicked').addClass('t-correct');
+		cTilesSelection.removeClass('t-active');
+		cTilesSelection.find('.t-front').removeClass('t-clicked').addClass('t-correct');
 		cTilesSelection.find('.t-inner').removeClass('flipped');
 		incrementScore();
 	} else if (pContent !== cContent) {
-		pTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
-		cTilesSelection.removeClass('t-clicked t-active t-correct').addClass('t-incorrect');
+		pTilesSelection.removeClass('t-active').addClass('t-incorrect');
+		pTilesSelection.find('.t-front').removeClass('t-clicked')
+		cTilesSelection.removeClass('t-active').addClass('t-incorrect');
+		cTilesSelection.find('.t-front').removeClass('t-clicked')
 		setTimeout(function () {
 			pTilesSelection.removeClass('t-incorrect');
 			cTilesSelection.removeClass('t-incorrect');
@@ -316,8 +321,10 @@ function resetGame() {
 	resetCountdown();
 	disableTiles(cTiles);
 	disableTiles(pTiles);
-	cTiles.removeClass('t-active t-correct t-incorrect t-clicked');
-	pTiles.removeClass('t-active t-correct t-incorrect t-clicked');
+	cTiles.removeClass('t-active t-incorrect');
+	cTiles.find('.t-front').removeClass('t-correct t-clicked');
+	pTiles.removeClass('t-active t-incorrect');
+	pTiles.find('.t-front').removeClass('t-correct t-clicked');
 	$('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
 	$('.t-front').empty(); // Remove all images from tiles
 
@@ -327,7 +334,7 @@ function resetGame() {
 	modeDisplay(currentMode);
 
 	$('#end-game-msg').hide();
-	
+
   currentScore = 0;
 
 	console.log('Score Reset');

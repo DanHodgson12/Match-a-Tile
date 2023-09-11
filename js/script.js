@@ -153,13 +153,14 @@ function checkTileMatch() {
 		cTilesSelection.find('.t-inner').removeClass('flipped');
 		incrementScore();
 	} else if (pContent !== cContent) {
-		pTilesSelection.removeClass('t-active').addClass('t-incorrect');
-		pTilesSelection.find('.t-front').removeClass('t-clicked')
-		cTilesSelection.removeClass('t-active').addClass('t-incorrect');
-		cTilesSelection.find('.t-front').removeClass('t-clicked')
+		pTilesSelection.removeClass('t-active');
+		pTilesSelection.find('.t-front').removeClass('t-clicked').addClass('t-incorrect')
+		cTilesSelection.removeClass('t-active');
+		cTilesSelection.find('.t-front').removeClass('t-clicked');
+		cTilesSelection.find('.t-back').addClass('t-incorrect');
 		setTimeout(function () {
-			pTilesSelection.removeClass('t-incorrect');
-			cTilesSelection.removeClass('t-incorrect');
+			pTilesSelection.find('.t-front').removeClass('t-incorrect');
+			cTilesSelection.find('.t-back').removeClass('t-incorrect');
 		}, 500);
 	}
 	reduceTurns();
@@ -321,9 +322,9 @@ function resetGame() {
 	resetCountdown();
 	disableTiles(cTiles);
 	disableTiles(pTiles);
-	cTiles.removeClass('t-active t-incorrect');
+	cTiles.removeClass('t-active');
 	cTiles.find('.t-front').removeClass('t-correct t-clicked');
-	pTiles.removeClass('t-active t-incorrect');
+	pTiles.removeClass('t-active');
 	pTiles.find('.t-front').removeClass('t-correct t-clicked');
 	$('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
 	$('.t-front').empty(); // Remove all images from tiles

@@ -67,12 +67,11 @@ img {
 }
 
 .t-clicked {
-  box-shadow: 0px 0px 9px 4px #00a3d5;
+  box-shadow: 0px 0px 9px 4px #00a3d5 inset;
 }
 
 .t-correct {
-  box-shadow: 0px 0px 9px 4px #02c435;
-}
+  box-shadow: 0px 0px 9px 4px #02c435 inset;}
 
 .t-incorrect {
   box-shadow: 0px 0px 9px 4px #D30302;

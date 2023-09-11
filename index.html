@@ -232,172 +232,174 @@
 
             </div>
 
-            <!-- Computer Area -->
-            <div id="computer-area" class="container-fluid p-0">
+						<div id="game-view">
+							<!-- Computer Area -->
+							<div id="computer-area" class="container-fluid p-0">
 
-              <div id="turns-score" class="row m-0 p-0">
+								<div id="turns-score" class="row m-0 p-0">
 
-                <!-- Timer -->
-                <div class="col-5 p-0">
-                  <div id="turns-container" class="text-center d-flex justify-content-start m-0 p-0">
-                    <p class="ps-1 p-0 m-0 fw-bold fs-6">
-											TURNS LEFT: <span id="turns" class="fs-3">18</span>
-										</p>
-                  </div>
-                </div>
+									<!-- Timer -->
+									<div class="col-5 p-0">
+										<div id="turns-container" class="text-center d-flex justify-content-start m-0 p-0">
+											<p class="ps-1 p-0 m-0 fw-bold fs-6">
+												TURNS LEFT: <span id="turns" class="fs-3">18</span>
+											</p>
+										</div>
+									</div>
 
-                <!-- Countdown -->
-                <div class="col-2 p-0">
-                  <div id="countdown-container" class="text-center d-flex justify-content-center m-0 p-0">
-                    <p class="m-0 fs-1 fw-bold">
-                      <span id="countdown"></span>
-                    </p>
-                  </div>
-                </div>
+									<!-- Countdown -->
+									<div class="col-2 p-0">
+										<div id="countdown-container" class="text-center d-flex justify-content-center m-0 p-0">
+											<p class="m-0 fs-1 fw-bold">
+												<span id="countdown"></span>
+											</p>
+										</div>
+									</div>
 
-                <!-- Score -->
-                <div class="col-5 p-0">
-                  <div id="score-container" class="text-center d-flex justify-content-center m-0 p-0">
-                    <p class="pe-1 mb-2 mb-sm-3 fw-bold fs-3">
-                      Score: <span id="score">0</span>/9
-                    </p>
-                  </div>
-                </div>
+									<!-- Score -->
+									<div class="col-5 p-0">
+										<div id="score-container" class="text-center d-flex justify-content-center m-0 p-0">
+											<p class="pe-1 mb-2 mb-sm-3 fw-bold fs-3">
+												Score: <span id="score">0</span>/9
+											</p>
+										</div>
+									</div>
 
-              </div>
+								</div>
 
-							<!-- End-Game Message -->
-							<div id="end-game" class="row m-0 p-0">
-								<p class="col text-center fw-bold m-0 p-0">
-									<span id="end-game-msg"></span>
-								</p>
+								<!-- End-Game Message -->
+								<div id="end-game" class="row m-0 p-0">
+									<p class="col text-center fw-bold m-0 p-0">
+										<span id="end-game-msg"></span>
+									</p>
+								</div>
+
+								<!-- Computer Tiles -->
+								<div class="row m-0 p-0">
+									<div class="col mx-auto my-2 p-0">
+										<div id="c-tiles" class="grid-container m-0 p-0">
+											<button type="button" class="tile" id="c-tile-1">
+												<div class="t-inner flipped">
+													<div class="t-front"></div>
+													<div class="t-back"></div>
+												</div>
+											</button>
+											<button type="button" class="tile" id="c-tile-2">
+												<div class="t-inner flipped">
+													<div class="t-front"></div>
+													<div class="t-back"></div>
+												</div>
+											</button>
+											<button type="button" class="tile" id="c-tile-3">
+												<div class="t-inner flipped">
+													<div class="t-front"></div>
+													<div class="t-back"></div>
+												</div>
+											</button>
+											<button type="button" class="tile" id="c-tile-4">
+												<div class="t-inner flipped">
+													<div class="t-front"></div>
+													<div class="t-back"></div>
+												</div>
+											</button>
+											<button type="button" class="tile" id="c-tile-5">
+												<div class="t-inner flipped">
+													<div class="t-front"></div>
+													<div class="t-back"></div>
+												</div>
+											</button>
+											<button type="button" class="tile" id="c-tile-6">
+												<div class="t-inner flipped">
+													<div class="t-front"></div>
+													<div class="t-back"></div>
+												</div>
+											</button>
+											<button type="button" class="tile" id="c-tile-7">
+												<div class="t-inner flipped">
+													<div class="t-front"></div>
+													<div class="t-back"></div>
+												</div>
+											</button>
+											<button type="button" class="tile" id="c-tile-8">
+												<div class="t-inner flipped">
+													<div class="t-front"></div>
+													<div class="t-back"></div>
+												</div>
+											</button>
+											<button type="button" class="tile" id="c-tile-9">
+												<div class="t-inner flipped">
+													<div class="t-front"></div>
+													<div class="t-back"></div>
+												</div>
+											</button>
+										</div>
+									</div>
+								</div>
+
 							</div>
 
-              <!-- Computer Tiles -->
-              <div class="row m-0 p-0">
-                <div class="col mx-auto my-2 p-0">
-                  <div id="c-tiles" class="grid-container m-0 p-0">
-                    <button type="button" class="tile" id="c-tile-1">
-                      <div class="t-inner flipped">
-                        <div class="t-front"></div>
-                        <div class="t-back"></div>
-                      </div>
-                    </button>
-                    <button type="button" class="tile" id="c-tile-2">
-                      <div class="t-inner flipped">
-                        <div class="t-front"></div>
-                        <div class="t-back"></div>
-                      </div>
-                    </button>
-                    <button type="button" class="tile" id="c-tile-3">
-                      <div class="t-inner flipped">
-                        <div class="t-front"></div>
-                        <div class="t-back"></div>
-                      </div>
-                    </button>
-                    <button type="button" class="tile" id="c-tile-4">
-                      <div class="t-inner flipped">
-                        <div class="t-front"></div>
-                        <div class="t-back"></div>
-                      </div>
-                    </button>
-                    <button type="button" class="tile" id="c-tile-5">
-                      <div class="t-inner flipped">
-                        <div class="t-front"></div>
-                        <div class="t-back"></div>
-                      </div>
-                    </button>
-                    <button type="button" class="tile" id="c-tile-6">
-                      <div class="t-inner flipped">
-                        <div class="t-front"></div>
-                        <div class="t-back"></div>
-                      </div>
-                    </button>
-                    <button type="button" class="tile" id="c-tile-7">
-                      <div class="t-inner flipped">
-                        <div class="t-front"></div>
-                        <div class="t-back"></div>
-                      </div>
-                    </button>
-                    <button type="button" class="tile" id="c-tile-8">
-                      <div class="t-inner flipped">
-                        <div class="t-front"></div>
-                        <div class="t-back"></div>
-                      </div>
-                    </button>
-                    <button type="button" class="tile" id="c-tile-9">
-                      <div class="t-inner flipped">
-                        <div class="t-front"></div>
-                        <div class="t-back"></div>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Player Area -->
-            <div id="player-area" class="row m-0 p-0">
-              <div class="col mx-auto m-0 mt-2 mb-2 p-0">
-                <div id="p-tiles" class="grid-container m-0 p-0">
-                  <button class="tile" id="p-tile-1">
-                    <div class="t-inner flipped">
-                      <div class="t-front"></div>
-                      <div class="t-back"></div>
-                    </div>
-                  </button>
-                  <button class="tile" id="p-tile-2">
-                    <div class="t-inner flipped">
-                      <div class="t-front"></div>
-                      <div class="t-back"></div>
-                    </div>
-                  </button>
-                  <button class="tile" id="p-tile-3">
-                    <div class="t-inner flipped">
-                      <div class="t-front"></div>
-                      <div class="t-back"></div>
-                    </div>
-                  </button>
-                  <button class="tile" id="p-tile-4">
-                    <div class="t-inner flipped">
-                      <div class="t-front"></div>
-                      <div class="t-back"></div>
-                    </div>
-                  </button>
-                  <button class="tile" id="p-tile-5">
-                    <div class="t-inner flipped">
-                      <div class="t-front"></div>
-                      <div class="t-back"></div>
-                    </div>
-                  </button>
-                  <button class="tile" id="p-tile-6">
-                    <div class="t-inner flipped">
-                      <div class="t-front"></div>
-                      <div class="t-back"></div>
-                    </div>
-                  </button>
-                  <button class="tile" id="p-tile-7">
-                    <div class="t-inner flipped">
-                      <div class="t-front"></div>
-                      <div class="t-back"></div>
-                    </div>
-                  </button>
-                  <button class="tile" id="p-tile-8">
-                    <div class="t-inner flipped">
-                      <div class="t-front"></div>
-                      <div class="t-back"></div>
-                    </div>
-                  </button>
-                  <button class="tile" id="p-tile-9">
-                    <div class="t-inner flipped">
-                      <div class="t-front"></div>
-                      <div class="t-back"></div>
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div>
+							<!-- Player Area -->
+							<div id="player-area" class="row m-0 p-0">
+								<div class="col mx-auto m-0 mt-2 mb-2 p-0">
+									<div id="p-tiles" class="grid-container m-0 p-0">
+										<button class="tile" id="p-tile-1">
+											<div class="t-inner flipped">
+												<div class="t-front"></div>
+												<div class="t-back"></div>
+											</div>
+										</button>
+										<button class="tile" id="p-tile-2">
+											<div class="t-inner flipped">
+												<div class="t-front"></div>
+												<div class="t-back"></div>
+											</div>
+										</button>
+										<button class="tile" id="p-tile-3">
+											<div class="t-inner flipped">
+												<div class="t-front"></div>
+												<div class="t-back"></div>
+											</div>
+										</button>
+										<button class="tile" id="p-tile-4">
+											<div class="t-inner flipped">
+												<div class="t-front"></div>
+												<div class="t-back"></div>
+											</div>
+										</button>
+										<button class="tile" id="p-tile-5">
+											<div class="t-inner flipped">
+												<div class="t-front"></div>
+												<div class="t-back"></div>
+											</div>
+										</button>
+										<button class="tile" id="p-tile-6">
+											<div class="t-inner flipped">
+												<div class="t-front"></div>
+												<div class="t-back"></div>
+											</div>
+										</button>
+										<button class="tile" id="p-tile-7">
+											<div class="t-inner flipped">
+												<div class="t-front"></div>
+												<div class="t-back"></div>
+											</div>
+										</button>
+										<button class="tile" id="p-tile-8">
+											<div class="t-inner flipped">
+												<div class="t-front"></div>
+												<div class="t-back"></div>
+											</div>
+										</button>
+										<button class="tile" id="p-tile-9">
+											<div class="t-inner flipped">
+												<div class="t-front"></div>
+												<div class="t-back"></div>
+											</div>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
 
           </div>
 

@@ -327,6 +327,8 @@ function resetGame() {
 	modeDisplay(currentMode);
 
 	$('#end-game-msg').hide();
+	
+  currentScore = 0;
 
 	console.log('Score Reset');
 	console.log(currentMode);

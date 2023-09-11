@@ -74,7 +74,7 @@ img {
   box-shadow: 0px 0px 9px 4px #02c435 inset;}
 
 .t-incorrect {
-  box-shadow: 0px 0px 9px 4px #D30302;
+  box-shadow: 0px 0px 9px 4px #D30302 inset;
 }
 
 /* Flip Functionality */
@@ -111,7 +111,8 @@ img {
 .t-back {
   background-color: #eac086;
   transform: rotateY(180deg);
-  box-shadow: 0px 0px 9px 4px rgba(0, 0, 0, 0.7) inset;
+	border: 3px solid rgb(0 0 0 / 60%);
+	/* box-shadow: 0px 0px 9px 4px rgba(0, 0, 0, 0.7) inset; */
 }
 
 .flipped {

@@ -107,7 +107,7 @@ $(document).ready(function () {
   $('#reset button').click(resetGame);
 });
 
-/** 
+/**
  * Checks if the player has run out of turns or scored 9/9.
  */
 function checkGameOver() {
@@ -116,7 +116,7 @@ function checkGameOver() {
   }
 }
 
-/** 
+/**
  * Disables and unflips all tiles, then displays an end-game message (defined externally).
  */
 function endGame() {
@@ -130,7 +130,7 @@ function endGame() {
   }, 100);
 }
 
-/** 
+/**
  * Displays GAME OVER and an alert to let the player know their score.
  */
 function endGameDisplayMsg() {
@@ -140,7 +140,7 @@ function endGameDisplayMsg() {
   }, 500);
 }
 
-/** 
+/**
  * Checks if the player tile matches the computer tile clicked on.
  */
 function checkTileMatch() {
@@ -167,7 +167,7 @@ function checkTileMatch() {
   reduceTurns();
 }
 
-/** 
+/**
  * Removes one turn if an attempt is made to match tiles.
  */
 function reduceTurns() {
@@ -177,7 +177,7 @@ function reduceTurns() {
   currentTurns = newTurns;
 }
 
-/** 
+/**
  * Adds one to the current score if tiles are matched.
  */
 function incrementScore() {
@@ -187,14 +187,14 @@ function incrementScore() {
   currentScore = newScore;
 }
 
-/** 
+/**
  * Flips the tiles 180 degrees on the Y axis.
  */
 function flipTiles(tiles) {
   tiles.find('.t-inner').toggleClass('flipped');
 }
 
-/** 
+/**
  * Sets the countdown timer and the timer to flip the cTiles and pTiles to the relevant starting positions.
  */
 function setCountdown() {
@@ -224,7 +224,7 @@ function setCountdown() {
   }, 1000);
 }
 
-/** 
+/**
  * Clears the countdownGame timeout and countdownTimer intervals, and sets the countdown value to 5.
  */
 function resetCountdown() {
@@ -236,7 +236,7 @@ function resetCountdown() {
   countdownDisplay.show();
 }
 
-/** 
+/**
  * Disables all tiles (buttons) so they cannot be clicked.
  */
 function disableTiles(tiles) {
@@ -244,7 +244,7 @@ function disableTiles(tiles) {
   tiles.removeClass('t-active');
 }
 
-/** 
+/**
  * Activates all tiles (buttons) so they can be clicked.
  */
 function activateTiles(tiles) {
@@ -260,7 +260,7 @@ function activateTiles(tiles) {
   });
 }
 
-/** 
+/**
  * Shuffles/reorganises the passed array - in this case: 'images'. Idea taken from The Fisher-Yates (Knuth) Shuffle Algorithm.
  */
 function shuffle(array) {
@@ -271,7 +271,7 @@ function shuffle(array) {
   return array;
 }
 
-/** 
+/**
  * Assigns images from the images array to either the computer or player tiles, depending on the argument passed in.
  */
 function assignImagesToTiles(images, tiles) {
@@ -284,7 +284,7 @@ function assignImagesToTiles(images, tiles) {
   });
 }
 
-/** 
+/**
  * Displays the mode selected from the 'Mode' dropdown menu.
  */
 function modeDisplay(mode) {
@@ -306,7 +306,7 @@ function modeDisplay(mode) {
   }
 }
 
-/** 
+/**
  * Resets the game.
  */
 function resetGame() {

@@ -44,20 +44,18 @@ $(document).ready(function () {
 		$('#instructions-text').slideToggle('slow');
 	});
 
-    $(window).on('resize', function() {
-        if ($(window).width() > 991) {
-            $('#aboutModal').modal('hide');
-            $('#instructionsModal').modal('hide');
-        }
-    });
+  // Stops modal background showing when adjusting screen width
+  $(window).on('resize', function() {
+    if ($(window).width() > 991) {
+      $('#aboutModal').modal('hide');
+      $('#instructionsModal').modal('hide');
+    }
+  });
 
 	// Mode-selection
 	$('.mode-item').click(function () {
 		let modeSelection = $(this).data('value');
 		modeDisplay(modeSelection);
-
-		console.log('Mode Selected = ' + modeSelection);
-		console.log('New Turns Left = ' + currentTurns);
 	});
 
 	resetGame();
@@ -66,21 +64,20 @@ $(document).ready(function () {
 	$('#start button').click(function () {
 		$('#game-view').get(0).scrollIntoView({ behavior: 'smooth' });
 
-		console.log('Game STARTED');
 		$('#score').text('0');
-		$('#start button').prop('disabled', true); // Disables Start button
-		$('#mode button').prop('disabled', true); // Disables Mode button
+		$('#start button').prop('disabled', true);
+		$('#mode button').prop('disabled', true);
 		disableTiles(cTiles);
 		disableTiles(pTiles);
 
-		resetCountdown(); // Resets countdown
-		shuffle(images); // Shuffle all images
-		let copiedImages = [...images]; // Copy of images array
-		copiedImages.splice(0, 9); // Take first 9 images from array
-		assignImagesToTiles(copiedImages, cTiles); // Assign images to computer tiles
-		shuffle(copiedImages); // Shuffle a second time
-		assignImagesToTiles(copiedImages, pTiles); // Assign images to player tiles
-		flipTiles(cTiles); // Shows computer tiles
+		resetCountdown();
+		shuffle(images);
+		let copiedImages = [...images];
+		copiedImages.splice(0, 9);
+		assignImagesToTiles(copiedImages, cTiles);
+		shuffle(copiedImages);
+		assignImagesToTiles(copiedImages, pTiles);
+		flipTiles(cTiles);
 		setCountdown();
 
 		if (loadListeners) {
@@ -93,7 +90,6 @@ $(document).ready(function () {
 				disableTiles(pTilesSelection);
 				activateTiles(cTiles);
 			});
-
 			cTiles.click(function () {
 				cTilesSelection = $(this);
 				let cTilesOther = $(this).siblings();
@@ -101,13 +97,10 @@ $(document).ready(function () {
 				disableTiles(cTilesSelection);
 				checkTileMatch();
 				activateTiles(pTiles);
-
 				checkGameOver();
 			});
-
 			loadListeners = false;
 		}
-
 	});
 
 	// Reset Game
@@ -131,7 +124,6 @@ function endGame() {
 	disableTiles(pTiles);
 	cTiles.removeClass('t-active t-clicked');
 	pTiles.removeClass('t-active t-clicked');
-	
 	setTimeout(function() {
 		cTiles.find('.t-inner').removeClass('flipped');
 		endGameDisplayMsg();
@@ -183,10 +175,6 @@ function reduceTurns() {
 	let newTurns = turns - 1;
 	$('#turns').text(newTurns);
 	currentTurns = newTurns;
-
-	console.log('Turns Reduced');
-	console.log('Previous Turns Left = ' + turns);
-	console.log('New Turns Left = ' + currentTurns);
 }
 
 /** 
@@ -197,10 +185,6 @@ function incrementScore() {
 	let newScore = score + 1;
 	$('#score').text(newScore);
 	currentScore = newScore;
-
-	console.log('Score Incremented');
-	console.log('Old Score = ' + score);
-	console.log('Current Score = ' + currentScore);
 }
 
 /** 
@@ -217,12 +201,12 @@ function setCountdown() {
 	countdownDisplay.text(countdownStart);
 
 	countdownGame = setTimeout(function () {
-		flipTiles(cTiles); // Hides computer tiles
-		flipTiles(pTiles); // Shows player tiles
-		activateTiles(pTiles); // Activate player tiles
-	}, 5000); // Delay of 5 seconds
-
-	countdownTimer = setInterval(function () { // Sets countdown timer for 5 seconds
+		flipTiles(cTiles);
+		flipTiles(pTiles);
+		activateTiles(pTiles);
+	}, 5000);
+  
+	countdownTimer = setInterval(function () {
 		countdown--;
 		if (countdown >= 1) {
 			countdownDisplay.text(countdown);
@@ -238,18 +222,17 @@ function setCountdown() {
 			}, 1500);
 		}
 	}, 1000);
-
 }
 
 /** 
  * Clears the countdownGame timeout and countdownTimer intervals, and sets the countdown value to 5.
  */
 function resetCountdown() {
-	clearTimeout(countdownGame); // Clears countdownGame
-	clearInterval(countdownTimer); // Stops countdownTimer
-	countdown = countdownStart; // Resets countdownTimer
-	countdownDisplay.empty(); // Sets value to 5
-	countdownDisplay.css('color', 'red'); // Sets color to Red
+	clearTimeout(countdownGame);
+	clearInterval(countdownTimer);
+	countdown = countdownStart;
+	countdownDisplay.empty();
+	countdownDisplay.css('color', 'red');
 	countdownDisplay.show();
 }
 
@@ -292,13 +275,12 @@ function shuffle(array) {
  * Assigns images from the images array to either the computer or player tiles, depending on the argument passed in.
  */
 function assignImagesToTiles(images, tiles) {
-	tiles.each(function (index) { // Itterates over the computer tiles and does the following...
-		const frontTile = $(this).find('.t-front'); // Targets the 't-front' div, i.e. the front of the tile
-		const image = document.createElement('img'); // Creates a new <img> element and assigns it to the 'image' variable
-		image.src = images[index].src; // Sets the src of the image to that of the src of the current image in the shuffled array
-		image.alt = images[index].alt; // Sets the alt of the image to that of the alt of the current image in the shuffled array
-		frontTile.empty().append(image); // Appends the randomly selected image with the assigned src and alt to one of the tiles
-		// Function repeats until all images have been assigned to the available tiles
+	tiles.each(function (index) {
+		const frontTile = $(this).find('.t-front');
+		const image = document.createElement('img');
+		image.src = images[index].src;
+		image.alt = images[index].alt;
+		frontTile.empty().append(image);
 	});
 }
 
@@ -335,21 +317,12 @@ function resetGame() {
 	cTiles.find('.t-front').removeClass('t-correct t-clicked');
 	pTiles.removeClass('t-active');
 	pTiles.find('.t-front').removeClass('t-correct t-clicked');
-	$('.t-inner').removeClass('flipped').addClass('flipped'); // All tiles flipped over to the back
-	$('.t-front').empty(); // Remove all images from tiles
-
+	$('.t-inner').removeClass('flipped').addClass('flipped');
+	$('.t-front').empty();
 	$('#start button').prop('disabled', false);
 	$('#mode button').prop('disabled', false);
 	$('#score').text('0');
 	modeDisplay(currentMode);
-
 	$('#end-game-msg').hide();
-
   currentScore = 0;
-
-	console.log('Score Reset');
-	console.log(currentMode);
-	console.log('Game RESET');
-	console.log('New Turns Left = ' + currentTurns);
-	console.log('Current Score = ' + currentScore);
 }

@@ -267,7 +267,7 @@ function disableTiles(tiles) {
 function activateTiles(tiles) {
 	tiles.each(function () {
 		const tile = $(this);
-		if (tile.hasClass('t-correct')) {
+        if (tile.find('.t-front').hasClass('t-correct')) {
 			tile.prop('disabled', true);
 			tile.removeClass('t-active');
 		} else {

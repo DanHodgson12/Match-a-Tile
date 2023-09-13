@@ -44,6 +44,13 @@ $(document).ready(function () {
 		$('#instructions-text').slideToggle('slow');
 	});
 
+    $(window).on('resize', function() {
+        if ($(window).width() > 991) {
+            $('#aboutModal').modal('hide');
+            $('#instructionsModal').modal('hide');
+        }
+    });
+
 	// Mode-selection
 	$('.mode-item').click(function () {
 		let modeSelection = $(this).data('value');

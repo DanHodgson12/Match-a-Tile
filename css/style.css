@@ -62,6 +62,10 @@ img {
   perspective: 1000px;
 }
 
+/* .tile span {
+  display: block;
+} */
+
 .t-active:hover {
   box-shadow: 0px 0px 9px 4px rgba(0, 0, 0, 0.7);
 }
@@ -110,6 +114,7 @@ img {
 
 .t-back {
   background-color: #eac086;
+  display: block;
   transform: rotateY(180deg);
 	border: 3px solid rgb(0 0 0 / 60%);
 }

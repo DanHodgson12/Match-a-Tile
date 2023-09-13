@@ -27,7 +27,7 @@ let currentTurns = 18;
 let currentScore = 0;
 let countdownGame;
 let countdownTimer;
-let countdownDisplay = $('#countdown');;
+let countdownDisplay = $('#countdown');
 const countdownStart = 5;
 let countdown = countdownStart;
 let pTilesSelection;
@@ -35,14 +35,14 @@ let cTilesSelection;
 let loadListeners = true;
 
 $(document).ready(function () {
-	// Side-bar info toggle divs
-	$('#about-btn').click(function () {
-		$('#about-text').slideToggle('slow');
-	});
+  // Side-bar info toggle divs
+  $('#about-btn').click(function () {
+    $('#about-text').slideToggle('slow');
+  });
 
-	$('#instructions-btn').click(function () {
-		$('#instructions-text').slideToggle('slow');
-	});
+  $('#instructions-btn').click(function () {
+    $('#instructions-text').slideToggle('slow');
+  });
 
   // Stops modal background showing when adjusting screen width
   $(window).on('resize', function() {
@@ -52,59 +52,59 @@ $(document).ready(function () {
     }
   });
 
-	// Mode-selection
-	$('.mode-item').click(function () {
-		let modeSelection = $(this).data('value');
-		modeDisplay(modeSelection);
-	});
+  // Mode-selection
+  $('.mode-item').click(function () {
+    let modeSelection = $(this).data('value');
+    modeDisplay(modeSelection);
+  });
 
-	resetGame();
+  resetGame();
 
-	// Start Game
-	$('#start button').click(function () {
-		$('#game-view').get(0).scrollIntoView({ behavior: 'smooth' });
+  // Start Game
+  $('#start button').click(function () {
+    $('#game-view').get(0).scrollIntoView({ behavior: 'smooth' });
 
-		$('#score').text('0');
-		$('#start button').prop('disabled', true);
-		$('#mode button').prop('disabled', true);
-		disableTiles(cTiles);
-		disableTiles(pTiles);
+    $('#score').text('0');
+    $('#start button').prop('disabled', true);
+    $('#mode button').prop('disabled', true);
+    disableTiles(cTiles);
+    disableTiles(pTiles);
 
-		resetCountdown();
-		shuffle(images);
-		let copiedImages = [...images];
-		copiedImages.splice(0, 9);
-		assignImagesToTiles(copiedImages, cTiles);
-		shuffle(copiedImages);
-		assignImagesToTiles(copiedImages, pTiles);
-		flipTiles(cTiles);
-		setCountdown();
+    resetCountdown();
+    shuffle(images);
+    let copiedImages = [...images];
+    copiedImages.splice(0, 9);
+    assignImagesToTiles(copiedImages, cTiles);
+    shuffle(copiedImages);
+    assignImagesToTiles(copiedImages, pTiles);
+    flipTiles(cTiles);
+    setCountdown();
 
-		if (loadListeners) {
-			pTiles.click(function () {
-				pTilesSelection = $(this);
-				let pTilesOther = $(this).siblings();
-				disableTiles(pTilesOther);
-				pTilesSelection.removeClass('t-active');
-				pTilesSelection.find('.t-front').addClass('t-clicked');
-				disableTiles(pTilesSelection);
-				activateTiles(cTiles);
-			});
-			cTiles.click(function () {
-				cTilesSelection = $(this);
-				let cTilesOther = $(this).siblings();
-				disableTiles(cTilesOther);
-				disableTiles(cTilesSelection);
-				checkTileMatch();
-				activateTiles(pTiles);
-				checkGameOver();
-			});
-			loadListeners = false;
-		}
-	});
+    if (loadListeners) {
+      pTiles.click(function () {
+        pTilesSelection = $(this);
+        let pTilesOther = $(this).siblings();
+        disableTiles(pTilesOther);
+        pTilesSelection.removeClass('t-active');
+        pTilesSelection.find('.t-front').addClass('t-clicked');
+        disableTiles(pTilesSelection);
+        activateTiles(cTiles);
+      });
+      cTiles.click(function () {
+        cTilesSelection = $(this);
+        let cTilesOther = $(this).siblings();
+        disableTiles(cTilesOther);
+        disableTiles(cTilesSelection);
+        checkTileMatch();
+        activateTiles(pTiles);
+        checkGameOver();
+      });
+      loadListeners = false;
+    }
+  });
 
-	// Reset Game
-	$('#reset button').click(resetGame);
+  // Reset Game
+  $('#reset button').click(resetGame);
 });
 
 /** 
@@ -112,217 +112,217 @@ $(document).ready(function () {
  */
 function checkGameOver() {
   if (currentTurns === 0 || currentScore === 9) {
-		endGame();
-	}
+    endGame();
+  }
 }
 
 /** 
  * Disables and unflips all tiles, then displays an end-game message (defined externally).
  */
 function endGame() {
-	disableTiles(cTiles);
-	disableTiles(pTiles);
-	cTiles.removeClass('t-active t-clicked');
-	pTiles.removeClass('t-active t-clicked');
-	setTimeout(function() {
-		cTiles.find('.t-inner').removeClass('flipped');
-		endGameDisplayMsg();
-	}, 100);
+  disableTiles(cTiles);
+  disableTiles(pTiles);
+  cTiles.removeClass('t-active t-clicked');
+  pTiles.removeClass('t-active t-clicked');
+  setTimeout(function() {
+    cTiles.find('.t-inner').removeClass('flipped');
+    endGameDisplayMsg();
+  }, 100);
 }
 
 /** 
  * Displays GAME OVER and an alert to let the player know their score.
  */
 function endGameDisplayMsg() {
-	$('#end-game-msg').show().text('GAME OVER');
-	setTimeout(function() {
-		alert('Well done! You scored ' + currentScore + ' out of 9!');
-	}, 500);
+  $('#end-game-msg').show().text('GAME OVER');
+  setTimeout(function() {
+    alert('Well done! You scored ' + currentScore + ' out of 9!');
+  }, 500);
 }
 
 /** 
  * Checks if the player tile matches the computer tile clicked on.
  */
 function checkTileMatch() {
-	let pContent = pTilesSelection.find('.t-front').html();
-	let cContent = cTilesSelection.find('.t-front').html();
-	if (pContent === cContent) {
-		pTilesSelection.removeClass('t-active');
-		pTilesSelection.find('.t-front').removeClass('t-clicked').addClass('t-correct');
-		cTilesSelection.removeClass('t-active');
-		cTilesSelection.find('.t-front').removeClass('t-clicked').addClass('t-correct');
-		cTilesSelection.find('.t-inner').removeClass('flipped');
-		incrementScore();
-	} else if (pContent !== cContent) {
-		pTilesSelection.removeClass('t-active');
-		pTilesSelection.find('.t-front').removeClass('t-clicked').addClass('t-incorrect')
-		cTilesSelection.removeClass('t-active');
-		cTilesSelection.find('.t-front').removeClass('t-clicked');
-		cTilesSelection.find('.t-back').addClass('t-incorrect');
-		setTimeout(function () {
-			pTilesSelection.find('.t-front').removeClass('t-incorrect');
-			cTilesSelection.find('.t-back').removeClass('t-incorrect');
-		}, 500);
-	}
-	reduceTurns();
+  let pContent = pTilesSelection.find('.t-front').html();
+  let cContent = cTilesSelection.find('.t-front').html();
+  if (pContent === cContent) {
+    pTilesSelection.removeClass('t-active');
+    pTilesSelection.find('.t-front').removeClass('t-clicked').addClass('t-correct');
+    cTilesSelection.removeClass('t-active');
+    cTilesSelection.find('.t-front').removeClass('t-clicked').addClass('t-correct');
+    cTilesSelection.find('.t-inner').removeClass('flipped');
+    incrementScore();
+  } else if (pContent !== cContent) {
+    pTilesSelection.removeClass('t-active');
+    pTilesSelection.find('.t-front').removeClass('t-clicked').addClass('t-incorrect');
+    cTilesSelection.removeClass('t-active');
+    cTilesSelection.find('.t-front').removeClass('t-clicked');
+    cTilesSelection.find('.t-back').addClass('t-incorrect');
+    setTimeout(function () {
+      pTilesSelection.find('.t-front').removeClass('t-incorrect');
+      cTilesSelection.find('.t-back').removeClass('t-incorrect');
+    }, 500);
+  }
+  reduceTurns();
 }
 
 /** 
  * Removes one turn if an attempt is made to match tiles.
  */
 function reduceTurns() {
-	let turns = parseInt($('#turns').text());
-	let newTurns = turns - 1;
-	$('#turns').text(newTurns);
-	currentTurns = newTurns;
+  let turns = parseInt($('#turns').text());
+  let newTurns = turns - 1;
+  $('#turns').text(newTurns);
+  currentTurns = newTurns;
 }
 
 /** 
  * Adds one to the current score if tiles are matched.
  */
 function incrementScore() {
-	let score = parseInt($('#score').text());
-	let newScore = score + 1;
-	$('#score').text(newScore);
-	currentScore = newScore;
+  let score = parseInt($('#score').text());
+  let newScore = score + 1;
+  $('#score').text(newScore);
+  currentScore = newScore;
 }
 
 /** 
  * Flips the tiles 180 degrees on the Y axis.
  */
 function flipTiles(tiles) {
-	tiles.find('.t-inner').toggleClass('flipped');
+  tiles.find('.t-inner').toggleClass('flipped');
 }
 
 /** 
  * Sets the countdown timer and the timer to flip the cTiles and pTiles to the relevant starting positions.
  */
 function setCountdown() {
-	countdownDisplay.text(countdownStart);
+  countdownDisplay.text(countdownStart);
 
-	countdownGame = setTimeout(function () {
-		flipTiles(cTiles);
-		flipTiles(pTiles);
-		activateTiles(pTiles);
-	}, 5000);
+  countdownGame = setTimeout(function () {
+    flipTiles(cTiles);
+    flipTiles(pTiles);
+    activateTiles(pTiles);
+  }, 5000);
 
-	countdownTimer = setInterval(function () {
-		countdown--;
-		if (countdown >= 1) {
-			countdownDisplay.text(countdown);
-			countdownDisplay.css('color', 'red');
-		} else {
-			clearInterval(countdownTimer);
-			countdownDisplay.text('GO');
-			countdownDisplay.css('color', 'green');
-			setTimeout(function () {
-				countdownDisplay.fadeOut('slow', function () {
-					countdownDisplay.text(countdownStart);
-				});
-			}, 1500);
-		}
-	}, 1000);
+  countdownTimer = setInterval(function () {
+    countdown--;
+    if (countdown >= 1) {
+      countdownDisplay.text(countdown);
+      countdownDisplay.css('color', 'red');
+    } else {
+      clearInterval(countdownTimer);
+      countdownDisplay.text('GO');
+      countdownDisplay.css('color', 'green');
+      setTimeout(function () {
+        countdownDisplay.fadeOut('slow', function () {
+          countdownDisplay.text(countdownStart);
+        });
+      }, 1500);
+    }
+  }, 1000);
 }
 
 /** 
  * Clears the countdownGame timeout and countdownTimer intervals, and sets the countdown value to 5.
  */
 function resetCountdown() {
-	clearTimeout(countdownGame);
-	clearInterval(countdownTimer);
-	countdown = countdownStart;
-	countdownDisplay.empty();
-	countdownDisplay.css('color', 'red');
-	countdownDisplay.show();
+  clearTimeout(countdownGame);
+  clearInterval(countdownTimer);
+  countdown = countdownStart;
+  countdownDisplay.empty();
+  countdownDisplay.css('color', 'red');
+  countdownDisplay.show();
 }
 
 /** 
  * Disables all tiles (buttons) so they cannot be clicked.
  */
 function disableTiles(tiles) {
-	tiles.prop('disabled', true);
-	tiles.removeClass('t-active');
+  tiles.prop('disabled', true);
+  tiles.removeClass('t-active');
 }
 
 /** 
  * Activates all tiles (buttons) so they can be clicked.
  */
 function activateTiles(tiles) {
-	tiles.each(function () {
-		const tile = $(this);
+  tiles.each(function () {
+    const tile = $(this);
         if (tile.find('.t-front').hasClass('t-correct')) {
-			tile.prop('disabled', true);
-			tile.removeClass('t-active');
-		} else {
-			tile.prop('disabled', false);
-			tile.addClass('t-active');
-		}
-	});
+      tile.prop('disabled', true);
+      tile.removeClass('t-active');
+    } else {
+      tile.prop('disabled', false);
+      tile.addClass('t-active');
+    }
+  });
 }
 
 /** 
  * Shuffles/reorganises the passed array - in this case: 'images'. Idea taken from The Fisher-Yates (Knuth) Shuffle Algorithm.
  */
 function shuffle(array) {
-	for (let i = array.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-		[array[i], array[j]] = [array[j], array[i]];
-	}
-	return array;
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 }
 
 /** 
  * Assigns images from the images array to either the computer or player tiles, depending on the argument passed in.
  */
 function assignImagesToTiles(images, tiles) {
-	tiles.each(function (index) {
-		const frontTile = $(this).find('.t-front');
-		const image = document.createElement('img');
-		image.src = images[index].src;
-		image.alt = images[index].alt;
-		frontTile.empty().append(image);
-	});
+  tiles.each(function (index) {
+    const frontTile = $(this).find('.t-front');
+    const image = document.createElement('img');
+    image.src = images[index].src;
+    image.alt = images[index].alt;
+    frontTile.empty().append(image);
+  });
 }
 
 /** 
  * Displays the mode selected from the 'Mode' dropdown menu.
  */
 function modeDisplay(mode) {
-	if (mode === 'Easy') {
-		currentMode = 'Easy';
-		currentTurns = 18;
-		$('#mode-display').html('EASY').css('color', 'green');
-		$('#turns').html('18');
-	} else if (mode === 'Normal') {
-		currentMode = 'Normal';
-		currentTurns = 14;
-		$('#mode-display').html('NORMAL').css('color', 'black');
-		$('#turns').html('14');
-	} else if (mode === 'Hard') {
-		currentMode = 'Hard';
-		currentTurns = 9;
-		$('#mode-display').html('HARD').css('color', 'red');
-		$('#turns').html('9');
-	}
+  if (mode === 'Easy') {
+    currentMode = 'Easy';
+    currentTurns = 18;
+    $('#mode-display').html('EASY').css('color', 'green');
+    $('#turns').html('18');
+  } else if (mode === 'Normal') {
+    currentMode = 'Normal';
+    currentTurns = 14;
+    $('#mode-display').html('NORMAL').css('color', 'black');
+    $('#turns').html('14');
+  } else if (mode === 'Hard') {
+    currentMode = 'Hard';
+    currentTurns = 9;
+    $('#mode-display').html('HARD').css('color', 'red');
+    $('#turns').html('9');
+  }
 }
 
 /** 
  * Resets the game.
  */
 function resetGame() {
-	resetCountdown();
-	disableTiles(cTiles);
-	disableTiles(pTiles);
-	cTiles.removeClass('t-active');
-	cTiles.find('.t-front').removeClass('t-correct t-clicked');
-	pTiles.removeClass('t-active');
-	pTiles.find('.t-front').removeClass('t-correct t-clicked');
-	$('.t-inner').removeClass('flipped').addClass('flipped');
-	$('.t-front').empty();
-	$('#start button').prop('disabled', false);
-	$('#mode button').prop('disabled', false);
-	$('#score').text('0');
-	modeDisplay(currentMode);
-	$('#end-game-msg').hide();
+  resetCountdown();
+  disableTiles(cTiles);
+  disableTiles(pTiles);
+  cTiles.removeClass('t-active');
+  cTiles.find('.t-front').removeClass('t-correct t-clicked');
+  pTiles.removeClass('t-active');
+  pTiles.find('.t-front').removeClass('t-correct t-clicked');
+  $('.t-inner').removeClass('flipped').addClass('flipped');
+  $('.t-front').empty();
+  $('#start button').prop('disabled', false);
+  $('#mode button').prop('disabled', false);
+  $('#score').text('0');
+  modeDisplay(currentMode);
+  $('#end-game-msg').hide();
   currentScore = 0;
 }

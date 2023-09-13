@@ -91,32 +91,32 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-											<p class="p-2 m-0">
-													Before you begin, select a difficulty mode. The mode will determine the number of turns the player
-													has to match the tiles. For example:
-											</p>
-											<ul class="m-0">
-													<li>Easy: 18 turns</li>
-													<li>Normal: 14 turns</li>
-													<li>Hard: 9 turns</li>
-											</ul>
-											<p class="p-2 m-0">
-													When you are ready, click 'Start' and a 5 second countdown timer will begin. At the start of the
-													countdown timer, the computer tiles will appear - take this time to remember each tile and commit
-													them to memory!
-											</p>
-											<p class="p-2 m-0">
-													Once the 5 seconds are over, the computer tiles flip over and the player tiles appear. The game
-													will then begin. The player must click on a player tile at the bottom of
-													the screen and match it with the correct computer tile.
-											</p>
-											<p class="p-2 m-0">
-													The game will end once all tiles have been matched, or when the number of remaining turns reaches zero.
-													Your score will then be displayed in the top right corner of the game area.
-											</p>
-											<p class="p-2 m-0">
-													If you'd like to reset the game at any point simply click the 'Reset' button. Happy gaming!
-											</p>
+                      <p class="p-2 m-0">
+                          Before you begin, select a difficulty mode. The mode will determine the number of turns the player
+                          has to match the tiles. For example:
+                      </p>
+                      <ul class="m-0">
+                          <li>Easy: 18 turns</li>
+                          <li>Normal: 14 turns</li>
+                          <li>Hard: 9 turns</li>
+                      </ul>
+                      <p class="p-2 m-0">
+                          When you are ready, click 'Start' and a 5 second countdown timer will begin. At the start of the
+                          countdown timer, the computer tiles will appear - take this time to remember each tile and commit
+                          them to memory!
+                      </p>
+                      <p class="p-2 m-0">
+                          Once the 5 seconds are over, the computer tiles flip over and the player tiles appear. The game
+                          will then begin. The player must click on a player tile at the bottom of
+                          the screen and match it with the correct computer tile.
+                      </p>
+                      <p class="p-2 m-0">
+                          The game will end once all tiles have been matched, or when the number of remaining turns reaches zero.
+                          Your score will then be displayed in the top right corner of the game area.
+                      </p>
+                      <p class="p-2 m-0">
+                          If you'd like to reset the game at any point simply click the 'Reset' button. Happy gaming!
+                      </p>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close">Close</button>
@@ -231,58 +231,52 @@
 
             </div>
 
-						<div id="game-view">
-							<!-- Computer Area -->
-							<div id="computer-area" class="container-fluid p-0">
+            <div id="game-view">
+              <!-- Computer Area -->
+              <div id="computer-area" class="container-fluid p-0">
 
-								<div id="turns-score" class="row m-0 p-0">
+                <div id="turns-score" class="row m-0 p-0">
 
-									<!-- Timer -->
-									<div class="col-5 p-0">
-										<div id="turns-container" class="text-center d-flex justify-content-start m-0 p-0">
-											<p class="ps-1 p-0 m-0 fw-bold fs-6">
-												TURNS LEFT: <span id="turns" class="fs-3">18</span>
-											</p>
-										</div>
-									</div>
+                  <!-- Timer -->
+                  <div class="col-5 p-0">
+                    <div id="turns-container" class="text-center d-flex justify-content-start m-0 p-0">
+                      <p class="ps-1 p-0 m-0 fw-bold fs-6">
+                        TURNS LEFT: <span id="turns" class="fs-3">18</span>
+                      </p>
+                    </div>
+                  </div>
 
-									<!-- Countdown -->
-									<div class="col-2 p-0">
-										<div id="countdown-container" class="text-center d-flex justify-content-center m-0 p-0">
-											<p class="m-0 fs-1 fw-bold">
-												<span id="countdown"></span>
-											</p>
-										</div>
-									</div>
+                  <!-- Countdown -->
+                  <div class="col-2 p-0">
+                    <div id="countdown-container" class="text-center d-flex justify-content-center m-0 p-0">
+                      <p class="m-0 fs-1 fw-bold">
+                        <span id="countdown"></span>
+                      </p>
+                    </div>
+                  </div>
 
-									<!-- Score -->
-									<div class="col-5 p-0">
-										<div id="score-container" class="text-center d-flex justify-content-center m-0 p-0">
-											<p class="pe-1 mb-2 mb-sm-3 fw-bold fs-3">
-												Score: <span id="score">0</span>/9
-											</p>
-										</div>
-									</div>
+                  <!-- Score -->
+                  <div class="col-5 p-0">
+                    <div id="score-container" class="text-center d-flex justify-content-center m-0 p-0">
+                      <p class="pe-1 mb-2 mb-sm-3 fw-bold fs-3">
+                        Score: <span id="score">0</span>/9
+                      </p>
+                    </div>
+                  </div>
 
-								</div>
+                </div>
 
-								<!-- End-Game Message -->
-								<div id="end-game" class="row m-0 p-0">
-									<p class="col text-center fw-bold m-0 p-0">
-										<span id="end-game-msg"></span>
-									</p>
-								</div>
+                <!-- End-Game Message -->
+                <div id="end-game" class="row m-0 p-0">
+                  <p class="col text-center fw-bold m-0 p-0">
+                    <span id="end-game-msg"></span>
+                  </p>
+                </div>
 
-								<!-- Computer Tiles -->
-								<div class="row m-0 p-0">
-									<div class="col mx-auto my-2 p-0">
-										<div id="c-tiles" role="group" aria-label="Computer Tiles" class="grid-container m-0 p-0">
-											<button type="button" class="tile">
-												<span class="t-inner flipped">
-													<span class="t-front"></span>
-													<span class="t-back"></span>
-												</span>
-											</button>
+                <!-- Computer Tiles -->
+                <div class="row m-0 p-0">
+                  <div class="col mx-auto my-2 p-0">
+                    <div id="c-tiles" role="group" aria-label="Computer Tiles" class="grid-container m-0 p-0">
                       <button type="button" class="tile">
                         <span class="t-inner flipped">
                           <span class="t-front"></span>
@@ -331,16 +325,22 @@
                           <span class="t-back"></span>
                         </span>
                       </button>
-										</div>
-									</div>
-								</div>
+                      <button type="button" class="tile">
+                        <span class="t-inner flipped">
+                          <span class="t-front"></span>
+                          <span class="t-back"></span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
 
-							</div>
+              </div>
 
-							<!-- Player Area -->
-							<div id="player-area" class="row m-0 p-0">
-								<div class="col mx-auto m-0 mt-2 mb-2 p-0">
-									<div id="p-tiles" role="group" aria-label="Player Tiles" class="grid-container m-0 p-0">
+              <!-- Player Area -->
+              <div id="player-area" class="row m-0 p-0">
+                <div class="col mx-auto m-0 mt-2 mb-2 p-0">
+                  <div id="p-tiles" role="group" aria-label="Player Tiles" class="grid-container m-0 p-0">
                     <button type="button" class="tile">
                       <span class="t-inner flipped">
                         <span class="t-front"></span>
@@ -395,10 +395,10 @@
                         <span class="t-back"></span>
                       </span>
                     </button>
-									</div>
-								</div>
-							</div>
-						</div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
 

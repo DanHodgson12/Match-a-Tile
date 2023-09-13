@@ -112,7 +112,7 @@ img {
   background-color: #eac086;
   display: block;
   transform: rotateY(180deg);
-	border: 3px solid rgb(0 0 0 / 60%);
+  border: 3px solid rgb(0 0 0 / 60%);
 }
 
 .flipped {
@@ -160,9 +160,9 @@ img {
 }
 
 #end-game p {
-	color: red;
-	line-height: normal;
-	font-size: 20px;
+  color: red;
+  line-height: normal;
+  font-size: 20px;
 }
 
 /* Computer Area */
@@ -196,13 +196,13 @@ img {
     width: 90px;
   }
 
-	#c-tiles,
-	#p-tiles {
-		display: grid;
-		width: 100%;
-		grid-template-columns: repeat(3, auto);
-		grid-template-rows: repeat(3, auto);
-		gap: 8px;
-		justify-content: center;
-	}
+  #c-tiles,
+  #p-tiles {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 8px;
+    justify-content: center;
+  }
 }

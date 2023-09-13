@@ -1,23 +1,23 @@
 // Images
 let images = [
-	{ src: 'images/book.svg', alt: 'An icon of a book with a skull and crossbones.' },
-	{ src: 'images/chess-board.svg', alt: 'An icon of a chessboard.' },
-	{ src: 'images/chess-queen.svg', alt: 'An icon of the Queen piece from a chess-set.' },
-	{ src: 'images/chess-king-rook.svg', alt: 'An icon of the King and Rook pieces from a chess set.' },
-	{ src: 'images/diamond.svg', alt: 'An icon of a diamond.' },
-	{ src: 'images/dice-d20.svg', alt: 'An icon of a D-20 die/dice.' },
-	{ src: 'images/dice-three.svg', alt: 'An icon of the "three" side of a die/dice.' },
-	{ src: 'images/dragon.svg', alt: 'An icon of a dragon.' },
-	{ src: 'images/dungeon.svg', alt: 'An icon of a dungeon door.' },
-	{ src: 'images/fist.svg', alt: 'An icon of a fist.' },
-	{ src: 'images/gamepad.svg', alt: 'An icon of a video-game controller.' },
-	{ src: 'images/heart.svg', alt: 'An icon of a heart.' },
-	{ src: 'images/puzzle.svg', alt: 'An icon of a puzzle piece.' },
-	{ src: 'images/ring.svg', alt: 'An icon of a ring.' },
-	{ src: 'images/scroll.svg', alt: 'An icon of a scroll.' },
-	{ src: 'images/shield.svg', alt: 'An icon of a shield.' },
-	{ src: 'images/vr.svg', alt: 'An icon of a virtual-reality headset.' },
-	{ src: 'images/dice.svg', alt: 'An icon of two dice.' }
+  { alt: 'An icon of a book with a skull and crossbones.', src: 'images/book.svg' },
+  { alt: 'An icon of a chessboard.', src: 'images/chess-board.svg' },
+  { alt: 'An icon of the Queen piece from a chess-set.', src: 'images/chess-queen.svg' },
+  { alt: 'An icon of the King and Rook pieces from a chess set.', src: 'images/chess-king-rook.svg' },
+  { alt: 'An icon of a diamond.', src: 'images/diamond.svg' },
+  { alt: 'An icon of a D-20 die/dice.', src: 'images/dice-d20.svg' },
+  { alt: 'An icon of the "three" side of a die/dice.', src: 'images/dice-three.svg' },
+  { alt: 'An icon of a dragon.', src: 'images/dragon.svg' },
+  { alt: 'An icon of a dungeon door.', src: 'images/dungeon.svg' },
+  { alt: 'An icon of a fist.', src: 'images/fist.svg' },
+  { alt: 'An icon of a video-game controller.', src: 'images/gamepad.svg' },
+  { alt: 'An icon of a heart.', src: 'images/heart.svg' },
+  { alt: 'An icon of a puzzle piece.', src: 'images/puzzle.svg' },
+  { alt: 'An icon of a ring.', src: 'images/ring.svg' },
+  { alt: 'An icon of a scroll.', src: 'images/scroll.svg' },
+  { alt: 'An icon of a shield.', src: 'images/shield.svg' },
+  { alt: 'An icon of a virtual-reality headset.', src: 'images/vr.svg' },
+  { alt: 'An icon of two dice.', src: 'images/dice.svg' }
 ];
 
 const cTiles = $('#c-tiles .tile'); // Targets the computer tiles
@@ -205,7 +205,7 @@ function setCountdown() {
 		flipTiles(pTiles);
 		activateTiles(pTiles);
 	}, 5000);
-  
+
 	countdownTimer = setInterval(function () {
 		countdown--;
 		if (countdown >= 1) {

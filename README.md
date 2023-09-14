@@ -12,6 +12,8 @@
 
 ## Typography
 
+The font used throughout this project is the sans-serif font that loads as standard depending on browser choice. The reason for this is that I wanted to keep the styling basic and focus more on the functionality of the game. Also, I like how the standard font looks and feel it goes well with the styling of the images for the tiles.
+
 ## Wireframes
 
 # Features

@@ -143,6 +143,12 @@ Phone | ![Phone wireframe image](readme-files/mat-wf-phone.png)
 
 # Finished Product
 
+Device | Image
+--- | ---
+Desktop | ![Desktop Image](readme-files/final-desktop.png)
+Tablet | ![Tablet Image](readme-files/final-tablet.png)
+Phone | ![Phone Image](readme-files/final-phone.png)
+
 # Deployment
 
 This website was developed using [Codeanywhere](https://codeanywhere.com/solutions/collaborate), then committed and pushed to GitHub using the Codeanywhere terminal.

@@ -190,3 +190,7 @@ To make a clone of this project, please use the following steps:
 ## Code
 
 # Acknowledgements
+
+- My family, for their valuable opinions and unconditional support.
+- My mentor, Marcel, for his encouraging feedback and patience during my learning journey.
+- Code Institute, for its wonderful learning platform and supportive community.

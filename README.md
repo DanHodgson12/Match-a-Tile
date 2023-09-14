@@ -18,6 +18,16 @@ Visit the deployed site [here](https://danhodgson12.github.io/Match-a-Tile/).
 
 ## Colour Scheme
 
+![Colour Scheme](readme-files/mat-colour-scheme.png)
+
+The colours used for this website are:
+
+- Sunset (#EAC086) - for the computer & player tiles and the navbar logo.
+- Papaya Whip (#FFEFD5) - for the side bar.
+- Silver (#A9A9A9) - for the computer-tiles background
+- Onyx (#3D3D3D) - for the player-tiles background.
+- Eerie Black (#212529) - for the Mode-selection, About and Instructions buttons.
+
 ## Typography
 
 The font used throughout this project is the sans-serif font that loads as standard depending on browser choice. The reason for this is that I wanted to keep the styling basic and focus more on the functionality of the game. Also, I like how the standard font looks and feel it goes well with the styling of the images for the tiles.

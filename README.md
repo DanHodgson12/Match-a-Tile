@@ -151,11 +151,11 @@ This website was developed using [Codeanywhere](https://codeanywhere.com/solutio
 
 The project was deployed to GitHub Pages using the following steps:
 
-1. Log into GitHub and locate the [GitHub Repository](https://github.com/DanHodgson12/Match-a-Tile.git).
+1. Log into GitHub and locate the [GitHub Repository](https://github.com/DanHodgson12/Match-a-Tile).
 2. At the top of the page, locate the "Settings" button on the menu bar.
-   ![Deployment Instructions Part 1](/assets/readme-files/github-deployment-1.png)
+   ![Deployment Instructions Part 1](readme-files/github-deploy-1.png)
 3. Under "Code and automation" on the left-hand side of the window, click the "Pages" tab.
-   ![Deployment Instructions Part 1](/assets/readme-files/github-deployment-2.png)
+   ![Deployment Instructions Part 1](readme-files/github-deploy-2.png)
 4. Under "Source", select the option "Deploy from a branch".
 5. Under "Branch", select the option "main", then select the "/(root)" folder.
 6. Click "Save" and the page will refresh.
@@ -166,7 +166,7 @@ The project was deployed to GitHub Pages using the following steps:
 
 To make a clone of this project, please use the following steps:
 
-1. Log into GitHub and locate the [GitHub Repository](https://github.com/DanHodgson12/Sumersata-Designs).
+1. Log into GitHub and locate the [GitHub Repository](https://github.com/DanHodgson12/Match-a-Tile).
 2. At the top of the Repository (not top of page), locate and click on the "< > Code" button on the menu bar.
 3. In the "Local" tab, beneath where it says "Clone", select the "HTTPS" option.
 4. Just below that, copy the link for the repository.

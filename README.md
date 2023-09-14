@@ -25,6 +25,33 @@
 
 ## Frameworks, Libraries & Programs
 
+- [Font Awesome](https://fontawesome.com/)
+  - Font Awesome was used to add icons/images to the computer and player tiles.
+
+- [Codeanywhere](https://app.codeanywhere.com/)
+  - Codeanywhere was used for writing, committing and pushing the code to GitHub.
+
+- [Bootstrap 5](https://getbootstrap.com/)
+  - Bootstrap 5 was used to develop a responsive mobile-first design using an assortment of templates.
+
+- [jQuery](https://jquery.com/)
+  - jQuery was used as the preferred JavaScript library for HTML document traversal and manipulation, event handling and animation.
+
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+  - Chrome DevTools was used throughout the development of the website to test ideas and responsiveness, as well as test functionality of the game and debug issues that arose.
+
+- [W3C Markup Validator](https://validator.w3.org/)
+  - W3C Markup Validator was used to validate the HTML code.
+
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+  - W3C CSS Validator was used to validate the CSS code.
+
+- [JSLint](https://www.jslint.com/)
+  - JSLint was used to validate the JavaScript.
+
+- [Favicon.io](https://favicon.io/)
+  - Favicon.io was used to create the site favicon.
+
 # Testing
 
 ## Testing User Stories

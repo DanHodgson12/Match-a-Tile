@@ -20,9 +20,23 @@ Visit the deployed site [here](https://danhodgson12.github.io/Match-a-Tile/).
 - Contains clear imagery and content.
 - Provides interactivity in the form of clickable elements.
 - Provides feedback in the form of elements changing state.
-- Offers the user the ability to challenge their memory.
+- Provides a score system and conveys it clearly.
+- Provides feedback in the form of displaying how many turns the player has left.
+- Offers the user the ability to challenge their memory skills.
+- The game can be played on a variety of screen sizes.
 
 ## User Stories
+
+- As a user, I want to be able to navigate the game easily.
+- As a user, I want to know what the game is about.
+- As a user, I want to know how to play the game.
+- as a user, I want to see the images clearly.
+- As a user, I want to be able to interact with the game.
+- As a user, I want to be given feedback when I interact with the game.
+- As a user, I want to be able to see my score.
+- As a user, I want to know how many turns I have left.
+- As a user, I want to challenge my momery skills.
+- As a user, I want to play the game on a variety of screen sizes.
 
 ## Colour Scheme
 

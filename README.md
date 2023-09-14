@@ -30,7 +30,7 @@ Visit the deployed site [here](https://danhodgson12.github.io/Match-a-Tile/).
 
 The colours used for this website are:
 
-- Sunset (#EAC086) - for the computer & player tiles and the navbar logo.
+- Sunset (#EAC086) - for the computer & player tiles and the navbar logo. This colour is loosely based on the color for the [Scrabble](https://en.wikipedia.org/wiki/Scrabble) tile.
 - Papaya Whip (#FFEFD5) - for the side bar.
 - Silver (#A9A9A9) - for the computer-tiles background
 - Onyx (#3D3D3D) - for the player-tiles background.

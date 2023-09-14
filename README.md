@@ -113,11 +113,11 @@ Phone | ![Phone wireframe image](readme-files/mat-wf-phone.png)
 
 ## Lighthouse Report
 
-### Home Page
+Lighthouse in Google Chrome Dev Tools was used to test performance, accessibility, best practices and search engine optimisation of the webpage.
 
-### Gallery Page
+![Lighthouse Report](readme-files/lh-report.png)
 
-### Contact Us Page
+One of the suggestions made for increasing Performance was to remove element IDs that weren't defined in CSS. However, elements that fell into this category had IDs for manipulation via JavaScript.
 
 ## Tools Testing
 

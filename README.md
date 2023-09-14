@@ -14,6 +14,14 @@ Visit the deployed site [here](https://danhodgson12.github.io/Match-a-Tile/).
 
 ## Project Goals
 
+- The game can be easily navigated and understood.
+- Clearly explains the concept of the game.
+- Clearly explains how to play the game.
+- Contains clear imagery and content.
+- Provides interactivity in the form of clickable elements.
+- Provides feedback in the form of elements changing state.
+- Offers the user the ability to challenge their memory.
+
 ## User Stories
 
 ## Colour Scheme

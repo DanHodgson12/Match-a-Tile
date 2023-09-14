@@ -185,7 +185,12 @@ To make a clone of this project, please use the following steps:
 
 ## Content
 
+- All content was written by the developer.
+
 ## Media
+
+- [Font Awesome](https://fontawesome.com/icons/categories/gaming) was used for providing the images to assign to the game tiles.
+- All other styling and media was created by the developer.
 
 ## Code
 

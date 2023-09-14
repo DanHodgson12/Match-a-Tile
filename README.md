@@ -34,6 +34,16 @@ The font used throughout this project is the sans-serif font that loads as stand
 
 ## Wireframes
 
+[Figma](https://www.figma.com/) was used to showcase the visuals of the game across the three main screen sizes.
+
+The full version of wireframes can be viewed [here](https://www.figma.com/file/FKLPRejh6ElgwCStCXU0IF/Match-a-Tile-WireFrames?type=design&node-id=0-1&mode=design&t=1RPCNTWt2wE6rDEL-0).
+
+Device | Wireframe
+--- | ---
+Desktop | ![Desktop wireframe image](readme-files/mat-wf-desktop.png)
+Tablet | ![Tablet wireframe image](readme-files/mat-wf-tablet.png)
+Phone | ![Phone wireframe image](readme-files/mat-wf-phone.png)
+
 # Features
 
 # Technologies Used

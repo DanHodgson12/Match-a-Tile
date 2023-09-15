@@ -215,6 +215,16 @@ The Computer Area consists of:
 - These tiles flip over (so they are shown) after the Countdown Timer has ended and the Computer Tiles have been flipped (hidden).
 - The tiles remain visible throughout the game.
 
+## Flip Functionality
+
+![Flip Functionality Image](readme-files/features-countdown-flip.gif)
+
+- The Computer Tiles and Player Tiles are flipped depending on the state of the game, or whether a successful match has been made.
+- They flip on the Y-axis at a rate of 0.6 seconds.
+- The images are assigned to the tiles before any of the tiles are flipped.
+  - This ensures that the user has enough time to register the image.
+  - It also adds to the visual representation of the game.
+
 # Technologies Used
 
 ## Languages

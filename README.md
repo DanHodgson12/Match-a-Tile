@@ -202,6 +202,19 @@ The Computer Area consists of:
 - If the user successfully matches a Player Tile with a Computer Tile, that particular Computer Tile will flip over (be shown).
 - If the user unsuccessfully matches the two tiles, that particular Computer Tile will remain hidden.
 
+## Player Tiles
+
+![Player Tiles Image](readme-files/features-player-tiles.png)
+
+- The Player Tiles consist of 9 buttons that the user can click.
+  - The buttons are disabled at the start of the game.
+  - The buttons are enabled after the Countdown Timer has ended and the Computer Tiles have been flipped (hidden).
+  - When the user has clicked on a Player Tile, all other Player Tiles are disabled and the Computer Tiles are enabled.
+  - Once the user has successfully matched a Player Tile with a Computer Tile, that particular Player Tile will have a green inner-border and will be disabled.
+  - If the user unsuccessfully matches two Tiles, that particular Player Tile will momentarily have a red inner-border, but can be selected in the user's next turn.
+- These tiles flip over (so they are shown) after the Countdown Timer has ended and the Computer Tiles have been flipped (hidden).
+- The tiles remain visible throughout the game.
+
 # Technologies Used
 
 ## Languages

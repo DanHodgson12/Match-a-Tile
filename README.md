@@ -238,6 +238,16 @@ The Computer Area consists of:
     - The Computer Tile momentarily gains a red inner-border but does not flip over (remains hidden).
     - The Player Tile momentarily gains a red inner-border but can be selected in the user's next turn.
 
+## Game Over
+
+![Game Over Gif](readme-files/features-game-over.gif)
+
+- When the user has scored 9 out of 9 and/or has run out of turns, the Game Over function is executed.
+  - The phrase GAME OVER appears above the Computer Tiles.
+  - An 'Alert' is displayed at the top of the screen.
+    - The 'Alert' displays the user's Score.
+- The user then has to click the 'Alert' and click the Reset button to reset the game.
+
 ## Footer
 
 ![Footer Image](readme-files/features-footer.png)

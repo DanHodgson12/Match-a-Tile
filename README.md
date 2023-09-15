@@ -68,6 +68,88 @@ Phone | ![Phone wireframe image](readme-files/mat-wf-phone.png)
 
 # Features
 
+- The website was designed from a mobile-first perspective.
+- The website is responsive on all screen sizes, including very small screens such as the Galaxy Fold.
+  - This allows the user to [view the website on a variety of screen sizes](#user-stories).
+
+## Navbar
+
+![Navbar on medium & small screen sizes](readme-files/features-navbar-tablet-phone.png)
+
+The Navbar consists of:
+
+- The game logo (styled from the tiles used in the game).
+  - This is a clickable button that refreshes the page and resets the game.
+- The game heading.
+- The About button.
+  - This opens a modal with information about the game.
+
+![About Modal Image](readme-files/features-about-modal.png)
+
+- The Instructions button.
+  - This opens a modal with the instructions for the game.
+
+![Instructions Modal Image](readme-files/features-instructions-modal.png)
+
+On larger screen sizes, the About and Instructions buttons disappear and this information is displayed in the [Side Bar](#side-bar).
+
+## Side Bar
+
+The Side Bar consists of:
+
+- The About button.
+  - This slide-toggles a drop-down box showing information about the game.
+- The Information button.
+  - This slide-toggles a drop-down box showing the instructions for the game.
+
+![Side Bar Image](readme-files/features-sidebar.png)
+
+On screen sizes below large, the Side Bar disappears and the About and Information buttons move to the [Navbar](#navbar).
+
+## Controls
+
+![Controls Area Image](readme-files/features-controls.png)
+
+The Controls area consists of:
+
+### Mode Selection
+
+![Mode Selection Image](readme-files/features-mode-selector.png)
+
+- This toggles a drop-down menu where the user can select a mode (Easy, Normal or Hard).
+
+### Mode Display
+
+![Mode Display Image](readme-files/features-mode-display.png)
+
+- This displays the mode the user has selected from the Mode selection drop-down menu.
+- The mode displayed changes depending on the user's selection.
+
+### Start Button
+
+![Start Button Image](readme-files/features-start-button.png)
+
+- This starts the game, which causes several things to happen:
+  - Disables the Start button.
+  - Disables the Mode selection button.
+  - Assigns random images to the Computer Tiles.
+  - Shuffles those same images and assigns them to the Player Tiles.
+  - Starts the Countdown Timer.
+  - Shows the Computer Tiles.
+  - Hides the Computer Tiles once the Countdown Timer ends.
+  - Shows the Player Tiles once the Countdown Timer ends.
+
+### Reset Button
+
+![Reset Button Image](readme-files/features-reset-button.png)
+
+- This resets the game, which causes several things to happen:
+  - Hides both the Computer and Player Tiles.
+  - Removes all images from all Tiles.
+  - Resets the 'Score' and 'Turns Left' displays.
+  - Enables the Start button.
+  - Enables the Mode selection button.
+
 # Technologies Used
 
 ## Languages

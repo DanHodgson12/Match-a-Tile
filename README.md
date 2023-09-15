@@ -111,6 +111,27 @@ Phone | ![Phone wireframe image](readme-files/mat-wf-phone.png)
 
 ## Code Validation
 
+The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) services were used to check for any code errors or misuse of syntax/elements in the HTML & CSS.
+
+The W3C Markup Validator returned a one error:
+
+- The use of `div` elements inside `button` elements.
+  - This was overcome by changing the `div` elements to `span` elements.
+
+![Markup Validation Image 1](readme-files/html-validation-error.png)
+![Markup Validation Image 2](readme-files/html-validation.png)
+
+The W3C CSS Validator returned no errors in the code.
+![CSS Validation Image](readme-files/css-validation.png)
+
+The [JS Hint](https://jshint.com/) service was used to check for any code errors or misuse of syntax in the JavaScript.
+
+JS Hint returned no errors or warnings. However, it did report several instances of undefined variables.
+
+![JS Hint Report Image](readme-files/jshint-validation.png)
+
+This was due to the use of jQuery throughout the project and didn't require adjustments to the code.
+
 ## Lighthouse Report
 
 Lighthouse in Google Chrome Dev Tools was used to test performance, accessibility, best practices and search engine optimisation of the webpage.

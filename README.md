@@ -150,6 +150,58 @@ The Controls area consists of:
   - Enables the Start button.
   - Enables the Mode selection button.
 
+## Computer Area
+
+![Computer Area Image](readme-files/features-computer-area.png)
+
+The Computer Area consists of:
+
+### Turns Left
+
+![Turns Left Image](readme-files/features-turns.png)
+
+- This displays the number of the turns the user has left to match the tiles before the game is over.
+- The number of turns left at the start of the game is determined by the Mode selected:
+  - Easy - 18 turns
+  - Normal - 14 turns
+  - Hard - 9 turns
+- When the Turns Left reaches 0, the game ends.
+
+### Countdown Timer
+
+![Countdown Timer Gif](readme-files/features-countdown-timer.gif)
+
+- The Countdown Timer starts after the user has clicked the Start button.
+- It counts down from 5 to the word 'GO'.
+- It displays how long the user has to memorise the Computer Tiles before they are flipped over/hidden.
+- Once it reaches the word 'GO', the Computer Tiles are hidden and the Player Tiles are shown.
+- The game then begins and the user is able to click on the Player Tiles to match them with the Computer Tiles.
+
+### Score
+
+![Score Image](readme-files/features-score.png)
+
+- The Score area displays the amount of correct matches the user has made.
+- Once the Score reaches 9/9, the game ends.
+  - However, the game can end prematurely if the Turns Left reaches 0 before the Score reaches 9/9.
+  - For example, the user could use all of their turns and only score 4/9 and the game will end.
+- The Score is reset at the start of the game or when the game is reset.
+- The Score cannot exceed 9/9.
+
+### Computer Tiles
+
+![Computer Tiles Image](readme-files/features-computer-tiles.png)
+
+- The Computer Tiles consist of 9 buttons that the user can click.
+  - The buttons are disabled at the start of the game.
+  - The buttons are enabled after the user has clicked on a Player Tile so that it can be matched with a Computer Tile.
+  - Once the user has successfully matched two Tiles, that particular Computer Tile will have a green inner-border and will be disabled.
+  - If the user unsuccessfully matches two Tiles, that particular Computer Tile will momentarily have a red inner-border, but can be selected in the user's next turn. That Computer Tile will remain disabled until the user has clicked on a Player Tile to match it with a Computer Tile.
+- These tiles flip over (so they are shown) when the user clicks the Start button and the Countdown Timer has begun.
+- The tiles then flip over again (so they are hidden) once the Countdown Timer has ended.
+- If the user successfully matches a Player Tile with a Computer Tile, that particular Computer Tile will flip over (be shown).
+- If the user unsuccessfully matches the two tiles, that particular Computer Tile will remain hidden.
+
 # Technologies Used
 
 ## Languages

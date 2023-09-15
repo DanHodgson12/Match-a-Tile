@@ -238,6 +238,16 @@ The Computer Area consists of:
     - The Computer Tile momentarily gains a red inner-border but does not flip over (remains hidden).
     - The Player Tile momentarily gains a red inner-border but can be selected in the user's next turn.
 
+## Footer
+
+![Footer Image](readme-files/features-footer.png)
+
+The Footer consists of:
+
+- Copyright information.
+
+No other links or information were included in the Footer as the developer thought it was unnecessary for the purpose of the project.
+
 # Technologies Used
 
 ## Languages

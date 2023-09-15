@@ -217,13 +217,26 @@ The Computer Area consists of:
 
 ## Flip Functionality
 
-![Flip Functionality Image](readme-files/features-countdown-flip.gif)
+![Flip Functionality Gif](readme-files/features-countdown-flip.gif)
 
 - The Computer Tiles and Player Tiles are flipped depending on the state of the game, or whether a successful match has been made.
 - They flip on the Y-axis at a rate of 0.6 seconds.
 - The images are assigned to the tiles before any of the tiles are flipped.
   - This ensures that the user has enough time to register the image.
   - It also adds to the visual representation of the game.
+
+## Tile Matching
+
+![Tile Matching Gif](readme-files/features-tile-matching.gif)
+
+- When the user clicks on a Player Tile, a blue inner-border is added to indicate it has been clicked.
+  - If the user then clicks on a Computer Tile and it's a successful match:
+    - The Computer Tile flips over (is shown) and a green inner-border is added.
+    - A green inner-border is also added to the Player Tile.
+    - Both tiles are disabled for the remainder of the game.
+  - If the user then clicks on a Computer Tile and it's not a match:
+    - The Computer Tile momentarily gains a red inner-border but does not flip over (remains hidden).
+    - The Player Tile momentarily gains a red inner-border but can be selected in the user's next turn.
 
 # Technologies Used
 

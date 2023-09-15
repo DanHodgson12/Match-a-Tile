@@ -201,6 +201,7 @@ The Computer Area consists of:
 - The tiles then flip over again (so they are hidden) once the Countdown Timer has ended.
 - If the user successfully matches a Player Tile with a Computer Tile, that particular Computer Tile will flip over (be shown).
 - If the user unsuccessfully matches the two tiles, that particular Computer Tile will remain hidden.
+- A random selection of 9 images are assigned to the Computer Tiles after the user clicks the Start button.
 
 ## Player Tiles
 
@@ -214,6 +215,7 @@ The Computer Area consists of:
   - If the user unsuccessfully matches two Tiles, that particular Player Tile will momentarily have a red inner-border, but can be selected in the user's next turn.
 - These tiles flip over (so they are shown) after the Countdown Timer has ended and the Computer Tiles have been flipped (hidden).
 - The tiles remain visible throughout the game.
+- The same 9 images assigned to the Computer Tiles are shuffled and assigned to the Player Tiles at the start of the game.
 
 ## Flip Functionality
 

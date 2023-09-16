@@ -427,6 +427,21 @@ Instructions Section cont. | Text adjusts to size of the section when window is 
 Instruction Button | Smoothly slide-toggles the Instructions information to hidden/shown as expected | Pass
 ---
 
+#### Controls Area
+
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Mode Button | Toggles a dropdown menu with the modes "Easy", "Normal" and "Hard" as expected | Pass
+Mode Button cont. | Dropdown menu items can be selected by clicking them as expected | Pass
+Mode Display | The mode displayed changes depending on the dropdown menu item selected as expected | Pass
+Mode Display cont. | The mode displayed adjusts the number of Turns Left as expected | Pass
+Start Button | Starts the countdown timer and shows the Computer Tiles as expected | Pass
+Start Button cont. | Disables the Start button and the Mode button as expected | Pass
+Reset Button | Hides the Player & Computer Tiles as expected | Pass
+Reset Button cont. | Resets the Turns Left and Score as expected | Pass
+Reset Button cont. | Enables the Start button and Mode button as expected | Pass
+---
+
 ### Known Bugs
 
 There are no known bugs with the web application.

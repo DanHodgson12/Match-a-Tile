@@ -374,7 +374,7 @@ One of the suggestions made for increasing Performance was to remove element IDs
   - [Am I Responsive?](https://ui.dev/amiresponsive) was used to check responsiveness across different screen sizes and generate the mockup final image.
   - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) was used to check responsiveness across different screen sizes during the development and testing phases.
 
-## Manual Testing
+## Compatibility Testing
 
 ### Browser Compatibility
 
@@ -392,117 +392,204 @@ The web application was tested across a wide variety of devices using [Google Ch
 - The full game area is too tall to be seen on the screen for phones with screen sizes similar to that of an Iphone 4, so the user would need to scroll up and down manually.
   - The developer chose to ignore this issue as adjusting the layout would compromise on the maximum size of the images displayed on the tiles.
 
-### Common Elements Testing
+## Common Elements Testing
 
-#### Navbar
+### Navbar
 
-Feature | Outcome | Pass/Fail
---- | --- | ---
-NavBar Logo | Reloads the page and resets the game as expected | Pass
-About Button | Is only displayed on screen widths less than 992px as expected | Pass
-About Button cont. | Opens the About Modal as expected | Pass
-About Modal | Displays the About information as expected | Pass
-About Modal cont. | Closes when the user clicks anywhere on the screen as expected | Pass
-About Modal cont. | Closes automaticaly when the screen size is manually adjusted | Pass
-About Modal cont. | The link within the text opens in a new window as expected | Pass
-Instructions Button | Is only displayed on screen widths less than 992px as expected | Pass
-Instructions Button cont. | Opens the Instructions Modal as expected | Pass
-Instructions Modal | Displays the Instructions information as expected | Pass
-Instructions Modal cont. | Closes when the user clicks anywhere on the screen as expected | Pass
-Instructions Modal cont. | Closes automaticaly when the screen size is manually adjusted | Pass
+#### Navbar Logo
+
+Outcome | Pass/Fail
+--- | ---
+Reloads the page and resets the game as expected | Pass
+
+#### About Button
+
+Outcome | Pass/Fail
+--- | ---
+Is only displayed on screen widths less than 992px as expected | Pass
+Opens the About Modal as expected | Pass
+
+#### About Modal
+
+Outcome | Pass/Fail
+--- | ---
+Displays the About information as expected | Pass
+Closes when the user clicks anywhere on the screen as expected | Pass
+Closes automaticaly when the screen size is manually adjusted | Pass
+The link within the text opens in a new window as expected | Pass
+
+#### Instructions Button
+
+Outcome | Pass/Fail
+--- | ---
+Is only displayed on screen widths less than 992px as expected | Pass
+Opens the Instructions Modal as expected | Pass
+
+#### Instructions Modal
+
+Outcome | Pass/Fail
+--- | ---
+Displays the Instructions information as expected | Pass
+Closes when the user clicks anywhere on the screen as expected | Pass
+Closes automaticaly when the screen size is manually adjusted | Pass
 ---
+
+### Side Bar
 
 #### Side Bar
 
-Feature | Outcome | Pass/Fail
---- | --- | ---
-Side Bar | Is only displayed on screen widths larger than 991px as expected | Pass
-Side Bar cont. | Is shown/hidden when the window is manually resized as expected | Pass
-About Section | Is automatically displayed when the page is loaded as expected | Pass
-About Section cont. | Text adjusts to size of the section when window is manually resized as expected | Pass
-About Section cont. | The link within the text opens in a new window as expected | Pass
-About Button | Smoothly slide-toggles the About information to hidden/shown as expected | Pass
-Instructions Section | Is automatically displayed when the page is loaded as expected | Pass
-Instructions Section cont. | Text adjusts to size of the section when window is manually resized as expected | Pass
-Instruction Button | Smoothly slide-toggles the Instructions information to hidden/shown as expected | Pass
+Outcome | Pass/Fail
+--- | ---
+Is only displayed on screen widths larger than 991px as expected | Pass
+Is shown/hidden when the window is manually resized as expected | Pass
+
+#### About Section
+
+Outcome | Pass/Fail
+--- | ---
+Is automatically displayed when the page is loaded as expected | Pass
+Text adjusts to size of the section when window is manually resized as expected | Pass
+The link within the text opens in a new window as expected | Pass
+The button smoothly slide-toggles the About information to hidden/shown as expected | Pass
+
+#### Instructions Section
+
+Outcome | Pass/Fail
+--- | ---
+Is automatically displayed when the page is loaded as expected | Pass
+Text adjusts to size of the section when window is manually resized as expected | Pass
+The button smoothly slide-toggles the Instructions information to hidden/shown as expected | Pass
 ---
 
-#### Controls Area
+### Controls Area
 
-Feature | Outcome | Pass/Fail
---- | --- | ---
-Mode Button | Toggles a dropdown menu with the modes "Easy", "Normal" and "Hard" as expected | Pass
-Mode Button cont. | Dropdown menu items can be selected by clicking them as expected | Pass
-Mode Display | The mode displayed changes depending on the dropdown menu item selected as expected | Pass
-Mode Display cont. | The mode displayed adjusts the number of Turns Left as expected | Pass
-Start Button | Starts the countdown timer and shows the Computer Tiles as expected | Pass
-Start Button cont. | Disables the Start button and the Mode button as expected | Pass
-Reset Button | Hides the Player & Computer Tiles as expected | Pass
-Reset Button cont. | Resets the Turns Left and Score as expected | Pass
-Reset Button cont. | Enables the Start button and Mode button as expected | Pass
+#### Mode Button
+
+Outcome | Pass/Fail
+--- | ---
+Toggles a dropdown menu with the modes "Easy", "Normal" and "Hard" as expected | Pass
+Dropdown menu items can be selected by clicking them as expected | Pass
+
+#### Mode Display
+
+Outcome | Pass/Fail
+--- | ---
+The mode displayed changes depending on the dropdown menu item selected as expected | Pass
+The mode displayed adjusts the number of Turns Left as expected | Pass
+
+#### Start Button
+
+Outcome | Pass/Fail
+--- | ---
+Starts the countdown timer and shows the Computer Tiles as expected | Pass
+Disables the Start button and the Mode button as expected | Pass
+
+#### Reset Button
+
+Outcome | Pass/Fail
+--- | ---
+Hides the Player & Computer Tiles as expected | Pass
+Resets the Turns Left and Score as expected | Pass
+Enables the Start button and Mode button as expected | Pass
 ---
 
-#### Turns/Timer/Score Area
+### Turns/Timer/Score Area
 
-Feature | Outcome | Pass/Fail
---- | --- | ---
-Turns Left Area | Displays the turns the player has left as expected | Pass
-Turns Left Area cont. | Adjusts the number of turns left depending on Mode selected as expected | Pass
-Turns Left Area cont. | Number of turns left reduces by 1 each time the player attempts to match two tiles together as expected | Pass
-Turns Left Area cont. | Resets back to the relevant number of turns left when the Reset button is clicked as expected | Pass
-Turns Left Area cont. | The game ends when Turns Left reaches '0' (and/or the Score reaches '9/9') as expected | Pass
-Turns Left Area cont. | Turns Left cannot be reduced below '0' as expected | Pass
-Countdown Timer | Timer starts when the Start button is clicked as expected | Pass
-Countdown Timer cont. | Timer counts down from 5 to the word 'GO' as expected | Pass
-Countdown Timer cont. | The relevant tiles are shown/hidden when the timer reaches the word 'GO' as expected | Pass
-Countdown Timer cont. | Fades out 2 seconds after the timer reaches the word 'GO' as expected | Pass
-Score Area | Displays the players current score as expected | Pass
-Score Area cont. | Is set to 0/9 when the page loads or when the Reset button is clicked as expected | Pass
-Score Area cont. | Increments by 1 each time the player gets a correct match as expected | Pass
-Score Area cont. | The game ends when the Score reaches '9/9' (and/or the Turns Left reaches '0') as expected | Pass
-Score Area cont. | Score cannot be incremented above '9/9' as expected | Pass
+#### Turns Left
+
+Outcome | Pass/Fail
+--- | ---
+Displays the turns the player has left as expected | Pass
+Adjusts the number of turns left depending on Mode selected as expected | Pass
+Number of turns left reduces by 1 each time the player attempts to match two tiles together as expected | Pass
+Resets back to the relevant number of turns left when the Reset button is clicked as expected | Pass
+The game ends when Turns Left reaches '0' (and/or the Score reaches '9/9') as expected | Pass
+Turns Left cannot be reduced below '0' as expected | Pass
+
+#### Countdown Timer
+
+Outcome | Pass/Fail
+--- | ---
+Timer starts when the Start button is clicked as expected | Pass
+Timer counts down from 5 to the word 'GO' as expected | Pass
+The relevant tiles are shown/hidden when the timer reaches the word 'GO' as expected | Pass
+Fades out 2 seconds after the timer reaches the word 'GO' as expected | Pass
+
+#### Score
+
+Outcome | Pass/Fail
+--- | ---
+Displays the players current score as expected | Pass
+Is set to 0/9 when the page loads or when the Reset button is clicked as expected | Pass
+Increments by 1 each time the player gets a correct match as expected | Pass
+The game ends when the Score reaches '9/9' (and/or the Turns Left reaches '0') as expected | Pass
+Score cannot be incremented above '9/9' as expected | Pass
 ---
 
-#### Computer Tiles
+### Computer Tiles
 
-Feature | Outcome | Pass/Fail
---- | --- | ---
-Images | Images are shuffled and randomly assigned to tiles as expected | Pass
-Images cont. | Images are centered within the tile, oriented correctly, and clearly visible as expected | Pass
-Flip Function | Tiles are flipped at the correct rate on the Y-axis as expected | Pass
-Flip Function cont. | Images are assigned to the front of the tiles before the Flip Function is executed as expected | Pass
-Flip Function cont. | The backs of the tiles are visible and the front of the tiles are hidden by default as expected | Pass
-Flip Function cont. | Tiles are unflipped (shown) when the Start button has been clicked and flipped (hidden) when the countdown timer has ended as expected | Pass
-Flip Function cont. | Tile is unflipped (shown) when a correct match has been made with a Player Tile and Computer Tile as expected | Pass
-Click Function | Tile 'buttons' are disabled by default when the page loads and the game is started as expected | Pass
-Click Function cont. | Tile 'buttons' are enabled after a Player Tile has been selected as expected | Pass
-Click Function cont. | Individual Computer Tiles are disabled indefinitely if a correct match has been made as expected | Pass
-Click Function cont. | Individual Computer Tiles gain a green border if a correct match has been made as expected | Pass
-Click Function cont. | Individual Computer Tiles momentarily gain a red border if an incorrect match has been made as expected | Pass
-Click Function cont. | Tiles are disabled when the game is over as expected | Pass
+#### Image Assignment/Display
+
+Outcome | Pass/Fail
+--- | ---
+Images are shuffled and randomly assigned to tiles as expected | Pass
+Images are centered within the tile, oriented correctly, and clearly visible as expected | Pass
+
+#### Flip Functionality
+
+Outcome | Pass/Fail
+--- | ---
+Tiles are flipped at the correct rate on the Y-axis as expected | Pass
+Images are assigned to the front of the tiles before the Flip Function is executed as expected | Pass
+The backs of the tiles are visible and the front of the tiles are hidden by default as expected | Pass
+Tiles are unflipped (shown) when the Start button has been clicked and flipped (hidden) when the countdown timer has ended as expected | Pass
+Tile is unflipped (shown) when a correct match has been made with a Player Tile and Computer Tile as expected | Pass
+
+#### Click Functionality
+
+Outcome | Pass/Fail
+--- | ---
+Tile 'buttons' are disabled by default when the page loads and the game is started as expected | Pass
+Tile 'buttons' are enabled after a Player Tile has been selected as expected | Pass
+Individual Computer Tiles are disabled indefinitely if a correct match has been made as expected | Pass
+Individual Computer Tiles gain a green border if a correct match has been made as expected | Pass
+Individual Computer Tiles momentarily gain a red border if an incorrect match has been made as expected | Pass
+Tiles are disabled when the game is over as expected | Pass
 ---
 
-#### Player Tiles
+### Player Tiles
 
-Feature | Outcome | Pass/Fail
---- | --- | ---
-Images | The same images assigned to the Computer Tiles are shuffled again and randomly assigned to Player Tiles as expected | Pass
-Images cont. | Images are centered within the tile, oriented correctly, and clearly visible as expected | Pass
-Flip Function | Tiles are flipped at the correct rate on the Y-axis as expected | Pass
-Flip Function cont. | Images are assigned to the front of the tiles before the Flip Function is executed as expected | Pass
-Flip Function cont. | The backs of the tiles are visible and the front of the tiles are hidden by default as expected | Pass
-Flip Function cont. | Tiles are unflipped (shown) when the countdown timer has ended as expected | Pass
-Flip Function cont. | Tiles remain unflipped (shown) for the remainder of the game (until page is reloaded or game is reset) as expected | Pass
-Click Function | Tile 'buttons' are disabled by default when the page loads and the game is started as expected | Pass
-Click Function cont. | Tile 'buttons' are enabled when the countdown timer has ended as expected | Pass
-Click Function cont. | Individual Player Tiles are disabled indefinitely if a correct match has been made as expected | Pass
-Click Function cont. | Player Tiles are disabled after an individual Player Tile has been clicked as expected | Pass
-Click Function cont. | Player Tiles are enabled after player has clicked a Computer Tile and attempted to match it with the Player Tile selected as expected | Pass
-Click Function cont. | Individual Player Tiles gain a blue border when clicked as expected | Pass
-Click Function cont. | Blue border disappears after player clicks on a Computer Tile to attempt a match as expected | Pass
-Click Function cont. | Individual Player Tiles gain a green border if a correct match has been made as expected | Pass
-Click Function cont. | Individual Player Tiles momentarily gain a red border if an incorrect match has been made as expected | Pass
-Click Function cont. | Tiles are disabled when the game is over as expected | Pass
+#### Image Assignment/Display
+
+Outcome | Pass/Fail
+--- | ---
+The same images assigned to the Computer Tiles are shuffled again and randomly assigned to Player Tiles as expected | Pass
+Images are centered within the tile, oriented correctly, and clearly visible as expected | Pass
+
+#### Flip Functionality
+
+Outcome | Pass/Fail
+--- | ---
+Tiles are flipped at the correct rate on the Y-axis as expected | Pass
+Images are assigned to the front of the tiles before the Flip Function is executed as expected | Pass
+The backs of the tiles are visible and the front of the tiles are hidden by default as expected | Pass
+Tiles are unflipped (shown) when the countdown timer has ended as expected | Pass
+Tiles remain unflipped (shown) for the remainder of the game (until page is reloaded or game is reset) as expected | Pass
+
+#### Click Functionality
+
+Outcome | Pass/Fail
+--- | ---
+Tile 'buttons' are disabled by default when the page loads and the game is started as expected | Pass
+Tile 'buttons' are enabled when the countdown timer has ended as expected | Pass
+Individual Player Tiles are disabled indefinitely if a correct match has been made as expected | Pass
+Player Tiles are disabled after an individual Player Tile has been clicked as expected | Pass
+Player Tiles are enabled after player has clicked a Computer Tile and attempted to match it with the Player Tile selected as expected | Pass
+Individual Player Tiles gain a blue border when clicked as expected | Pass
+Blue border disappears after player clicks on a Computer Tile to attempt a match as expected | Pass
+Individual Player Tiles gain a green border if a correct match has been made as expected | Pass
+Individual Player Tiles momentarily gain a red border if an incorrect match has been made as expected | Pass
+Tiles are disabled when the game is over as expected | Pass
 ---
 
 ### Known Bugs

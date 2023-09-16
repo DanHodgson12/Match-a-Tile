@@ -482,6 +482,29 @@ Click Function cont. | Individual Computer Tiles momentarily gain a red border i
 Click Function cont. | Tiles are disabled when the game is over as expected | Pass
 ---
 
+#### Player Tiles
+
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Images | The same images assigned to the Computer Tiles are shuffled again and randomly assigned to Player Tiles as expected | Pass
+Images cont. | Images are centered within the tile, oriented correctly, and clearly visible as expected | Pass
+Flip Function | Tiles are flipped at the correct rate on the Y-axis as expected | Pass
+Flip Function cont. | Images are assigned to the front of the tiles before the Flip Function is executed as expected | Pass
+Flip Function cont. | The backs of the tiles are visible and the front of the tiles are hidden by default as expected | Pass
+Flip Function cont. | Tiles are unflipped (shown) when the countdown timer has ended as expected | Pass
+Flip Function cont. | Tile remain unflipped (shown) for the remainder of the game (until page is reloaded or game is reset) as expected | Pass
+Click Function | Tile 'buttons' are disabled by default when the page loads and the game is started as expected | Pass
+Click Function cont. | Tile 'buttons' are enabled when the countdown timer has ended as expected | Pass
+Click Function cont. | Individual Player Tiles are disabled indefinitely if a correct match has been made as expected | Pass
+Click Function cont. | Player Tiles other than the tile clicked are disabled until player has clicked a Computer Tile to match as expected | Pass
+Click Function cont. | Player Tiles are enabled after player has attempted to match a Player Tile with a Computer Tile as expected | Pass
+Click Function cont. | Individual Player Tiles gain a blue border when clicked as expected | Pass
+Click Function cont. | Blue border disappears after player clicks on a Computer Tile to attempt a match as expected | Pass
+Click Function cont. | Individual Player Tiles gain a green border if a correct match has been made as expected | Pass
+Click Function cont. | Individual Player Tiles momentarily gain a red border if an incorrect match has been made as expected | Pass
+Click Function cont. | Tiles are disabled when the game is over as expected | Pass
+---
+
 ### Known Bugs
 
 There are no known bugs with the web application.

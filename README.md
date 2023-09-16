@@ -380,6 +380,11 @@ One of the suggestions made for increasing Performance was to remove element IDs
   
 ### Device Compatibility
 
+The web application was tested across a wide variety of devices using [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) & [Responsive Design Checker](https://www.responsivedesignchecker.com/) - no appearance, responsiveness or functionality issues were found, other than:
+
+- The full game area is too tall to be seen on the screen for phones with screen sizes similar to that of an Iphone 4, so the user would need to scroll up and down manually.
+  - The developer chose to ignore this issue as adjusting the layout would compromise on the maximum size of the images displayed on the tiles.
+
 ### Common Elements Testing
 
 #### General

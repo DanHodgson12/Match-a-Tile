@@ -394,6 +394,22 @@ The web application was tested across a wide variety of devices using [Google Ch
 
 ### Common Elements Testing
 
+#### Navbar
+
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+NavBar Logo | Reloads the page and resets the game as expected | Pass
+About Button | Is only displayed on screen widths less than 992px as expected | Pass
+About Button cont. | Opens the About Modal as expected | Pass
+About Modal | Displays the About information as expected | Pass
+About Modal cont. | Closes when the user clicks anywhere on the screen as expected | Pass
+About Modal cont. | Closes automaticaly when the screen size is manually adjusted | Pass
+Instructions Button | Is only displayed on screen widths less than 992px as expected | Pass
+Instructions Button cont. | Opens the Instructions Modal as expected | Pass
+Instructions Modal | Displays the Instructions information as expected | Pass
+Instructions Modal cont. | Closes when the user clicks anywhere on the screen as expected | Pass
+Instructions Modal cont. | Closes automaticaly when the screen size is manually adjusted | Pass
+
 ### Known Bugs
 
 There are no known bugs with the web application.

@@ -387,17 +387,9 @@ The web application was tested across a wide variety of devices using [Google Ch
 
 ### Common Elements Testing
 
-#### General
-  
-#### Home Page
-
-#### Gallery
-
-#### Contact Us Page
-
-#### 404 Error Page
-
 ### Known Bugs
+
+There are no known bugs with the web application.
 
 # Finished Product
 

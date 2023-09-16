@@ -442,6 +442,27 @@ Reset Button cont. | Resets the Turns Left and Score as expected | Pass
 Reset Button cont. | Enables the Start button and Mode button as expected | Pass
 ---
 
+#### Turns/Timer/Score Area
+
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Turns Left Area | Displays the turns the player has left as expected | Pass
+Turns Left Area cont. | Adjusts the number of turns left depending on Mode selected as expected | Pass
+Turns Left Area cont. | Number of turns left reduces by 1 each time the player attempts to match two tiles together as expected | Pass
+Turns Left Area cont. | Resets back to the relevant number of turns left when the Reset button is clicked as expected | Pass
+Turns Left Area cont. | The game ends when Turns Left reaches '0' (and/or the Score reaches '9/9') as expected | Pass
+Turns Left Area cont. | Turns Left cannot be reduced below '0' as expected | Pass
+Countdown Timer | Timer starts when the Start button is clicked as expected | Pass
+Countdown Timer cont. | Timer counts down from 5 to the word 'GO' as expected | Pass
+Countdown Timer cont. | The relevant tiles are shown/hidden when the timer reaches the word 'GO' as expected | Pass
+Countdown Timer cont. | Fades out 2 seconds after the timer reaches the word 'GO' as expected | Pass
+Score Area | Displays the players current score as expected | Pass
+Score Area cont. | Is set to 0/9 when the page loads or when the Reset button is clicked as expected | Pass
+Score Area cont. | Increments by 1 each time the player gets a correct match as expected | Pass
+Score Area cont. | The game ends when the Score reaches '9/9' (and/or the Turns Left reaches '0') as expected | Pass
+Score Area cont. | Score cannot be incremented above '9/9' as expected | Pass
+---
+
 ### Known Bugs
 
 There are no known bugs with the web application.

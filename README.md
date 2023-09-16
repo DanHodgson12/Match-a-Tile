@@ -299,6 +299,32 @@ No other links or information were included in the Footer as the developer thoug
 
 # Testing
 
+- A large amount of testing was undertaken throughout the project in order to assess the game was working as expected.
+- Friends and family participated in testing the game's functionality and express any concerns or ideas they have with function, layout and user experience.
+
+## Testing Paradigms
+
+There are two types of testing a developer can carry out before, during and after writing a web application - Automated and Manual.
+
+### Automated Testing
+
+1. __Quicker__: Automated testing allows for hundreds of tests to be run in a short space of time, making it more resourceful than Manual testing.
+2. __Efficient__: Tests written by developers help to detect errors earlier on, and help avoid writing code that likely won't perform as expected.
+3. __Specific__: Tests can be written for specific edge cases in which manual testing may not be able to pick up.
+4. __Resourceful__: Automated tests can be used for continuous testing of an application, making it easier to find an error if a new piece of content is added to a page, for example.
+5. __Data-driven__: Automated testing can be used to check if a piece of code provides the same outcome when using different sources of data.
+
+### Manual Testing
+
+1. __UX(User Experience)__: Manual testing allows for the developer to check if the user experience of the application is as intended.
+2. __Layout/Responsiveness__: Manual testing allows for the developer to inspect the application on different browsers and devices, which is something automated testing would not pick up on.
+3. __Animation & Interactivity__: Manual testing allows for the developer to check if animations and interactions between elements are performing as expected.
+4. __Accessibility__: Manual testing allows the developer to test the application with screen readers and make sure it is accessible.
+
+Although one form of testing may be more appropriate than the other for a specific application, they do both have downsides. The disadvantage of one form of testing is usually something the other form of testing can provide.
+
+Due to this, it is best practice to utilise both forms of testing during the building of an application. However, the choice for which form of testing to use depends on resources available, budget and whether or not you have a team large enough to carry out the tests.
+
 ## Testing User Stories
 
 - __As__ a user, I want to be able to navigate the game easily, __So__ that I can start playing the game as soon as possible.

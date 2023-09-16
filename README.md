@@ -30,12 +30,12 @@ Visit the deployed site [here](https://danhodgson12.github.io/Match-a-Tile/).
 - As a user, I want to be able to navigate the game easily.
 - As a user, I want to know what the game is about.
 - As a user, I want to know how to play the game.
-- as a user, I want to see the images clearly.
+- As a user, I want to see the images clearly.
 - As a user, I want to be able to interact with the game.
 - As a user, I want to be given feedback when I interact with the game.
 - As a user, I want to be able to see my score.
 - As a user, I want to know how many turns I have left.
-- As a user, I want to challenge my momery skills.
+- As a user, I want to challenge my memory skills.
 - As a user, I want to play the game on a variety of screen sizes.
 
 ## Colour Scheme
@@ -300,6 +300,37 @@ No other links or information were included in the Footer as the developer thoug
 # Testing
 
 ## Testing User Stories
+
+- __As__ a user, I want to be able to navigate the game easily, __So__ that I can start playing the game as soon as possible.
+  - __Given__ I load the game, __When__ I look at the Navbar, __Then__ I should be able to see that the game consists of only one page, And I don't need to navigate to other pages.
+
+- __As__ a user, I want to know what the game is about, __So__ that I can understand the concept behind it.
+  - __Given__ I navigation to the Navbar or Side Bar, __When__ I click the 'About' button, __Then__ I should be able to see information explaining the concept of the game.
+
+- __As__ a user, I want to see the game's instructions, __So__ that I can understand how to play it.
+  - __Given__ I navigation to the Navbar or Side Bar, __When__ I click the 'Instructions' button, __Then__ I should be able to see information explaining how to play the game.
+
+- __As__ a user, I want to see the images clearly, __So__ that I can confidently memorise them and match the tiles together.
+  - __Given__ I click the Start button, __When__ the tiles flip over, __Then__ I should be able to see clear images, And have the correct amount of time to memorise them.
+
+- __As__ a user, I want to be able to interact with the game, __So__ that I can have a fun experience.
+  - __Given__ I click the Start button, __When__ the countdown timer has finished, __Then__ I should be able to click on the Player Tiles and match them with the Computer Tiles.
+
+- __As__ a user, I want to be given feedback when I interact with the game, __So__ I know whether or not I have successfully matched the tiles together or not.
+  - __Given__ I attempt to match two tiles together, __When__ I get it right, __Then__ I should be able to see a clear green border on both tiles to indicate a correct match.
+  - __Given__ I attempt to match two tiles together, __When__ I get it wrong, __Then__ I should be able to see a clear red border on both tiles to indicate an incorrect match.
+
+- __As__ a user, I want to be able to see my score, __So__ I know how well I've done.
+  - __Given__ I match two tiles together correctly, __When__ I look at the Score area, __Then__ I can see the score increment by 1 each time.
+
+- __As__ a user, I want to know how many turns I have left, __So__ I have an idea of when the game will be over.
+  - __Given__ I attempt to match two tiles together, __When__ I look at the Turns Left area, __Then__ I can see the Turns Left reduce by 1 each time.
+
+- __As__ a user, I want to challenge my memory skills, __So__ that I can adopt an enjoyable process for engaging my mind.
+  - __Given__ I click the Mode button, __When__ I select a harder difficulty, __Then__ I can see that I have less turns to attempt to match the tiles together.
+
+- __As__ a user, I want the web application to be responsive, __So__ that I can play the game on a variety of screen sizes.
+  - __Given__ I load the web application, __When__ I load it on different screen sizes, __Then__ I will see the layout change to suit the screen size accordingly.
 
 ## Code Validation
 

@@ -27,16 +27,16 @@ Visit the deployed site [here](https://danhodgson12.github.io/Match-a-Tile/).
 
 ## User Stories
 
-- As a user, I want to be able to navigate the game easily.
-- As a user, I want to know what the game is about.
-- As a user, I want to know how to play the game.
-- As a user, I want to see the images clearly.
-- As a user, I want to be able to interact with the game.
-- As a user, I want to be given feedback when I interact with the game.
-- As a user, I want to be able to see my score.
-- As a user, I want to know how many turns I have left.
-- As a user, I want to challenge my memory skills.
-- As a user, I want to play the game on a variety of screen sizes.
+- As a user, I want to be able to navigate the game easily, so that I can start playing the game as soon as possible.
+- As a user, I want to know what the game is about, so that I can understand the concept behind it.
+- As a user, I want to see the game's instructions, so that I can understand how to play it.
+- As a user, I want to see the images clearly, so that I can confidently memorise them and match the tiles together.
+- As a user, I want to be able to interact with the game, so that I can have a fun experience.
+- As a user, I want to be given feedback when I interact with the game, so I know whether or not I have successfully matched the tiles together or not.
+- As a user, I want to be able to see my score, so I know how well I've done.
+- As a user, I want to know how many turns I have left, so I have an idea of when the game will be over.
+- As a user, I want to challenge my memory skills, so that I can adopt an enjoyable process for engaging my mind.
+- As a user, I want the web application to be responsive, so that I can play the game on a variety of screen sizes.
 
 ## Colour Scheme
 

@@ -404,11 +404,26 @@ About Button cont. | Opens the About Modal as expected | Pass
 About Modal | Displays the About information as expected | Pass
 About Modal cont. | Closes when the user clicks anywhere on the screen as expected | Pass
 About Modal cont. | Closes automaticaly when the screen size is manually adjusted | Pass
+About Modal cont. | The link within the text opens in a new window as expected | Pass
 Instructions Button | Is only displayed on screen widths less than 992px as expected | Pass
 Instructions Button cont. | Opens the Instructions Modal as expected | Pass
 Instructions Modal | Displays the Instructions information as expected | Pass
 Instructions Modal cont. | Closes when the user clicks anywhere on the screen as expected | Pass
 Instructions Modal cont. | Closes automaticaly when the screen size is manually adjusted | Pass
+
+#### Side Bar
+
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Side Bar | Is only displayed on screen widths larger than 991px as expected | Pass
+Side Bar cont. | Is shown/hidden when the window is manually resized as expected | Pass
+About Section | Is automatically displayed when the page is loaded as expected | Pass
+About Section cont. | Text adjusts to size of the section when window is manually resized as expected | Pass
+About Section cont. | The link within the text opens in a new window as expected | Pass
+About Button | Smoothly slide-toggles the About information to hidden/shown as expected | Pass
+Instructions Section | Is automatically displayed when the page is loaded as expected | Pass
+Instructions Section cont. | Text adjusts to size of the section when window is manually resized as expected | Pass
+Instruction Button | Smoothly slide-toggles the About information to hidden/shown as expected | Pass
 
 ### Known Bugs
 

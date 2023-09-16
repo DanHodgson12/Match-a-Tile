@@ -377,6 +377,13 @@ One of the suggestions made for increasing Performance was to remove element IDs
 ## Manual Testing
 
 ### Browser Compatibility
+
+Browser | Outcome | Pass/Fail
+--- | --- | ---
+Google Chrome | No appearance, responsiveness or functionality issues | Pass
+Safari | No appearance, responsiveness or functionality issues | Pass
+Mozilla Firefox | No appearance, responsiveness or functionality issues | Pass
+Microsoft Edge | No appearance, responsiveness or functionality issues | Pass
   
 ### Device Compatibility
 

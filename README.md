@@ -463,6 +463,25 @@ Score Area cont. | The game ends when the Score reaches '9/9' (and/or the Turns 
 Score Area cont. | Score cannot be incremented above '9/9' as expected | Pass
 ---
 
+#### Computer Tiles
+
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Images | Images are shuffled and randomly assigned to tiles as expected | Pass
+Images cont. | Images are centered within the tile, oriented correctly, and clearly visible as expected | Pass
+Flip Function | Tiles are flipped at the correct rate on the Y-axis as expected | Pass
+Flip Function cont. | Images are assigned to the front of the tiles before the Flip Function is executed as expected | Pass
+Flip Function cont. | The backs of the tiles are visible and the front of the tiles are hidden by default as expected | Pass
+Flip Function cont. | Tiles are unflipped (shown) when the Start button has been clicked and flipped (hidden) when the countdown timer has ended as expected | Pass
+Flip Function cont. | Tile is unflipped (shown) when a correct match has been made with a Player Tile and Computer Tile as expected | Pass
+Click Function | Tile 'buttons' are disabled by default when the page loads and the game is started as expected | Pass
+Click Function cont. | Tile 'buttons' are enabled after a Player Tile has been selected as expected | Pass
+Click Function cont. | Individual Computer Tiles are disabled indefinitely if a correct match has been made as expected | Pass
+Click Function cont. | Individual Computer Tiles gain a green border if a correct match has been made as expected | Pass
+Click Function cont. | Individual Computer Tiles momentarily gain a red border if an incorrect match has been made as expected | Pass
+Click Function cont. | Tiles are disabled when the game is over as expected | Pass
+---
+
 ### Known Bugs
 
 There are no known bugs with the web application.

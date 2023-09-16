@@ -410,6 +410,7 @@ Instructions Button cont. | Opens the Instructions Modal as expected | Pass
 Instructions Modal | Displays the Instructions information as expected | Pass
 Instructions Modal cont. | Closes when the user clicks anywhere on the screen as expected | Pass
 Instructions Modal cont. | Closes automaticaly when the screen size is manually adjusted | Pass
+---
 
 #### Side Bar
 
@@ -423,7 +424,8 @@ About Section cont. | The link within the text opens in a new window as expected
 About Button | Smoothly slide-toggles the About information to hidden/shown as expected | Pass
 Instructions Section | Is automatically displayed when the page is loaded as expected | Pass
 Instructions Section cont. | Text adjusts to size of the section when window is manually resized as expected | Pass
-Instruction Button | Smoothly slide-toggles the About information to hidden/shown as expected | Pass
+Instruction Button | Smoothly slide-toggles the Instructions information to hidden/shown as expected | Pass
+---
 
 ### Known Bugs
 

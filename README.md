@@ -492,12 +492,12 @@ Flip Function | Tiles are flipped at the correct rate on the Y-axis as expected 
 Flip Function cont. | Images are assigned to the front of the tiles before the Flip Function is executed as expected | Pass
 Flip Function cont. | The backs of the tiles are visible and the front of the tiles are hidden by default as expected | Pass
 Flip Function cont. | Tiles are unflipped (shown) when the countdown timer has ended as expected | Pass
-Flip Function cont. | Tile remain unflipped (shown) for the remainder of the game (until page is reloaded or game is reset) as expected | Pass
+Flip Function cont. | Tiles remain unflipped (shown) for the remainder of the game (until page is reloaded or game is reset) as expected | Pass
 Click Function | Tile 'buttons' are disabled by default when the page loads and the game is started as expected | Pass
 Click Function cont. | Tile 'buttons' are enabled when the countdown timer has ended as expected | Pass
 Click Function cont. | Individual Player Tiles are disabled indefinitely if a correct match has been made as expected | Pass
-Click Function cont. | Player Tiles other than the tile clicked are disabled until player has clicked a Computer Tile to match as expected | Pass
-Click Function cont. | Player Tiles are enabled after player has attempted to match a Player Tile with a Computer Tile as expected | Pass
+Click Function cont. | Player Tiles are disabled after an individual Player Tile has been clicked as expected | Pass
+Click Function cont. | Player Tiles are enabled after player has clicked a Computer Tile and attempted to match it with the Player Tile selected as expected | Pass
 Click Function cont. | Individual Player Tiles gain a blue border when clicked as expected | Pass
 Click Function cont. | Blue border disappears after player clicks on a Computer Tile to attempt a match as expected | Pass
 Click Function cont. | Individual Player Tiles gain a green border if a correct match has been made as expected | Pass

@@ -373,13 +373,17 @@ The W3C Markup Validator returned a one error:
 The W3C CSS Validator returned no errors in the code.
 ![CSS Validation Image](readme-files/css-validation.png)
 
-The [JS Hint](https://jshint.com/) service was used to check for any code errors or misuse of syntax in the JavaScript.
+The [JSHint](https://jshint.com/) & [JSLint](https://www.jslint.com/) services were used to check for any code errors or misuse of syntax in the JavaScript.
 
-JS Hint returned no errors or warnings. However, it did report several instances of undefined variables.
+JSHint returned no errors or warnings. However, it did report several instances of undefined variables.
 
-![JS Hint Report Image](readme-files/jshint-validation.png)
+![JSHint Report Image](readme-files/jshint-validation.png)
 
 This was due to the use of jQuery throughout the project and didn't require adjustments to the code.
+
+JSLint reported one warning with the use of an unexpected `let` keyword. This was ignored as the code functions without issue and was not flagged in JSHint.
+
+![JSLint Report Image](readme-files/jslint-validation.png)
 
 ## Lighthouse Report
 

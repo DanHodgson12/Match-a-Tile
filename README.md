@@ -362,6 +362,10 @@ Due to this, it is best practice to utilise both forms of testing during the bui
 
 The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) services were used to check for any code errors or misuse of syntax/elements in the HTML & CSS.
 
+The [JSHint](https://jshint.com/) & [JSLint](https://www.jslint.com/) services were used to check for any code errors or misuse of syntax in the JavaScript.
+
+### HTML
+
 The W3C Markup Validator returned a one error:
 
 - The use of `div` elements inside `button` elements.
@@ -370,18 +374,20 @@ The W3C Markup Validator returned a one error:
 ![Markup Validation Image 1](readme-files/html-validation-error.png)
 ![Markup Validation Image 2](readme-files/html-validation.png)
 
+### CSS
+
 The W3C CSS Validator returned no errors in the code.
 ![CSS Validation Image](readme-files/css-validation.png)
 
-The [JSHint](https://jshint.com/) & [JSLint](https://www.jslint.com/) services were used to check for any code errors or misuse of syntax in the JavaScript.
+### JavaScript
 
-JSHint returned no errors or warnings. However, it did report several instances of undefined variables.
+__JSHint__ returned no errors or warnings. However, it did report several instances of undefined variables.
 
 ![JSHint Report Image](readme-files/jshint-validation.png)
 
 This was due to the use of jQuery throughout the project and didn't require adjustments to the code.
 
-JSLint reported one warning with the use of an unexpected `let` keyword. This was ignored as the code functions without issue and was not flagged in JSHint.
+__JSLint__ reported one warning with the use of an unexpected `let` keyword. This was ignored as the code functions without issue and was not flagged in JSHint.
 
 ![JSLint Report Image](readme-files/jslint-validation.png)
 

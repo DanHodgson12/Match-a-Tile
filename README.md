@@ -219,7 +219,7 @@ The Computer Area consists of:
 
 ## Flip Functionality
 
-![Flip Functionality Gif](readme-files/features-countdown-flip.gif)
+![Flip Functionality Gif](readme-files/features-flip-functionality.gif)
 
 - The Computer Tiles and Player Tiles are flipped depending on the state of the game, or whether a successful match has been made.
 - They flip on the Y-axis at a rate of 0.6 seconds.
@@ -229,7 +229,7 @@ The Computer Area consists of:
 
 ## Tile Matching
 
-![Tile Matching Gif](readme-files/features-tile-matching.gif)
+![Tile Matching Gif](readme-files/features-tile-match.gif)
 
 - When the user clicks on a Player Tile, a blue inner-border is added to indicate it has been clicked.
   - If the user then clicks on a Computer Tile and it's a successful match:
@@ -242,7 +242,7 @@ The Computer Area consists of:
 
 ## Game Over
 
-![Game Over Gif](readme-files/features-game-over.gif)
+![Game Over Gif](readme-files/features-game-over-final.gif)
 
 - When the user has scored 9 out of 9 and/or has run out of turns, the Game Over function is executed.
   - The phrase GAME OVER appears above the Computer Tiles.

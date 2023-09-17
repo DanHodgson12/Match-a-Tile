@@ -6,42 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Match-a-Tile is a memory challenge game where the player has 5 seconds to memorise 
     9 images and then try to remember them by matching their tiles with the computer's tiles.">
- 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/58ae92d97f.js"
       crossorigin="anonymous">
     </script>
-
     <!-- jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous">
     </script>
-
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous">
-
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
     <title>Match-a-Tile</title>
   </head>
   <body>
     <div class="content-container">
-
       <!-- Navbar -->
       <header>
         <div class="container-fluid p-0">
           <div class="row p-0 m-0 bg-body-tertiary">
-
             <!-- Header/Logo -->
             <div id="header" class="col-sm-7 p-0 mb-0 mt-2 my-sm-2 d-flex align-items-center justify-content-center mx-auto">
               <a class="navbar-brand" href="index.html" aria-label="Match-a-Tile Logo">
@@ -49,14 +41,11 @@
               </a>
               <h1 class="my-0 mx-2">Match-a-Tile</h1>
             </div>
-
             <!-- About/Instructions -->
             <div id="game-info" class="col-sm-5 d-lg-none p-0 my-2 my-sm-0 mx-auto d-flex align-items-center justify-content-center">
-
               <button type="button" class="btn btn-dark btn-sm mx-2 p-0" data-bs-toggle="modal" data-bs-target="#aboutModal">
                 About
               </button>
-              
               <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -81,11 +70,9 @@
                   </div>
                 </div>
               </div>
-              
               <button type="button" class="btn btn-dark btn-sm mx-2 p-0" data-bs-toggle="modal" data-bs-target="#instructionsModal">
                 Instructions
               </button>
-              
               <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
@@ -128,26 +115,20 @@
                   </div>
                 </div>
               </div>
-
             </div>
-
           </div>
         </div>
       </header>
-
       <!-- Main Area -->
       <main class="container-fluid m-0 p-0">
         <div class="row m-0 p-0 h-100">
-
           <!-- Side Bar -->
           <div id="side-bar" class="col-lg-3 m-0 p-2 d-none d-lg-block">
-            
             <!-- About -->
             <button id="about-btn" class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
               data-bs-auto-close="false" aria-expanded="true" aria-controls="about-text">
               About
             </button>
-
             <div id="about-text" class="border rounded w-100">
               <p class="p-2 m-0">
                 The 'Match-a-Tile' game is a memory challenge based on 
@@ -159,13 +140,11 @@
                 of the game, players must match the tiles at the bottom of the screen with the computer's tiles.
               </p>
             </div>
-
             <!-- Instructions -->
             <button id="instructions-btn" class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
               data-bs-auto-close="false" aria-expanded="true" aria-controls="instructions-text">
               Instructions
             </button>
-            
             <div id="instructions-text" class="border rounded w-100">
               <p class="p-2 m-0">
                 Before you begin, select a difficulty mode. The mode will determine the number of turns the player
@@ -194,18 +173,13 @@
                 If you'd like to reset the game at any point simply click the 'Reset' button. Happy gaming!
               </p>
             </div>
-
           </div>
-
           <!-- Game Area -->
           <div id="game-area" class="col-lg-9 m-0 p-0">
-
             <!-- Controls -->
             <div id="controls" class="row m-0 px-2 py-0 bg-body-secondary">
-
               <!-- Mode Selector -->
               <div class="col-4 p-0 pt-2 text-center align-items-center justify-content-center" id="mode-selector">
-              
                 <div id="mode" class="dropdown">
                   <button class="btn btn-sm btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Mode
@@ -216,31 +190,23 @@
                     <li class="dropdown-item mode-item" data-value="Hard">Hard</li>
                   </ul>
                 </div>
-
                 <div id="mode-selection" class="mt-1">
                   Mode: <span id="mode-display" class="fs-5 fw-bold">EASY</span>
                 </div>
-              
               </div>
-
               <!-- Start Button -->
               <div class="col-4 p-2 d-flex align-items-center justify-content-center" id="start">
                 <button type="button" class="btn btn-success" id="startButton" aria-label="Start">Start</button>
               </div>
-
               <!-- Reset Button -->
               <div class="col-4 p-0 d-flex align-items-center justify-content-center" id="reset">
                 <button type="button" class="btn btn-danger py-0" id="resetButton" aria-label="Reset">Reset</button>
               </div>
-
             </div>
-
             <div id="game-view">
               <!-- Computer Area -->
               <div id="computer-area" class="container-fluid p-0">
-
                 <div id="turns-score" class="row m-0 p-0">
-
                   <!-- Timer -->
                   <div class="col-5 p-0">
                     <div id="turns-container" class="text-center d-flex justify-content-start m-0 p-0">
@@ -249,7 +215,6 @@
                       </p>
                     </div>
                   </div>
-
                   <!-- Countdown -->
                   <div class="col-2 p-0">
                     <div id="countdown-container" class="text-center d-flex justify-content-center m-0 p-0">
@@ -258,7 +223,6 @@
                       </p>
                     </div>
                   </div>
-
                   <!-- Score -->
                   <div class="col-5 p-0">
                     <div id="score-container" class="text-center d-flex justify-content-center m-0 p-0">
@@ -267,16 +231,13 @@
                       </p>
                     </div>
                   </div>
-
                 </div>
-
                 <!-- End-Game Message -->
                 <div id="end-game" class="row m-0 p-0">
                   <p class="col text-center fw-bold m-0 p-0">
                     <span id="end-game-msg"></span>
                   </p>
                 </div>
-
                 <!-- Computer Tiles -->
                 <div class="row m-0 p-0">
                   <div class="col mx-auto my-2 p-0">
@@ -338,9 +299,7 @@
                     </div>
                   </div>
                 </div>
-
               </div>
-
               <!-- Player Area -->
               <div id="player-area" class="row m-0 p-0">
                 <div class="col mx-auto m-0 mt-2 mb-2 p-0">
@@ -403,19 +362,15 @@
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </main>
-
       <!-- Footer -->
       <footer class="bg-dark-subtle text-black text-center py-3 mt-auto">
         <div class="container">
           <p class="m-0">&copy; Match-a-Tile</p>
         </div>
       </footer>
-
     </div>
 
     <script

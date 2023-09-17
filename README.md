@@ -44,15 +44,15 @@ Visit the deployed site [here](https://danhodgson12.github.io/Match-a-Tile/).
 
 The colours used for this website are:
 
-- Sunset (#EAC086) - for the computer & player tiles and the navbar logo. This colour is loosely based on the color for the [Scrabble](https://en.wikipedia.org/wiki/Scrabble) tile.
-- Papaya Whip (#FFEFD5) - for the side bar.
+- Sunset (#EAC086) - for the computer & player tiles and the navbar logo. This colour is loosely based on the colour for the [Scrabble](https://en.wikipedia.org/wiki/Scrabble) tile.
+- Papaya Whip (#FFEFD5) - for the SideBar.
 - Silver (#A9A9A9) - for the computer-tiles background
 - Onyx (#3D3D3D) - for the player-tiles background.
 - Eerie Black (#212529) - for the Mode-selection, About and Instructions buttons.
 
 ## Typography
 
-The font used throughout this project is the sans-serif font that loads as standard depending on browser choice. The reason for this is that I wanted to keep the styling basic and focus more on the functionality of the game. Also, I like how the standard font looks and feel it goes well with the styling of the images for the tiles.
+The font used throughout this project is the sans-serif font that loads as standard depending on browser choice. The reason behind this was to keep the styling basic and focus more on the functionality of the game. Also, the standard font looks appropriate and it goes well with the styling of the images for the tiles.
 
 ## Wireframes
 
@@ -91,20 +91,20 @@ The Navbar consists of:
 
 ![Instructions Modal Image](readme-files/features-instructions-modal.png)
 
-On larger screen sizes, the About and Instructions buttons disappear and this information is displayed in the [Side Bar](#side-bar).
+On larger screen sizes, the About and Instructions buttons disappear and this information is displayed in the [SideBar](#sidebar).
 
-## Side Bar
+## SideBar
 
-The Side Bar consists of:
+The SideBar consists of:
 
 - The About button.
   - This slide-toggles a drop-down box showing information about the game.
 - The Information button.
   - This slide-toggles a drop-down box showing the instructions for the game.
 
-![Side Bar Image](readme-files/features-sidebar.png)
+![SideBar Image](readme-files/features-sidebar.png)
 
-On screen sizes below large, the Side Bar disappears and the About and Information buttons move to the [Navbar](#navbar).
+On screen sizes below large, the SideBar disappears and the About and Information buttons move to the [Navbar](#navbar).
 
 ## Controls
 
@@ -299,8 +299,8 @@ No other links or information were included in the Footer as the developer thoug
 
 # Testing
 
-- A large amount of testing was undertaken throughout the project in order to assess the game was working as expected.
-- Friends and family participated in testing the game's functionality and express any concerns or ideas they have with function, layout and user experience.
+- A large amount of testing was undertaken throughout the project in order to assess if the game was working as expected.
+- Friends and family participated in testing the game's functionality and expressed any concerns or ideas they had with function, layout and user experience.
 
 ## Testing Paradigms
 
@@ -331,10 +331,10 @@ Due to this, it is best practice to utilise both forms of testing during the bui
   - __Given__ I load the game, __When__ I look at the Navbar, __Then__ I should be able to see that the game consists of only one page, And I don't need to navigate to other pages.
 
 - __As__ a user, I want to know what the game is about, __So__ that I can understand the concept behind it.
-  - __Given__ I navigation to the Navbar or Side Bar, __When__ I click the 'About' button, __Then__ I should be able to see information explaining the concept of the game.
+  - __Given__ I navigate to the Navbar or SideBar, __When__ I click the 'About' button, __Then__ I should be able to see information explaining the concept of the game.
 
 - __As__ a user, I want to see the game's instructions, __So__ that I can understand how to play it.
-  - __Given__ I navigation to the Navbar or Side Bar, __When__ I click the 'Instructions' button, __Then__ I should be able to see information explaining how to play the game.
+  - __Given__ I navigate to the Navbar or SideBar, __When__ I click the 'Instructions' button, __Then__ I should be able to see information explaining how to play the game.
 
 - __As__ a user, I want to see the images clearly, __So__ that I can confidently memorise them and match the tiles together.
   - __Given__ I click the Start button, __When__ the tiles flip over, __Then__ I should be able to see clear images, And have the correct amount of time to memorise them.
@@ -441,7 +441,7 @@ Outcome | Pass/Fail
 --- | ---
 Displays the About information as expected | Pass
 Closes when the user clicks anywhere on the screen as expected | Pass
-Closes automaticaly when the screen size is manually adjusted | Pass
+Closes automatically when the screen size is manually adjusted | Pass
 The link within the text opens in a new window as expected | Pass
 
 #### Instructions Button
@@ -457,12 +457,12 @@ Outcome | Pass/Fail
 --- | ---
 Displays the Instructions information as expected | Pass
 Closes when the user clicks anywhere on the screen as expected | Pass
-Closes automaticaly when the screen size is manually adjusted | Pass
+Closes automatically when the screen size is manually adjusted | Pass
 ---
 
-### Side Bar
+### SideBar
 
-#### Side Bar
+#### SideBar
 
 Outcome | Pass/Fail
 --- | ---
@@ -559,7 +559,7 @@ Score cannot be incremented above '9/9' as expected | Pass
 Outcome | Pass/Fail
 --- | ---
 Images are shuffled and randomly assigned to tiles as expected | Pass
-Images are centered within the tile, oriented correctly, and clearly visible as expected | Pass
+Images are centred within the tile, oriented correctly, and clearly visible as expected | Pass
 
 #### Flip Functionality
 
@@ -590,7 +590,7 @@ Tiles are disabled when the game is over as expected | Pass
 Outcome | Pass/Fail
 --- | ---
 The same images assigned to the Computer Tiles are shuffled again and randomly assigned to Player Tiles as expected | Pass
-Images are centered within the tile, oriented correctly, and clearly visible as expected | Pass
+Images are centred within the tile, oriented correctly, and clearly visible as expected | Pass
 
 #### Flip Functionality
 
@@ -676,7 +676,7 @@ To make a clone of this project, please use the following steps:
 ## Code
 
 - [Bootstrap 5](https://getbootstrap.com/docs/5.3/getting-started/introduction/) was used throughout to help with responsiveness and styling purposes.
-- [MDN_](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView) was used for help adding the scrollIntoView() function.
+- [MDN_](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView) was used to help add the scrollIntoView() function.
 - [saturncloud.io](https://saturncloud.io/blog/how-to-randomize-shuffle-a-javascript-array/#:~:text=The%20Fisher%2DYates%20(Knuth)%20Shuffle%20Algorithm&text=The%20shuffle%20function%20takes%20an,random()%20function) was used for help utilising the shuffleArray() function.
 - [W3Schools](https://www.w3schools.com/) was used for inspiration for:
   - The [Flip](https://www.w3schools.com/howto/howto_css_flip_card.asp) effect for the tiles.

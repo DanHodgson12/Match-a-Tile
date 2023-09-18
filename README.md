@@ -143,7 +143,7 @@ The Controls area consists of:
   - Shows the Computer Tiles.
   - Hides the Computer Tiles once the Countdown Timer ends.
   - Shows the Player Tiles once the Countdown Timer ends.
-- The Start button was made larger than the other buttons and styled around the traffic light system, i.e. "Green = Go, Red = Stop".
+- The Start button was made larger than the other controls and styled around the traffic light system, i.e. "Green = Go, Red = Stop".
   - This allows the user to [navigate the game easily, so that they can start playing the game as soon as possible](#user-stories).
 
 ### Reset Button

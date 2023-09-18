@@ -2,7 +2,7 @@
 
 ![Match-a-Tile Final Design](readme-files/mat-mockup-final.png)
 
-The 'Match-a-Tile' game is a memory challenge based on 'Kim's Game' , whereby the player is shown a number of items, which are then covered after a period of time. The player then has to remember the items they were shown and guess what was there. In this version of the game, players must match the tiles at the bottom of the screen with the computer's tiles.
+The 'Match-a-Tile' game is a memory challenge based on ['Kim's Game'](https://en.wikipedia.org/wiki/Kim%27s_Game) , whereby the player is shown a number of items, which are then covered after a period of time. The player then has to remember the items they were shown and guess what was there. In this version of the game, players must match the tiles at the bottom of the screen with the computer's tiles.
 
 The primary goal of this project is to offer the user a fun and interactive game to play while, at the same time, provide a challenge to test the user's memory.
 

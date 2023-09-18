@@ -32,7 +32,7 @@ Visit the deployed site [here](https://danhodgson12.github.io/Match-a-Tile/).
 - As a user, I want to see the game's instructions, so that I can understand how to play it.
 - As a user, I want to see the images clearly, so that I can confidently memorise them and match the tiles together.
 - As a user, I want to be able to interact with the game, so that I can have a fun experience.
-- As a user, I want to be given feedback when I interact with the game, so I know whether or not I have successfully matched the tiles together or not.
+- As a user, I want to be given feedback when I interact with the game, so I know whether or not I have successfully matched the tiles together.
 - As a user, I want to be able to see my score, so I know how well I've done.
 - As a user, I want to know how many turns I have left, so I have an idea of when the game will be over.
 - As a user, I want to challenge my memory skills, so that I can adopt an enjoyable process for engaging my mind.
@@ -83,11 +83,13 @@ The Navbar consists of:
 - The game heading.
 - The About button.
   - This opens a modal with information about the game.
+  - This allows the user to [understand the concept behind the game](#user-stories).
 
 ![About Modal Image](readme-files/features-about-modal.png)
 
 - The Instructions button.
   - This opens a modal with the instructions for the game.
+  - This allows the user to [understand how to play the game](#user-stories).
 
 ![Instructions Modal Image](readme-files/features-instructions-modal.png)
 
@@ -99,8 +101,10 @@ The SideBar consists of:
 
 - The About button.
   - This slide-toggles a drop-down box showing information about the game.
-- The Information button.
+  - This allows the user to [understand the concept behind the game](#user-stories).
+- The Instructions button.
   - This slide-toggles a drop-down box showing the instructions for the game.
+  - This allows the user to [understand how to play the game](#user-stories).
 
 ![SideBar Image](readme-files/features-sidebar.png)
 
@@ -117,6 +121,7 @@ The Controls area consists of:
 ![Mode Selection Image](readme-files/features-mode-selector.png)
 
 - This toggles a drop-down menu where the user can select a mode (Easy, Normal or Hard).
+- This allows the user to try out different difficulties and [challenge their memory skills, so they can adopt an enjoyable process for engaging their mind](#user-stories).
 
 ### Mode Display
 
@@ -138,6 +143,8 @@ The Controls area consists of:
   - Shows the Computer Tiles.
   - Hides the Computer Tiles once the Countdown Timer ends.
   - Shows the Player Tiles once the Countdown Timer ends.
+- The Start button was made larger than the other buttons and styled around the traffic light system, i.e. "Green = Go, Red = Stop".
+  - This allows the user to [navigate the game easily, so that they can start playing the game as soon as possible](#user-stories).
 
 ### Reset Button
 
@@ -160,7 +167,7 @@ The Computer Area consists of:
 
 ![Turns Left Image](readme-files/features-turns.png)
 
-- This displays the number of the turns the user has left to match the tiles before the game is over.
+- This displays the number of the turns the user has left to match the tiles, [indicating when the game will be over](#user-stories).
 - The number of turns left at the start of the game is determined by the Mode selected:
   - Easy - 18 turns
   - Normal - 14 turns
@@ -181,7 +188,7 @@ The Computer Area consists of:
 
 ![Score Image](readme-files/features-score.png)
 
-- The Score area displays the amount of correct matches the user has made.
+- The Score area displays the amount of correct matches the user has made, [allowing the user to see how well they've done](#user-stories).
 - Once the Score reaches 9/9, the game ends.
   - However, the game can end prematurely if the Turns Left reaches 0 before the Score reaches 9/9.
   - For example, the user could use all of their turns and only score 4/9 and the game will end.
@@ -192,30 +199,36 @@ The Computer Area consists of:
 
 ![Computer Tiles Image](readme-files/features-computer-tiles.png)
 
-- The Computer Tiles consist of 9 buttons that the user can click.
+- The Computer Tiles consist of 9 buttons that the user can click, [allowing the user to interact with the game, so they can have a fun experience](#user-stories).
   - The buttons are disabled at the start of the game.
   - The buttons are enabled after the user has clicked on a Player Tile so that it can be matched with a Computer Tile.
   - Once the user has successfully matched two Tiles, that particular Computer Tile will have a green inner-border and will be disabled.
   - If the user unsuccessfully matches two Tiles, that particular Computer Tile will momentarily have a red inner-border, but can be selected in the user's next turn. That Computer Tile will remain disabled until the user has clicked on a Player Tile to match it with a Computer Tile.
+  - [This gives the user feedback, allowing them to know whether or not they have successfully matched the tiles together](#user-stories).
 - These tiles flip over (so they are shown) when the user clicks the Start button and the Countdown Timer has begun.
 - The tiles then flip over again (so they are hidden) once the Countdown Timer has ended.
 - If the user successfully matches a Player Tile with a Computer Tile, that particular Computer Tile will flip over (be shown).
 - If the user unsuccessfully matches the two tiles, that particular Computer Tile will remain hidden.
 - A random selection of 9 images are assigned to the Computer Tiles after the user clicks the Start button.
+- The tiles have been styled so they take up around half of the screen when the user is playing the game.
+  - This allows the user to [see the images clearly, so they can confidently memorise them and match the tiles together](#user-stories).
 
 ## Player Tiles
 
 ![Player Tiles Image](readme-files/features-player-tiles.png)
 
-- The Player Tiles consist of 9 buttons that the user can click.
+- The Player Tiles consist of 9 buttons that the user can click, [allowing the user to interact with the game, so they can have a fun experience](#user-stories).
   - The buttons are disabled at the start of the game.
   - The buttons are enabled after the Countdown Timer has ended and the Computer Tiles have been flipped (hidden).
   - When the user has clicked on a Player Tile, all other Player Tiles are disabled and the Computer Tiles are enabled.
   - Once the user has successfully matched a Player Tile with a Computer Tile, that particular Player Tile will have a green inner-border and will be disabled.
   - If the user unsuccessfully matches two Tiles, that particular Player Tile will momentarily have a red inner-border, but can be selected in the user's next turn.
+  - [This gives the user feedback, allowing them to know whether or not they have successfully matched the tiles together](#user-stories).
 - These tiles flip over (so they are shown) after the Countdown Timer has ended and the Computer Tiles have been flipped (hidden).
 - The tiles remain visible throughout the game.
 - The same 9 images assigned to the Computer Tiles are shuffled and assigned to the Player Tiles at the start of the game.
+- The tiles have been styled so they take up around half of the screen when the user is playing the game.
+  - This allows the user to [see the images clearly, so they can confidently memorise them and match the tiles together](#user-stories).
 
 ## Flip Functionality
 
@@ -342,7 +355,7 @@ Due to this, it is best practice to utilise both forms of testing during the bui
 - __As__ a user, I want to be able to interact with the game, __So__ that I can have a fun experience.
   - __Given__ I click the Start button, __When__ the countdown timer has finished, __Then__ I should be able to click on the Player Tiles and match them with the Computer Tiles.
 
-- __As__ a user, I want to be given feedback when I interact with the game, __So__ I know whether or not I have successfully matched the tiles together or not.
+- __As__ a user, I want to be given feedback when I interact with the game, __So__ I know whether or not I have successfully matched the tiles together.
   - __Given__ I attempt to match two tiles together, __When__ I get it right, __Then__ I should be able to see a clear green border on both tiles to indicate a correct match.
   - __Given__ I attempt to match two tiles together, __When__ I get it wrong, __Then__ I should be able to see a clear red border on both tiles to indicate an incorrect match.
 

@@ -312,8 +312,9 @@ No other links or information were included in the Footer as the developer thoug
 
 # Testing
 
-- A large amount of testing was undertaken throughout the project in order to assess if the game was working as expected.
-- Friends and family participated in testing the game's functionality and expressed any concerns or ideas they had with function, layout and user experience.
+A large amount of testing was undertaken throughout the project in order to assess if the game was working as expected.
+
+Friends and family also participated in testing the game's functionality and expressed any concerns or ideas they had with function, layout and user experience.
 
 ## Testing Paradigms
 
@@ -337,6 +338,8 @@ There are two types of testing a developer can carry out before, during and afte
 Although one form of testing may be more appropriate than the other for a specific application, they do both have downsides. The disadvantage of one form of testing is usually something the other form of testing can provide.
 
 Due to this, it is best practice to utilise both forms of testing during the building of an application. However, the choice for which form of testing to use depends on resources available, budget and whether or not you have a team large enough to carry out the tests.
+
+The developer chose to use manual testing as the main form of testing throughout this project. They felt it was an efficient method for this type of applicationdue to its size and the fact that a lot of the functions relied on visual aspects such as animations and styling changes.
 
 ## Testing User Stories
 

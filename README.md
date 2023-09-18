@@ -56,7 +56,7 @@ The font used throughout this project is the sans-serif font that loads as stand
 
 ## Wireframes
 
-[Figma](https://www.figma.com/) was used to showcase the visuals of the game across the three main screen sizes.
+[Figma](https://www.figma.com/) was used to showcase the initial concept of the game across the three main screen sizes. The layout of the game remained largely the same as the project progressed, with some changes to the Sidebar and the location of the Mode button and Player Tiles.
 
 The full version of wireframes can be viewed [here](https://www.figma.com/file/FKLPRejh6ElgwCStCXU0IF/Match-a-Tile-WireFrames?type=design&node-id=0-1&mode=design&t=1RPCNTWt2wE6rDEL-0).
 

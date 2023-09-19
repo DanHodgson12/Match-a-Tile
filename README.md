@@ -339,7 +339,7 @@ Although one form of testing may be more appropriate than the other for a specif
 
 Due to this, it is best practice to utilise both forms of testing during the building of an application. However, the choice for which form of testing to use depends on resources available, budget and whether or not you have a team large enough to carry out the tests.
 
-The developer chose to use manual testing as the main form of testing throughout this project. They felt it was an efficient method for this type of applicationdue to its size and the fact that a lot of the functions relied on visual aspects such as animations and styling changes.
+The developer chose to use manual testing as the main form of testing throughout this project. They felt it was an efficient method for this type of application due to its size and the fact that a lot of the functions relied on visual aspects such as animations and styling changes.
 
 ## Testing User Stories
 

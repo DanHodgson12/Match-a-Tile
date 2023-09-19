@@ -644,6 +644,18 @@ Individual Player Tiles momentarily gain a red border if an incorrect match has 
 Tiles are disabled when the game is over as expected | Pass
 ---
 
+#### Game Over Function
+
+Outcome | Pass/Fail
+--- | ---
+The game ends when the Score has reached 9/9 and/or the Turns Left has reached 0 | Pass
+The 'GAME OVER' message appears correctly above the Computer Tiles | Pass
+The Game Over Modal appears half a second after the game ends, as expected | Pass
+The Game Over Modal displays as expected | Pass
+The Game Over Modal message is adjusted depending on the Score, as expected | Pass
+The Game Over Modal can be closed by clicking anywhere on the page, as expected | Pass
+---
+
 ### Known Bugs
 
 There are no known bugs with the web application.

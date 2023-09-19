@@ -33,6 +33,7 @@ let countdown = countdownStart;
 let pTilesSelection;
 let cTilesSelection;
 let loadListeners = true;
+let finalScoreMessage = $('#final-score-message');
 
 $(document).ready(function () {
   // Side-bar info toggle divs
@@ -136,7 +137,27 @@ function endGame() {
 function endGameDisplayMsg() {
   $("#end-game-msg").show().text("GAME OVER");
   setTimeout(function() {
-    alert("Well done! You scored " + currentScore + " out of 9!");
+    $('#gameOverModal').modal('show');
+    if (currentScore === 0) {
+      finalScoreMessage.html(
+        `Unlucky! You scored ${currentScore} out of 9.
+        <br><br>
+        Press the 'Reset' button to have another go and see if you can beat your score!`);
+    } else if (currentScore >= 1 && currentScore <= 8) {
+      finalScoreMessage.html(
+        `Well done! You scored ${currentScore} out of 9.
+        <br><br>
+        Press the 'Reset' button to have another go and see if you can beat your score!`);
+    } else if (currentScore === 9) {
+      finalScoreMessage.html(
+        `WOW! You scored ${currentScore} out of 9.
+        <br><br>
+        You've beaten the game! You should be very proud of yourself.
+        <br><br>
+        If you haven't already, why not try a harder difficulty and see how you get on?
+        <br><br>
+        Press the 'Reset' button to have another go.`);
+    }
   }, 500);
 }
 
